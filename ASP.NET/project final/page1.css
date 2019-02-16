@@ -1,0 +1,41 @@
+﻿body{
+    font-family:微軟正黑體;
+}
+
+.t1{
+    font-size:20px;
+    text-align:center;
+}
+.u1{
+    font-size:16px;
+    line-height:2em;
+}
+.b{
+    letter-spacing:15px;
+}
+.i{
+    color:red;
+}
+.box{
+    margin-top:10px;
+}
+.font{
+    margin-top:15px;
+}
+.rad{
+    border-radius:2px;
+}
+.address{
+    font-size:14px;
+    font-style:italic;
+}
+.address1{
+    margin-top:3px;
+}
+.time{
+    margin-left:15px;
+}
+.btn{
+    margin-top:20px;
+    border-radius:5px;
+}

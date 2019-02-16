@@ -1,0 +1,73 @@
+﻿body{
+    font-family:微軟正黑體;
+}
+
+
+.tablestyle1 {
+    width:1000px;
+    height:500px;
+    border:solid 1px #cec9c9;
+    background-color:#fff;
+    margin:0 auto;
+}
+.tdstyle1 {
+    width:580px;
+    padding-right:20px;
+    padding-left:20px;
+    vertical-align:top;
+}
+.btn{
+    margin-left:10px;
+    margin-top:10px;
+    border-radius:5px;
+}
+.mult{
+    margin-top:40px;
+}
+.style1{
+    margin:0 auto;
+}
+.style2{
+    text-align:center;
+    width:200px;
+    border:solid 1px #d4d2d2;
+    margin:5px;
+    background-color:white;
+}
+.qty{
+    margin-right:10px;
+}
+.rad{
+    border-radius:3px;
+}
+.name{
+    margin-top:10px;
+}
+.news1{
+    width:300px;
+    height:36px;
+    line-height:36px;
+    font-size:20px;
+    text-align:center;
+    background-color:#c39b4e;
+}
+.news2{
+    font-size:15px;
+    color:gray;
+
+}
+.news3{
+    height:30px;
+    line-height:30px;
+    background-color:#f9f0d9;
+}
+.total{
+    font-size:20px;
+}
+.Checkout{
+    font-size:25px;
+    border-radius:3px;
+    letter-spacing:5px;
+    
+    
+}
