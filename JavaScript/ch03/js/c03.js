@@ -52,3 +52,7 @@ var t2 = t1.name;
 
 console.log(t2);
 
+var size = document.getElementById('size');
+var time = new Date();
+size.textContent = time;
+

@@ -11,4 +11,3 @@ cost = {
     t3:60
 }
 
-cost.t1.items[0];
