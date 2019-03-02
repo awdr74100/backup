@@ -1,5 +1,5 @@
 var score = 60;
-var english = 60
+var english = 60;
 var t1 = 10;
 var t2 = 20;
 var t3 = 30;
