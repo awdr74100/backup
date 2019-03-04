@@ -4,10 +4,11 @@ var t1 = 10;
 var t2 = 20;
 var t3 = 30;
 var t4 = 40;
-var sd = ["a",'b','c']
+var sd = ["a",'b','c'];
 console.log(sd.length);
 
 // ==  &&  >=  <= 
+
 
 if(score >= 60){
     console.log("及格");
