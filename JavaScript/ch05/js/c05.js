@@ -1,15 +1,16 @@
-var a = document.getElementById("aaa");
-a.textContent = "更改成功";
-a.className = "cc";
+var a = document.getElementById("one");
+console.log(a);
+a.textContent = "第一行更改成功";
+a.className = "change";
 
-var b = document.querySelector(".bb");
-b.textContent = "更改成功";
+var b = document.getElementsByClassName("hot");
+console.log(b);
 
-var c = document.getElementsByClassName(".cc");
-c.textContent = "更改成功";
+var c = document.getElementsByTagName("li");
+console.log(c);
 
-var d = document.getElementsByTagName("p");
-d.textContent = "更改成功";
+var d = document.querySelector(".hot");
+console.log(d);
 
-var e = document.querySelectorAll(".ee");
-e.textContent = "更改成功";
+var e = document.querySelectorAll(".hot");
+console.log(e);
