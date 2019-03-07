@@ -51,6 +51,20 @@ var remove = document.getElementById("two");
 var dade = remove.parentNode;
 dade.removeChild(remove);
 
+var firstitem = document.getElementById("three");
+if(firstitem.hasAttribute("class")){
+    var attr = firstitem.getAttribute("class");
+
+    firstitem.className = "change";
+}
+
+var gg = document.getElementsByTagName("div")[1];
+gg.setAttribute("class","change");
+
+if(gg.hasAttribute("class")){
+    gg.removeAttribute("class");
+}
+
 
 
 
