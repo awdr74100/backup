@@ -1,6 +1,9 @@
 var today = new Date();
 var hourNow = today.getHours();
+var ss = today.getMilliseconds();
 var greeting;
+
+console.log(ss);
 
 if (hourNow > 18) 
 {
@@ -16,6 +19,6 @@ if (hourNow > 18)
     greeting = "歡迎";
 }
 
-document.write('<h3>' + greeting + '</h3>');
+//document.write('<h3>' + greeting + '</h3>');
 
 //直接顯示頁面
