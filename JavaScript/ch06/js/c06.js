@@ -71,6 +71,19 @@ function aree(){
 dfdf.addEventListener('input',aree,false);
 */
 
+/*  (submit、change、input)  From事件
+待補充
+*/
+
+/* MUTATION事件
+(DOMNodeInserted、DomNodeRemoved、DOMSubtreeModified、DOMNodeInsertedIntoDocument、DOMNodeRemovedFromDocument)
+*/
+
+/* HTML5事件 
+(DOMcontentLoadeed、hsahchange、beforeunload) 
+*/
+
+
 
 
 
