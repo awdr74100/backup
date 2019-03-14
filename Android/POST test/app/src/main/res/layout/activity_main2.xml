@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    >
+
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="173dp"
+        android:layout_height="95dp"
+        android:text="傳送"
+        android:textSize="30dp"
+        />
+
+    <EditText
+
+        android:id="@+id/e3"
+        android:layout_width="120dp"
+        android:layout_height="120dp" />
+
+    <EditText
+        android:id="@+id/e4"
+        android:layout_width="120dp"
+        android:layout_height="120dp" />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="TextView" />
+</LinearLayout>

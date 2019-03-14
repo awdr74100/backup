@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:background="@android:color/holo_blue_light">
+    <TextView
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="尚未送出"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="50dp"
+        android:layout_marginBottom="40dp"/>
+    <EditText
+        android:id="@+id/exit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:id="@+id/push"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="送出"
+        android:textColor="@android:color/background_dark"/>
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我好帥"
+        android:textSize="20dp"
+        android:textColor="@android:color/background_dark"/>
+
+    <Button
+        android:id="@+id/btn_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="按下"
+         />
+
+    <Button
+        android:id="@+id/gogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳頁"/>
+
+</LinearLayout>
