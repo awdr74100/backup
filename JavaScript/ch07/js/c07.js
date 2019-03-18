@@ -79,12 +79,37 @@ $(function(){
     });
 });
 
+$(function(){  //簡易版下拉選單
+    
+    $(".we").hide();
+    $("#hh").append("<a>show</a>");
 
-
-$(function(){
-    var e1 = $("#e1");
-
+    $("#hh").on("click", function () {
+        $("#hh").next().fadeIn(500).children().not(".ddc").addClass("bt");
+        
+    });
 });
+
+$(function(){   //示範陣列取值
+    $(".hot").eq(2).removeClass("hot");
+});
+
+$(function(){   //廣告設定淡出
+    var end = $("#footer").offset().top - $(window).height() - 50;
+
+    $(window).on("scroll", function () {
+        
+        if((end) < $(window).scrollTop()){
+            $("#slide").animate({"right":"0px"},250);
+        }else{
+            $("#slide").stop(true).animate({"right":"-360px"},250);
+        }
+
+    });
+});
+
+
+
 
 
 
