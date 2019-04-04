@@ -1,17 +1,31 @@
-.d1{
-    width: 500px;
-    height: 500px;
-    background-color: aquamarine;
+.wrap{
+    max-width: 960px;
+    padding-top: 20px;
+    margin: 0 auto;
+    line-height: 1.5;
 }
 
-@media(max-width : 768px){
-    .d1{
-        background-color: darkkhaki;
+.news h2{
+    color: aquamarine;
+    font-size: 20px;
+}
+
+.news li{
+    width: 31.33333%;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 10px;
+}
+
+@media(max-width:768px){
+    .news li{
+        width: 48%;
     }
 }
 
-@media(max-width:568px){
-    .d1{
-        background-color: sienna;
+@media(max-width:569px){
+    .news li{
+        width: 98%;
     }
 }
