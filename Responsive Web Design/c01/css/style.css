@@ -1,0 +1,17 @@
+.d1{
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+}
+
+@media(max-width : 768px){
+    .d1{
+        background-color: darkkhaki;
+    }
+}
+
+@media(max-width:568px){
+    .d1{
+        background-color: sienna;
+    }
+}
