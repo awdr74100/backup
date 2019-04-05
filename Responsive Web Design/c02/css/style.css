@@ -1,0 +1,35 @@
+.wrap{
+    max-width: 960px;
+    
+}
+
+.menu{
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+    float: left;
+    
+}
+
+@media(max-width:768px){
+    .menu{
+        float: none;
+        width: 100%;
+    }
+}
+
+.menu li{
+    margin-bottom: 10px;
+}
+
+.content{
+    margin-left: 150px;
+    background-color: coral;
+}
+
+@media(max-width:768px){
+    .content{
+        margin-left: 0px;
+        
+    }
+}
