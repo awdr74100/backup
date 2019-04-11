@@ -1,0 +1,35 @@
+.content{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* .order{
+    width:100%;
+    text-align: center;
+} */
+
+.order td,.order th{
+    text-align: center;
+    border: 1px solid green;
+}
+
+.order th{
+    background-color: green;
+    color: aliceblue;
+}
+
+/* @media(max-width:700px){
+    .m-none{
+        display: none;
+    }
+} */
+
+@media(max-width:500px){
+    .content{
+        overflow-x: auto;
+    }
+
+    .order{
+        width: 768px;
+    }
+}
