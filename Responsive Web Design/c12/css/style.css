@@ -59,95 +59,109 @@ img {
 
 /* CSS Reset end */
 
-.wrap{
+.container{
+    position: relative;
+    overflow: hidden;
     max-width: 960px;
     margin: 0 auto;
 }
 
-.header{
-    position: relative;
-    height: 50px;
-    background-color: black;
-}
-
-.logo{
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    background-image: url(../img/icon.png);
-    background-size: contain;
-    width: 40px;
-    height: 40px;
-}
-
-.menu{
-    float: right;
-}
-
-.menu li{
-    float: left;
-}
-
-.menu li a{
-    display: block;
-    width: 80px;
+.mobile-link,.mobile-close{
+    background-color: brown;
     text-decoration: none;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    color: aliceblue
-}
-.icon{
-    position: absolute;
-    top: 5px;
-    right: 0px;
-    display: block;
-    background: url(../img/icon.png);
-    background-size: contain;
-    width: 40px;
-    height: 40px;
+    color: aliceblue;
+    display: inline-block;
 }
 
-.showmenu{
+.mobile-link{
     display: none;
 }
 
+@media(max-width:768px){
+    .mobile-link{
+        display: inline-block;
+    }
+}
+.main{
+    transition: all 0.3s;
+}
+
+.header{
+    height: 50px;
+    background-color:black; 
+    margin-bottom: 1em;
+}
+
+.header .menu{
+    float: right;
+}
+
+.open .header .menu{
+    display: none;
+}
+
+.content{
+    padding: 1em;
+}
+
+.content p{
+    margin-bottom: 1em;
+}
+
 @media(max-width:767px){
-    .header{
-        position: fixed;
-        width: 100%;
+    .header .menu{
+        display: none;
     }
+}
 
-    .menu{
-        max-height: 0px;
-        overflow: hidden;
-        transition: max-height 1.3s;
-        position: absolute;
-        z-index: 100;
-        top: 50px;
-        left: 0;
-        right: 0;
-        background-color: black;
-        
-    }
+.header .menu li{
+    float: left;
+}
 
-    .menu li{
-        float: none;
-    }
+.header .menu li a{
+    color: aliceblue;
+    display: block;
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s;  /*非常重要*/
+}
 
-    .menu li a{
-        transition: all 0.3s;
-    }
+.header .menu li a:hover{
+    background-color: brown;
+}
+.aside{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 270px;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+    transform: translateX(-270px);
+    transition: all 0.3s;
+}
 
-    .showmenu{
-        display: block;
-        
-        
-    }
+.open .main{
+    transform: translateX(270px);
+}
+.open .aside{
+    transform: translateX(0px);
+}
+.aside .menu li{
+    margin: 1em;
+    background-color: black;
+    color: aliceblue;
+}
+.aside .menu li a{
+    color: aliceblue;
+    display: block;
+    text-decoration: none;
+}
 
-    .menu-show .menu{
-        max-height: 500px;
-    }  
-
+.aside .menu li a:hover{
+    background-color: brown;
 }
 
