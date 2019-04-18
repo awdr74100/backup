@@ -1,85 +1,5 @@
 /* CSS Reset */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -92,8 +12,7 @@ html {
     line-height: 1;
 }
 
-ol,
-ul {
+ol,ul {
     list-style: none;
 }
 
@@ -102,23 +21,17 @@ table {
     border-spacing: 0;
 }
 
-caption,
-th,
-td {
+caption,th,td {
     text-align: left;
     font-weight: normal;
     vertical-align: middle;
 }
 
-q,
-blockquote {
+q,blockquote {
     quotes: none;
 }
 
-q:before,
-q:after,
-blockquote:before,
-blockquote:after {
+q:before,q:after,blockquote:before,blockquote:after {
     content: "";
     content: none;
 }
@@ -127,18 +40,7 @@ a img {
     border: none;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
     display: block;
 }
 
@@ -146,9 +48,7 @@ html {
     line-height: 1;
 }
 
-*,
-*:before,
-*:after {
+*,*:before,*:after {
     box-sizing: border-box;
 }
 
@@ -159,22 +59,18 @@ img {
 
 /* CSS Reset end */
 
-
-.wrap {
+.wrap{
     max-width: 1024px;
     margin: 0 auto;
+    position: relative;
     font-family: Microsoft JhengHei;
     font-weight: 200;
 }
 
-/* top start*/
-.top {
-    position: relative;
-}
+/* banner start */
 
-.banner {
-    position: absolute;
-    width: 100%;
+.banner{
+    position: relative;
     height: 420px;
     background-image: url(../img/header_desktop.png);
     background-position: center center;
@@ -187,38 +83,40 @@ img {
     }
 }
 
-.banner-msg {
-    max-width: 460px;
-    min-height: 152px;
+.banner-msg{
     position: relative;
     top: 123px;
     margin: 0 auto;
+    max-width: 460px;
+    min-height: 152px;
     background: rgba(0, 0, 0, 0.35);
     text-align: center;
 }
 
-.banner-msg h2 {
-    display: block;
+.banner-msg h2{
     padding-top: 25px;
     color: #fff;
     font-size: 36px;
 }
 
-.banner-msg p {
-    display: block;
+.banner-msg p{
     padding-top: 21px;
     color: #fff;
     font-size: 16px;
     line-height: 23px;
 }
 
-/* top end*/
+/* banner end */
 
-/* header start*/
-.header {
-    position: relative;
+/* header start */
+
+.header{
+    position: absolute;
+    top: 0;
+    width: 100%;
     height: 56px;
-    background: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.35);
 }
 
 .logo {
@@ -267,47 +165,49 @@ img {
     background-size: contain;
     width: 30px;
     height: 30px;
+    z-index: 10;
 }
 
 .showmenu {
     display: none;
 }
 
-@media(max-width:375px) {
-    .header {
+@media(max-width:375px){
+    .showmenu {
+        display: inline-block;
+        background: black;
+        
+    }
+    .header{
         position: fixed;
         width: 100%;
-        background-color: black;
+        background: black;
+        
     }
-
-    .menu {
+    .menu{
         max-height: 0px;
-        overflow: hidden;
         position: absolute;
+        overflow: hidden;
         top: 56px;
-        left: 0;
-        right: 0;
-        z-index: 20;
+        left: 0px;
+        right: 0px;
+        margin: 0px;
         background-color: black;
-        transition: max-height 1.3s;
-        margin: 0;
+        transition: max-height 0.8s;
+        z-index: 20;
     }
-
-    .menu li {
+    .menu li{
         float: none;
     }
 
-    .menu li a {
+    .menu li a{
         transition: all 0.3s;
     }
-
-    .showmenu {
-        display: block;
-    }
-
-    .menu-show .menu {
+    .menu-show .menu{
         max-height: 300px;
     }
 }
 
-/* header end */
+/*header end */
+
+
