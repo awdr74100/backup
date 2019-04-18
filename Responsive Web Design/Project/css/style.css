@@ -1,0 +1,313 @@
+/* CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+q,
+blockquote {
+    quotes: none;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+    content: "";
+    content: none;
+}
+
+a img {
+    border: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+html {
+    line-height: 1;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* CSS Reset end */
+
+
+.wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: Microsoft JhengHei;
+    font-weight: 200;
+}
+
+/* top start*/
+.top {
+    position: relative;
+}
+
+.banner {
+    position: absolute;
+    width: 100%;
+    height: 420px;
+    background-image: url(../img/header_desktop.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@media(max-width:375px) {
+    .banner {
+        background-image: url(../img/header_mobile.png);
+    }
+}
+
+.banner-msg {
+    max-width: 460px;
+    min-height: 152px;
+    position: relative;
+    top: 123px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+.banner-msg h2 {
+    display: block;
+    padding-top: 25px;
+    color: #fff;
+    font-size: 36px;
+}
+
+.banner-msg p {
+    display: block;
+    padding-top: 21px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+/* top end*/
+
+/* header start*/
+.header {
+    position: relative;
+    height: 56px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.logo {
+    position: absolute;
+    top: 16px;
+    left: 42px;
+}
+
+.logo a {
+    display: block;
+    background: url(../img/logo_w@svg.svg);
+    width: 120px;
+    height: 24px;
+}
+
+.menu {
+    float: right;
+    margin-right: 48px;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    margin-left: 30px;
+    color: #fff;
+    font-size: 16px;
+    height: 56px;
+    line-height: 56px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.menu li a:hover {
+    color: coral;
+}
+
+.icon {
+    position: absolute;
+    top: 13px;
+    right: 8px;
+    display: block;
+    background: url(../img/menu.svg);
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.showmenu {
+    display: none;
+}
+
+@media(max-width:375px) {
+    .header {
+        position: fixed;
+        width: 100%;
+        background-color: black;
+    }
+
+    .menu {
+        max-height: 0px;
+        overflow: hidden;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        background-color: black;
+        transition: max-height 1.3s;
+        margin: 0;
+    }
+
+    .menu li {
+        float: none;
+    }
+
+    .menu li a {
+        transition: all 0.3s;
+    }
+
+    .showmenu {
+        display: block;
+    }
+
+    .menu-show .menu {
+        max-height: 300px;
+    }
+}
+
+/* header end */
