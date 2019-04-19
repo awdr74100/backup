@@ -210,4 +210,56 @@ img {
 
 /*header end */
 
+/* content [title] start */
+
+.content{
+    position: relative;
+    height: auto;
+    background-color: #efe9e7;
+}
+
+.title{
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    width: 225px;
+    height: 70px;
+    text-align: center;
+}
+
+.title h2{
+    font-size: 20px;
+    color: #3D1101;
+    line-height: 32px;
+    font-weight: 500;
+    
+}
+
+.title h2 span{
+    display: block;
+    position: relative;
+}
+
+.title h2 span:after,.title h2 span::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    background-color: #979797;
+    width: 50%;
+    height: 1px;
+}
+
+.title h2 span:after{
+    right:-50%;
+}
+
+.title h2 span::before{
+    left:-50%;
+}
+
+/* content [title] end */
+
+
+
+
 
