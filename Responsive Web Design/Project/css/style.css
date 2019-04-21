@@ -229,7 +229,7 @@ img {
 
 
 
-.title{
+.content1 .title{
     position: relative;
     top: 50px;
     margin: 0 auto;
@@ -238,7 +238,7 @@ img {
     
 }
 
-.title h2{
+.content1 .title h2{
     font-size: 20px;
     color: #3D1101;
     line-height: 32px;
@@ -246,12 +246,12 @@ img {
     
 }
 
-.title h2 span{
+.content1 .title h2 span{
     display: block;
     position: relative;
 }
 
-.title h2 span:after,.title h2 span::before{
+.content1 .title h2 span:after,.content1 .title h2 span::before{
     content: '';
     position: absolute;
     top: 0%;
@@ -260,28 +260,28 @@ img {
     height: 1px;
 }
 
-.title h2 span:after{
+.content1 .title h2 span:after{
     right:-50%;
 }
 
-.title h2 span::before{
+.content1 .title h2 span::before{
     left:-50%;
 }
 
 @media(max-width:375px){
-    .title h2 span:after,.title h2 span::before{
+    .content1 .title h2 span:after,.content1 .title h2 span::before{
         height: 0px;
     }
 }
 
-.td1 h2,.td2 h2,.td3 h2{
+.content1 .td1 h2,.content1 .td2 h2,.content1 .td3 h2{
     font-size: 18px;
     color: #3D1101;
     font-weight: 500;
 }
 
 
-.td1{
+.content1 .td1{
     float: left;
     width: 30.33333%;
     margin-top: 81px;
@@ -289,7 +289,7 @@ img {
     margin-right: 1.5%;
 }
 
-.td1 h1{
+.content1 .td1 h1{
     display: block;
     width: 200px;
     height: 200px;
@@ -298,7 +298,7 @@ img {
     margin: 0 auto 20px auto;
 }
 
-.td1 p,.td2 p,.td3 p{
+.content1 .td1 p,.content1 .td2 p,.content1 .td3 p{
     color: #3D1101;
     font-weight: 500;
     line-height: 20px;
@@ -309,7 +309,7 @@ img {
     margin: 11px auto auto auto;
     
 }
-.td2{
+.content1 .td2{
     float: left;
     width: 30.33333%;
     margin-top: 81px;
@@ -317,7 +317,7 @@ img {
     margin-right: 1.5%;
 }
 
-.td2 h1{
+.content1 .td2 h1{
     display: block;
     width: 200px;
     height: 200px;
@@ -325,7 +325,7 @@ img {
     border-radius: 100px;
     margin: 0 auto 20px auto;
 }
-.td3{
+.content1 .td3{
     float: left;
     width: 30.33333%;
     margin-top: 81px;
@@ -333,7 +333,7 @@ img {
     margin-right: 1.5%;
 }
 
-.td3 h1{
+.content1 .td3 h1{
     display: block;
     width: 200px;
     height: 200px;
@@ -343,15 +343,15 @@ img {
 }
 
 @media(max-width:375px){
-    .td1,.td2,.td3{
+    .content1 .td1,.content1 .td2,.content1 .td3{
         float: none;
         width: 100%;
     }
-    .td2{
+    .content1 .td2{
         margin-top: 30px;
     }
     
-    .td3{
+    .content1 .td3{
         margin-top: 40px;
         padding-bottom: 60px;
     }
@@ -376,7 +376,7 @@ img {
     margin-left: 4%;
     display: block;
     height: 460px;
-    background: url(../img/main_chef_brown.png);
+    background: url(../img/main_chef_brown.png) no-repeat center center;
     
 }
 
@@ -428,13 +428,237 @@ img {
 
 /* content2 end */
 
+/* content3 start */
 .content3{
     position: relative;
-    height: 386px;
+    height: 315px;
+    color: #3D1101;
+}
+
+.content3 .title{
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    width: 168px;
+    height: 32px;
+    margin: 0 auto;
+    line-height: 32px;
+    margin-top: 50px;
+}
+
+.content3 .td1{
+    float: left;
+    width: 30%;
+    margin-left: 4%;
+    
+    margin-top:32px; 
+}
+.content3 .td1 h1{
+    
+    float: left;
+    background: url(../img/avatar_1.png);
+    width: 67px;
+    height: 67px;
+    border-radius: 40px;
+}
+.content3 .td1 h2{
+    
+    float: left;
+    margin-left:15px; 
+    width: 90px;
+    height: 67px;
+    
+    line-height: 67px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.content3 .td1 p{
+    float: left;
+    display: block;
+    max-width: 220px;;
+    margin-left: 80px;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 500;
+}
+.content3 .td1 h3{
+    display: block;
+    float: right;
+    margin-top: 16px;
+    font-size: 16px;
+    
+    
 }
 
 
+.content3 .td2{
+    float: left;
+    width: 30%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top:32px; 
+}
+.content3 .td2 h1{
+    
+    float: left;
+    background: url(../img/avatar_2.png);
+    width: 67px;
+    height: 67px;
+    border-radius: 40px;
+}
+.content3 .td2 h2{
+    
+    float: left;
+    margin-left:15px; 
+    width: 90px;
+    height: 67px;
+    
+    line-height: 67px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.content3 .td2 p{
+    float: left;
+    display: block;
+    max-width: 220px;;
+    margin-left: 80px;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 500;
+}
+.content3 .td2 h3{
+    display: block;
+    float: right;
+    margin-top: 16px;
+    font-size: 16px;
+    
+    
+}
 
 
+.content3 .td3{
+    float: left;
+    width: 30%;
+    
+    margin-right: 4%;
+    margin-top:32px; 
+}
+.content3 .td3 h1{
+    
+    float: left;
+    background: url(../img/avatar_3.png);
+    width: 67px;
+    height: 67px;
+    border-radius: 40px;
+}
+.content3 .td3 h2{
+    
+    float: left;
+    margin-left:15px; 
+    width: 90px;
+    height: 67px;
+    
+    line-height: 67px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.content3 .td3 p{
+    float: left;
+    display: block;
+    max-width: 220px;;
+    margin-left: 80px;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 500;
+}
+.content3 .td3 h3{
+    display: block;
+    float: right;
+    margin-top: 16px;
+    font-size: 16px;
+    
+    
+}
 
+/* content3 end */
+
+/* content4 start */
+
+.content4{
+    position: relative;
+    height:588px;
+    background-color:rgba(250,250,250,0.70);
+    color: #3D1101;
+}
+
+
+.content4 .title{
+    position: relative;
+    width: 216px;
+    height: 64px;
+    top: 50px;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.content4 h2{
+    float: left;
+    width: 46%;
+    height: 388px;
+    background: url(../img/Map.png) no-repeat center center;
+    margin-left: 4%;
+    margin-top: 88px;
+}
+
+.input-msg{
+    float: left;
+    width: 44%;
+    margin-right: 4%;
+    margin-left: 2%;
+    margin-top: 88px;
+}
+
+.input-msg p{
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#nocss{
+    margin-top: 4px;
+}
+
+#name,#phone,#email,#number{
+    margin-top: 6px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: inset 0px 1px 0px 0px #ECECEC;
+    border-radius: 3px;
+    width: 100%;
+    height: 32px;
+    font-size: 16px;
+}
+
+#yes{
+    width: 16px;
+    height: 16px;;
+    margin-top: 6px;
+}
+#no{
+    width: 16px;
+    height: 16px;
+    margin-top: 6px;
+}
+.margin-food{
+    display: inline;
+    margin-left: 26px;
+}
+.food-change{
+    
+    font-size: 14px;
+    font-weight: 500;
+}
 
