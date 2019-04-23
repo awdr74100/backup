@@ -345,7 +345,7 @@ img {
 @media(max-width:375px){
     .content1 .td1,.content1 .td2,.content1 .td3{
         float: none;
-        width: 100%;
+        width: 97%;
     }
     .content1 .td2{
         margin-top: 30px;
@@ -418,10 +418,10 @@ img {
     }
     .ex{
         float: none;
-        width: 80%;
+        width: 94%;
         margin-top: 30px;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 3%;
+        margin-right: 3%;
         padding-bottom: 30px;
     }
 }
@@ -579,6 +579,37 @@ img {
     
     
 }
+@media(max-width:375px){
+    .content3{
+        height: auto;
+    }
+
+    .content3 .td1{
+        float: none;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        
+        
+        
+    }
+    .content3 .td2{
+        float: none;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 0px;
+    }
+    .content .td3{
+        float: none;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        
+    }
+
+}
+
 
 /* content3 end */
 
@@ -657,8 +688,151 @@ img {
     margin-left: 26px;
 }
 .food-change{
-    
     font-size: 14px;
     font-weight: 500;
 }
+.btn-form{
+    text-align: right;
+    display: block;
+    margin-top: 40px;
+    
+}
 
+#btn-cancel{
+    font-size: 14px;
+    width: 70px;
+    height: 32px;
+    color: #fff;
+    background: rgba(0,0,0,0.35);
+    border-radius: 3px;
+    border: none;
+    
+}
+#btn-send{
+    font-size: 14px;
+    width: 70px;
+    height: 32px;
+    color: #fff;
+    background: #F56C23;
+    border-radius: 3px;
+    border: none;
+    margin-left: 11px;
+}
+
+@media(max-width:375px){
+    .content4{
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .content4 h2{
+        float: none;
+        width: 93%;
+        margin-left: 3%;
+        margin: 88px 3% 0px 3%;
+    }
+    .input-msg{
+        float: none;
+        width: 94%;
+        margin: 30px 3% 0px 3%;
+        
+    }
+}
+
+/* content4 end */
+
+/* content5 start */
+.footer{
+    position: relative;
+    height: 232px;
+    background-color: #efe9e7;
+    color: #3D1101;
+    font-weight: 500;
+}
+.footer .about{
+    float: left;
+    width: 30%;
+    margin-top: 50px;
+    margin-left: 4%;
+    margin-right: 2%;
+}
+.footer .about h1,.footer .contact h1{
+    font-size: 24px;
+
+}
+.footer .about p,.footer .contact p{
+    display: block;
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+
+}
+.footer .contact{
+    width: 25%;
+    float: left;
+    margin-top: 50px;
+}
+.footer .share{
+    width: 35%;
+    float: right;
+    margin-right: 4%;
+    margin-top: 50px;
+    text-align: right;
+}
+.share h1{
+    font-weight:900;
+    font-size: 49px;
+    color: #3D1101;
+    letter-spacing: 0px;
+}
+.share .google{
+    
+    width: 31px;
+    height: 36px;
+    background: url(../img/google-plus.svg) no-repeat;
+    display: inline-block;
+    margin-top: 22px;
+    
+}
+.share .twitter{
+    
+    width: 31px;
+    height: 36px;
+    background: url(../img/twitter.svg) no-repeat;
+    display: inline-block;
+    margin-top: 22px;
+    margin-left: 11px;
+    margin-right: 11px;
+}
+.share .fb{
+    
+    width: 31px;
+    height: 36px;
+    background: url(../img/facebook.svg) no-repeat;
+    display: inline-block;
+    margin-top: 22px;
+    
+}
+@media(max-width:375px){
+    .footer{
+        height: auto;
+    }
+    .footer .about{
+        float: none;
+        width: 94%;
+        margin: 0px 3% 0px 3%;
+        padding-top: 50px;
+        
+    }
+    .footer .contact{
+        float: none;
+        width: 94%;
+        margin: 30px 3% 0px 3%;
+    }
+    .footer .share{
+        float: none;
+        width: 94%;
+        margin: 30px 3% 0px 3%;
+        padding-bottom: 50px;
+    }
+
+}
