@@ -77,7 +77,7 @@ img {
     background-repeat: no-repeat;
 }
 
-@media(max-width:375px) {
+@media(max-width:480px) {
     .banner {
         background-image: url(../img/header_mobile.png);
     }
@@ -172,7 +172,7 @@ img {
     display: none;
 }
 
-@media(max-width:375px){
+@media(max-width:480px){
     .showmenu {
         display: inline-block;
         background: black;
@@ -268,7 +268,7 @@ img {
     left:-50%;
 }
 
-@media(max-width:375px){
+@media(max-width:480px){
     .content1 .title h2 span:after,.content1 .title h2 span::before{
         height: 0px;
     }
@@ -342,7 +342,7 @@ img {
     margin: 0 auto 20px auto;
 }
 
-@media(max-width:375px){
+@media(max-width:480px){
     .content1 .td1,.content1 .td2,.content1 .td3{
         float: none;
         width: 97%;
@@ -407,7 +407,7 @@ img {
     line-height: 22px;
 }
 
-@media(max-width:375px){
+@media(max-width:480px){
     .content2{
         height: auto;
     }
@@ -447,6 +447,7 @@ img {
 }
 
 .content3 .td1{
+    position: relative;
     float: left;
     width: 30%;
     margin-left: 4%;
@@ -454,26 +455,22 @@ img {
     margin-top:32px; 
 }
 .content3 .td1 h1{
-    
-    float: left;
+    position: relative;;
     background: url(../img/avatar_1.png);
     width: 67px;
     height: 67px;
     border-radius: 40px;
 }
 .content3 .td1 h2{
-    
-    float: left;
-    margin-left:15px; 
-    width: 90px;
-    height: 67px;
-    
-    line-height: 67px;
+    position: absolute;
+    left: 80px;
+    top: 0px;
     font-size: 18px;
+    height: 67px;
+    line-height: 67px;
     font-weight: 500;
 }
 .content3 .td1 p{
-    float: left;
     display: block;
     max-width: 220px;;
     margin-left: 80px;
@@ -483,15 +480,14 @@ img {
 }
 .content3 .td1 h3{
     display: block;
-    float: right;
     margin-top: 16px;
     font-size: 16px;
-    
-    
+    text-align: right;
 }
 
 
 .content3 .td2{
+    position: relative;
     float: left;
     width: 30%;
     margin-left: 1%;
@@ -500,25 +496,22 @@ img {
 }
 .content3 .td2 h1{
     
-    float: left;
+    position: relative;;
     background: url(../img/avatar_2.png);
     width: 67px;
     height: 67px;
     border-radius: 40px;
 }
 .content3 .td2 h2{
-    
-    float: left;
-    margin-left:15px; 
-    width: 90px;
-    height: 67px;
-    
-    line-height: 67px;
+    position: absolute;
+    left: 80px;
+    top: 0px;
     font-size: 18px;
+    height: 67px;
+    line-height: 67px;
     font-weight: 500;
 }
 .content3 .td2 p{
-    float: left;
     display: block;
     max-width: 220px;;
     margin-left: 80px;
@@ -528,42 +521,39 @@ img {
 }
 .content3 .td2 h3{
     display: block;
-    float: right;
     margin-top: 16px;
     font-size: 16px;
+    text-align: right;
     
     
 }
 
 
 .content3 .td3{
+    position: relative;
     float: left;
     width: 30%;
-    
     margin-right: 4%;
     margin-top:32px; 
 }
 .content3 .td3 h1{
     
-    float: left;
+    position: relative;;
     background: url(../img/avatar_3.png);
     width: 67px;
     height: 67px;
     border-radius: 40px;
 }
 .content3 .td3 h2{
-    
-    float: left;
-    margin-left:15px; 
-    width: 90px;
-    height: 67px;
-    
-    line-height: 67px;
+    position: absolute;
+    left: 80px;
+    top: 0px;
     font-size: 18px;
+    height: 67px;
+    line-height: 67px;
     font-weight: 500;
 }
 .content3 .td3 p{
-    float: left;
     display: block;
     max-width: 220px;;
     margin-left: 80px;
@@ -573,15 +563,16 @@ img {
 }
 .content3 .td3 h3{
     display: block;
-    float: right;
     margin-top: 16px;
     font-size: 16px;
+    text-align: right;
     
     
 }
-@media(max-width:375px){
+@media(max-width:480px){
     .content3{
         height: auto;
+        padding-bottom: 57px;
     }
 
     .content3 .td1{
@@ -598,13 +589,14 @@ img {
         width: 96%;
         margin-left: 2%;
         margin-right: 2%;
-        margin-top: 0px;
+        margin-top: 30px;
     }
     .content .td3{
         float: none;
         width: 96%;
         margin-left: 2%;
         margin-right: 2%;
+        margin-top: 30px;
         
     }
 
@@ -719,7 +711,7 @@ img {
     margin-left: 11px;
 }
 
-@media(max-width:375px){
+@media(max-width:480px){
     .content4{
         height: auto;
         padding-bottom: 50px;
@@ -812,7 +804,7 @@ img {
     margin-top: 22px;
     
 }
-@media(max-width:375px){
+@media(max-width:480px){
     .footer{
         height: auto;
     }
