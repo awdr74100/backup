@@ -732,7 +732,7 @@ img {
 
 /* content4 end */
 
-/* content5 start */
+/* footer start */
 .footer{
     position: relative;
     height: 232px;
@@ -828,3 +828,45 @@ img {
     }
 
 }
+
+/* footer end */
+
+/* page2 */
+
+/* login start */
+
+.login{
+    position: relative;
+    height: 431px;
+    color: #3D1101;
+
+}
+
+.login .title{
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+.login .title h1{
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.login .title p{
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.login .td1{
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    height: 273px;
+}
+.login .td1 h2{
+    
+}
+
+
+ 
