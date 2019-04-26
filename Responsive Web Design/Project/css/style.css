@@ -831,7 +831,7 @@ img {
 
 /* footer end */
 
-/* page2 */
+/* page2  start*/
 
 /* login start */
 
@@ -846,6 +846,7 @@ img {
     position: relative;
     top: 50px;
     text-align: center;
+    z-index: 10;
 }
 .login .title h1{
     font-size: 48px;
@@ -860,13 +861,95 @@ img {
 
 .login .td1{
     position: relative;
+    top: 85px;
     margin: 0 auto;
     width: 300px;
     height: 273px;
+    border-top:3px solid #FF5E45;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+    z-index: 10;
+    
 }
 .login .td1 h2{
- font-size: 36px;  
+    font-size:18px;
+     font-weight: 900;
+     text-align: center;
+     padding-top: 12px;
+}
+.login .td1 p{
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 15px;
+    margin-left: 15px;
+}
+.login .td1 #email{
+    width: 270px;
+    height: 32px;
+    margin-left: 15px;
+    margin-top: 3px;
+    background-image: url(../img/email.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 10px;
+    background-size: 15px 12px;
+    padding-left: 30px;
+    
+    border: 1px solid #CCCCCC;
+    box-shadow: inset 0px 1px 0px 0px #ECECEC;
+    border-radius: 3px;
+}
+.login .td1 #password{
+    width: 270px;
+    height: 32px;
+    margin-left: 15px;
+    margin-top: 3px;
+    background-image: url(../img/lock.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 10px;
+    background-size: 15px 12px;
+    padding-left: 30px;
+    
+    border: 1px solid #CCCCCC;
+    box-shadow: inset 0px 1px 0px 0px #ECECEC;
+    border-radius: 3px;
 }
 
+
+
+.login .td1 a{
+    font-size: 14px;
+    color: #FF5E45;
+    margin-top: 1px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.login .td1 #sign-up{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 125px;
+    height: 32px;;
+    background: rgba(0,0,0,0.35);
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+.login .td1 #sign-in{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 125px;
+    height: 32px;
+    background: #F56C23;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* page2 end */
+
+/* login end */
 
  
