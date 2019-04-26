@@ -115,7 +115,7 @@ img {
     top: 0;
     width: 100%;
     height: 56px;
-    z-index: 10;
+    z-index: 100;
     background: rgba(0, 0, 0, 0.35);
 }
 
@@ -1078,7 +1078,8 @@ img {
     border-radius: 3px;
 }
 
-.register .td1 a{
+.register .td1 .form a{
+    display: block;
     font-size: 14px;
     color: #FF5E45;
     margin-top: 1px;
@@ -1097,5 +1098,39 @@ img {
     font-size: 14px;
     color: #fff;
 }
+
+@media(max-width:450px){
+    .register{
+        height: auto;
+        padding-bottom: 93px;
+        
+    }
+    .register .td1{
+        max-width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: auto;
+        
+    }
+    .register .td1 h3{
+        float: none;
+        width: 98%;
+        text-align: center;
+        
+    }
+    .register .td1 .form{
+        float: none;
+        width: 96%;
+        
+    }
+    .register .td1 .form #submit{
+        position: static;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+/* page3 end */
+
+/* register end */
 
 
