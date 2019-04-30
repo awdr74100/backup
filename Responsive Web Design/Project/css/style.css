@@ -1133,4 +1133,71 @@ img {
 
 /* register end */
 
+/* page4 start */
+
+/* cart start */
+
+.cart {
+    position: relative;
+    height: 746px;
+    color: #3D1101;
+}
+
+.left-menu{
+    float: left;
+    width: 21.5%;
+    height: 698px;
+    margin-left: 4%;
+    margin-top: 48px;
+}
+
+.left-menu h2{
+    font-size: 20px;
+}
+
+
+.left-menu .list {
+    margin-top: 16px;
+}
+.left-menu .list li a{
+    padding-left: 8px;
+    display: block;
+    width: 220px;
+    height: 35px;
+    font-size: 16px;
+    line-height: 35px;
+    text-decoration: none;
+    color: #3D1101;
+    border-bottom: 1px solid #3D1101;
+}
+
+.left-menu .list li a:hover{
+    color: #fff;
+    background-color: #3D1101;
+}
+
+.right-content{
+    float: left;
+    margin-left: 2%;
+    width: 68.5%;
+    margin-right: 4%;
+    margin-top: 48px;
+}
+
+.cart #search{
+    border: 2px solid #3D1101;
+    background-color: #efe9e7;
+    background-image: url(../img/lock.svg);
+    background-repeat: no-repeat;
+    background-position: 9px 10px;
+    background-size: 15px 12px;
+    
+    width:65% ;
+    height: 32px;
+    
+}
+
+
+
+
 
