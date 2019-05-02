@@ -15,9 +15,13 @@ $(document).ready(function () {
     $(".icon4").on("click", function (e) {
         $(".icon4").toggleClass("showicon1");
     });
-    
+    $("#btn-send").on("click", function () {
+        window.location.href = "login.html"
+    });
+    $("#sign-up").on("click", function () {
+        window.location.href = "register.html"
+    });
 });
-
 
 
 
