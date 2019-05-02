@@ -4,3 +4,11 @@ $(document).ready(function () {
         $("body").toggleClass("menu-show");
     });
 });
+
+var signUp = document.getElementById("sign-up");
+signUp.addEventListener("click",Toregister,false)
+
+function Toregister (){
+    window.open("register.html");
+}
+
