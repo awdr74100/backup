@@ -77,12 +77,6 @@ img {
     background-repeat: no-repeat;
 }
 
-@media(max-width:480px) {
-    .banner {
-        background-image: url(../img/header_mobile.png);
-    }
-}
-
 .banner-msg{
     position: relative;
     top: 123px;
@@ -97,6 +91,7 @@ img {
     padding-top: 25px;
     color: #fff;
     font-size: 36px;
+    
 }
 
 .banner-msg p{
@@ -104,6 +99,20 @@ img {
     color: #fff;
     font-size: 16px;
     line-height: 23px;
+}
+
+@media(max-width:480px) {
+    .banner {
+        background-image: url(../img/header_mobile.png);
+        
+    }
+    .banner-msg{
+        padding-bottom: 20px;
+    }
+    .banner-msg h2 span{
+        display: block;
+        padding-top: 8px;
+    }
 }
 
 /* banner end */
@@ -183,6 +192,9 @@ img {
         width: 100%;
         background: black;
         
+    }
+    .logo{
+        left: 13px;
     }
     .menu{
         max-height: 0px;
@@ -947,7 +959,7 @@ img {
     color: #fff;
     font-size: 14px;
 }
-@media(max-width:750px){
+@media(max-width:480px){
     .login{
         height: auto;
         padding-bottom: 81px;
@@ -1099,7 +1111,7 @@ img {
     color: #fff;
 }
 
-@media(max-width:450px){
+@media(max-width:480px){
     .register{
         height: auto;
         padding-bottom: 93px;
@@ -1179,7 +1191,7 @@ img {
     background-color: #3D1101;
 }
 
-@media(max-width:450px){
+@media(max-width:480px){
     .cart{
         height: auto;
     }
@@ -1249,7 +1261,7 @@ img {
     font-size: 28px;
 }
 
-@media(max-width:450px){
+@media(max-width:480px){
     .right-search{
         float: none;
         width: 92%;
@@ -1340,16 +1352,19 @@ img {
     top: 60px;
     right: 0px;
 }
-.right-content .td1 h2{
+.right-content .td1 .icon1{
     position: relative;
     top: -110px;
     left: 9px;
     display: block;
     width: 23px;
     height: 20px;
-    background-image: url(../img/heart.svg);
+    background-image: url(../img/h1.svg);
     background-size: 23px 20px;
     background-position: center center;
+}
+.showicon1 {
+    background-image: url(../img/h2.svg) !important;
 }
 
 .right-content .td1 h3{
@@ -1411,7 +1426,7 @@ img {
     height: 120px;;
 }
 
-.right-content .td2 h2{
+.right-content .td2 .icon2{
     position: relative;
     top: -110px;
     left: 9px;
@@ -1480,7 +1495,7 @@ img {
     height: 120px;;
 }
 
-.right-content .td3 h2{
+.right-content .td3 .icon3{
     position: relative;
     top: -110px;
     left: 9px;
@@ -1550,7 +1565,7 @@ img {
     height: 120px;
 }
 
-.right-content .td4 h2{
+.right-content .td4 .icon4{
     position: relative;
     top: -110px;
     left: 9px;
@@ -1600,7 +1615,7 @@ img {
     font-style: normal;
 }
 
-@media(max-width:450px){
+@media(max-width:480px){
     .right-content{
         float: none;
         width: 100%;
