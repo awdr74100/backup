@@ -859,7 +859,11 @@ img {
 
 /* footer end */
 
-/* page2  start*/
+
+
+
+
+/* page[login]  start*/
 
 /* login start */
 
@@ -982,13 +986,14 @@ img {
     }
 }
 
-/* page2 end */
-
 /* login end */
 
+/* page[login]  end*/
  
 
-/* page3 start */
+
+
+/* page[register] start */
 
 /* register start */
 
@@ -1157,14 +1162,17 @@ img {
         margin-bottom: 20px;
     }
 }
-/* page3 end */
 
 /* register end */
 
-/* page4 start */
+/* page[register] end */
+
+
+
+
+/* page[cart] start */
 
 /* cart start */
-
 
 /* left-menu start */
 
@@ -1684,3 +1692,7 @@ img {
 }
 
 /* right-content end */
+
+/* cart end */
+
+/* page[cart] end */
