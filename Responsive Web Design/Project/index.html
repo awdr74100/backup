@@ -34,7 +34,7 @@
         <div class="header">
             <h2 class="logo"><a href="index.html"></a></h2>
             <ul class="menu">
-                <li><a href="">特色</a></li>
+                <li><a href="#trait">特色</a></li>
                 <li><a href="cart.html">主題</a></li>
                 <li><a href="#map">地圖</a></li>
             </ul>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="content">
-            <div class="content1">
+            <div class="content1" id="trait">
                 <div class="title">
                     <h2>客人總是在詢問<span>這麼好吃的秘訣是什麼</span></h2>
                 </div>
@@ -108,11 +108,11 @@
                 <h2></h2>
                 <form action="#" class="input-msg">
                     <p id="nocss">姓名</p>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" placeholder="六角講師吃尾牙" onfocus="this.placeholder = '' " onblur="this.placeholder = '六角講師吃尾牙' ">
                     <p>電話</p>
-                    <input type="tel" name="phone" id="phone">
+                    <input type="tel" name="phone" id="phone" placeholder="02-1234567" onfocus="this.placeholder = '' " onblur="this.placeholder = '02-1234567' ">
                     <p>信箱</p>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" placeholder="test@gmail.com" onfocus="this.placeholder = '' " onblur="this.placeholder = 'test@gmail.com' ">
                     <p>人數</p>
                     <input type="number" name="number" id="number">
                     <p>是否需要素食</p>
