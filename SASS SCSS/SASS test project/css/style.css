@@ -1,0 +1,120 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+html {
+  line-height: 1;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CSS Reset end */
+.wrap {
+  max-width: 960px;
+  position: relative;
+  font-weight: 500;
+}
+
+.header {
+  position: relative;
+  height: 45px;
+  background-color: black;
+}
+
+.header .menu {
+  float: right;
+}
+
+.header .menu li {
+  float: left;
+}
+
+.header .menu li a {
+  display: block;
+  width: 40px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+.content1 {
+  position: relative;
+  height: 450px;
+  color: #fff;
+  font-size: 16px;
+}
+
+@media (max-width: 320px) {
+  .content1 {
+    height: auto;
+  }
+}
+
+@media (max-width: 440px) {
+  .content1 {
+    height: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .content1 {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .content1 {
+    height: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

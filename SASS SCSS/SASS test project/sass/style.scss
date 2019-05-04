@@ -1,0 +1,48 @@
+@import "reset";
+@import"responsive";
+@import"module";
+$color:black;
+$fontsize:10px;
+.wrap{
+    max-width: 960px;
+    position: relative;
+    font-weight: 500;
+}
+
+.header{
+    position: relative;
+    height: 45px;
+    background-color: $color;
+    .menu{
+        float: right;
+        li{
+            float: left;
+            a{
+                display: block;
+                width: 40px;
+                height: 20px;
+                line-height: 20px;
+                font-size: $fontsize*2;
+            }
+        }
+    }
+}
+
+.content1{
+    position: relative;
+    height: 450px;
+    @include footer(#fff,16px);
+    @include iphone5(){
+        height: auto;
+    }
+    @include iphone6(){
+        height: auto;
+    }
+    @include iphone7(){
+        height: auto;
+    }
+    @include pad(){
+        height: auto;
+    }
+    
+}

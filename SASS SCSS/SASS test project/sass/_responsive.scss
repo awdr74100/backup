@@ -1,0 +1,23 @@
+@mixin iphone5 {
+    @media(max-width: 320px){
+        @content
+    }
+}
+
+@mixin iphone6 {
+    @media(max-width: 440px){
+        @content
+    }
+}
+
+@mixin iphone7 {
+    @media(max-width: 560px){
+        @content
+    }
+}
+
+@mixin pad {
+    @media(max-width: 768px){
+        @content
+    }
+}
