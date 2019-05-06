@@ -20,7 +20,8 @@ $(document).ready(function () {
     });
     $("#sign-up").on("click", function () {
         window.location.href = "register.html"
-    });
+    });  
+    
 });
 
 
