@@ -22,10 +22,10 @@ $(document).ready(function () {
 
             if (targetPos - 1 <= scrollPos && (targetPos + targetHeight) > scrollPos) {
                 //   console.log(target);
-                $(".scrollTop").removeClass("active")
-                $(this).addClass("active")
+                $(".scrollTop").removeClass("active");
+                $(this).addClass("active");
             } else {
-                $(this).removeClass("active")
+                $(this).removeClass("active");
             }
         });
     });

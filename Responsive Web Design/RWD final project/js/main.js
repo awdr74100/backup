@@ -20,16 +20,15 @@ $(document).ready(function () {
     });
     $("#sign-up").on("click", function () {
         window.location.href = "register.html"
-    });  
-    
+    });
+    $(".scrollTop").click(function (e) {
+        e.preventDefault();
+        var target = $(this).attr("href");
+        var targetPos = $(target).offset().top;
+        $("html,body").animate({
+            scrollTop: targetPos
+        }, 1000);
+        
+
+    });
 });
-
-
-
-
-
-
-
-
-
-
