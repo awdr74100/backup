@@ -1,7 +1,14 @@
 @import "reset";
 
 // font
-$font-family: "Microsoft JhengHei",PMingLiU,MingLiu,"Segoe UI","Helvetica",Garuda,Arial,sans-serif;
+$font-family: "Microsoft JhengHei",
+PMingLiU,
+MingLiu,
+"Segoe UI",
+"Helvetica",
+Garuda,
+Arial,
+sans-serif;
 $font-size: 16px;
 
 // gutter
@@ -38,33 +45,40 @@ $mobile-size: 779px;
 * {
   box-sizing: border-box;
 }
-body, html {
+
+body,
+html {
   height: 100%;
   line-height: 1.5;
   font-family: $font-family;
 }
+
 h1 {
   font-size: $font-size*3;
 }
+
 h2 {
   font-size: $font-size*2.5;
 }
+
 h3 {
   font-size: $font-size*2;
 }
+
 a {
   color: $brand-primary
 }
 
 //** Grid **//
 .wrap {
-  
+
   overflow: hidden;
   background-image: url(https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?dpr=2&auto=format&fit=crop&w=450&h=750&q=50&cs=tinysrgb&crop=);
   background-position: bottom center;
   background-size: cover;
   background-attachment: fixed;
 }
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -74,6 +88,7 @@ a {
 .row {
   margin-left: -15px;
   margin-right: -15px;
+
   &:after {
     content: "";
     display: table;
@@ -92,20 +107,25 @@ a {
 .col-half {
   width: 50%;
 }
+
 .col-half-center {
   margin-left: 25%;
 }
+
 .col-three-one {
   width: 33.33333%;
 }
+
 .col-three-one-center {
   margin-left: 33.33333%;
 }
+
 .col-quarter {
   width: 25%;
 }
 
 @media (max-width: $mobile-size) {
+
   .col-half,
   .col-three-one,
   .col-quarter {
@@ -113,7 +133,8 @@ a {
     width: 100%;
   }
 
-  .col-half-center, .col-three-one-center {
+  .col-half-center,
+  .col-three-one-center {
     margin-left: 0;
   }
 }
@@ -125,6 +146,7 @@ a {
   left: 0;
   right: 0;
   z-index: $navbar-zindex;
+
   &.navbar-bottom {
     top: auto;
     bottom: 0;
@@ -147,18 +169,24 @@ a {
 .nav-menu {
   margin: 0;
   list-style: none;
+
   li {
     float: left;
   }
+
   a {
     display: block;
     padding: 12px 16px;
     text-decoration: none;
     color: white;
     font-size: $font-size + 2;
-    &:hover, &:active, &:focus {
+
+    &:hover,
+    &:active,
+    &:focus {
       background-color: rgba(black, .05);
     }
+
     &.active {
       box-shadow: 0 -2px 0 $brand-accent inset;
     }
@@ -168,10 +196,14 @@ a {
   .nav-accent {
     color: white;
     background-color: $brand-accent;
-    &:hover, &:active, &:focus {
+
+    &:hover,
+    &:active,
+    &:focus {
       color: white;
       background-color: darken($brand-accent, 15%);
     }
+
     &.active {
       box-shadow: 0 -2px 0 darken($brand-accent, 15%) inset;
     }
@@ -182,11 +214,13 @@ a {
 .section {
   padding: 35px 0;
 }
+
 .section-rotate {
   transform: rotate(-7deg);
   margin-left: -80px;
   margin-right: -80px;
   padding: 35px 80px 35px 80px;
+
   .section-rotate-fixed {
     transform: rotate(7deg);
   }
@@ -198,9 +232,10 @@ a {
   overflow: hidden;
   background-color: rgba(#fafafa, .45);
   border-radius: 3px;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
   position: relative;
 }
+
 .progress-bar {
   position: absolute;
   left: 0;
@@ -212,7 +247,7 @@ a {
   color: #fff;
   text-align: center;
   background-color: $brand-accent;
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
   transition: width 1s ease;
 }
 
@@ -228,6 +263,7 @@ a {
   overflow: hidden;
   transform: rotate(-7deg);
 }
+
 .header-img {
   background-image: url(https://firebasestorage.googleapis.com/v0/b/hexschool-api.appspot.com/o/tutorials%2FRWD%2Fman-for-scroll-demo-light.png?alt=media&token=625670d9-4180-434b-a4bd-c1b1db0d0604);
   background-position: right 0;
@@ -238,6 +274,7 @@ a {
   left: 0;
   right: 0;
 }
+
 .header-text {
   padding: 25px 35px;
   background-color: #555;
@@ -249,7 +286,8 @@ a {
   transform: translateY(-50%);
   z-index: 2;
   box-shadow: 2px 5px 15px rgba(black, .25);
-  & > * {
+
+  &>* {
     transform: rotate(7deg);
   }
 }
@@ -260,20 +298,25 @@ a {
   display: table;
   clear: both;
 }
+
 .h100 {
   height: 100%;
 }
+
 .v-center {
   top: 50%;
   transform: translateY(-50%);
   position: relative;
 }
+
 .relative {
   position: relative;
 }
+
 .pull-left {
   float: left;
 }
+
 .pull-right {
   float: right;
 }
@@ -282,6 +325,7 @@ a {
   border: transparent 2px solid;
   border-radius: 100%;
 }
+
 .border-white {
   border-color: white;
 }
@@ -289,36 +333,47 @@ a {
 .bg-darker {
   background-color: darken($background-color, 5%);
 }
+
 .bg-dark {
   background-color: $brand-dark;
 }
+
 .bg-white {
   background-color: #fff;
 }
+
 .text-primary {
   color: $brand-primary;
 }
+
 .text-success {
   color: $brand-success;
 }
+
 .text-accent {
   color: $brand-accent;
 }
+
 .text-white {
   color: white;
   text-decoration: none;
 }
+
 .text-gray {
   color: $font-color-gray
 }
+
 .text-right {
   text-align: right;
 }
+
 .block {
   display: block;
 }
+
 .box-shadow {
   position: relative;
+
   &:before {
     content: " ";
     position: absolute;
@@ -334,54 +389,68 @@ a {
 .m-b-0 {
   margin-bottom: 0;
 }
+
 .m-t-1 {
   margin-top: $gutter;
 }
+
 .m-t-3 {
   margin-top: $gutter*3;
 }
+
 .m-b-2 {
   margin-bottom: $gutter*2;
 }
+
 .m-b-1 {
   margin-bottom: $gutter*1;
 }
+
 .m-y-1 {
   margin-top: $gutter;
   margin-bottom: $gutter;
 }
+
 .m-y-2 {
   margin-top: $gutter*2;
   margin-bottom: $gutter*2;
 }
+
 .m-y-3 {
   margin-top: $gutter*3;
   margin-bottom: $gutter*3;
 }
+
 .m-x-1 {
   margin-left: $gutter;
   margin-right: $gutter;
 }
+
 .m-x-2 {
   margin-left: $gutter*2;
   margin-right: $gutter*2;
 }
+
 .p-y-1 {
   padding-top: $gutter;
   padding-bottom: $gutter;
 }
+
 .p-y-2 {
   padding-top: $gutter * 2;
   padding-bottom: $gutter * 2;
 }
+
 .p-y-3 {
   padding-top: $gutter * 3;
   padding-bottom: $gutter * 3;
 }
+
 .p-x-3 {
   padding-left: $gutter * 3;
   padding-right: $gutter * 3;
 }
+
 .p-a-3 {
   padding: $gutter * 3;
 }
@@ -399,12 +468,13 @@ a {
 }
 
 // hidden
-@media (max-width: $mobile-size){
+@media (max-width: $mobile-size) {
   .hidden-mobile {
     display: none !important;
   }
 }
-@media (min-width: $mobile-size){
+
+@media (min-width: $mobile-size) {
   .hidden-desktop {
     display: none !important;
   }
@@ -416,6 +486,22 @@ a {
   background-image: linear-gradient(45deg, #59f0ff, $brand-primary);
 }
 
-.footer{
-  height: 500px;
+
+
+
+//animated
+
+.animated {
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translateY(50px);
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.a {
+  transform: translateY()
 }
