@@ -102,3 +102,27 @@ img {
     text-decoration: none;
     color: brown;
 }
+
+@media(max-width:768px){
+    .header{
+        height: auto;
+    }
+
+    .logo{
+        position: relative;
+        width: 64px;
+        margin: 0 auto;
+    }
+    .menu{
+        float: none;
+    }
+
+    .menu li{
+        float: none;
+        width: 100%;
+    }
+
+    .menu li a{
+        width: 100%;
+    }
+}
