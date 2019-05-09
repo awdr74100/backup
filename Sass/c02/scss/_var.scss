@@ -1,0 +1,64 @@
+// font-size
+$font-m:16px;
+$font-l:24px;
+
+// font-color
+$black:#000;
+$blue:#0000FF;
+$white:#fff;
+$red:#ff0000;
+
+
+
+
+body {
+    font-size: $font-m;
+    color: $black;
+}
+
+.header {
+    background-image: url(../header_desktop.png);
+
+    .menu {
+        top: 0;
+
+        .btn {
+            color: $blue;
+        }
+    }
+
+    .banner-title {
+        max-width: 460px;
+        background-color: $red;
+        color: $white;
+        font-size: $font-l;
+
+    }
+
+    .main-menu {
+        background-color: $red;
+        overflow: hidden;
+
+        a {
+            &:hover {
+                background-color: $red;
+            }
+        }
+    }
+}
+
+.content{
+    h2{
+        font-size: $font-l;
+    }
+}
+
+.footer{
+    h3{
+        font-size: $font-l;
+    }
+
+    p{
+        color: $blue;
+    }
+}

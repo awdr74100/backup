@@ -1,0 +1,31 @@
+@import "var";
+
+$base-color:rgb(67, 175, 103);
+
+
+.wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+
+    .td1 {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        background-color: $base-color;
+    }
+
+    .td2 {
+        width: 100px;
+        margin: 20px;
+        height: 100px;
+        background-color: darken($base-color, 20%);
+    }
+
+    .td3 {
+        width: 100px;
+        margin: 20px;
+        height: 100px;
+        background-color: lighten($base-color, 40%);
+    }
+}
