@@ -1,0 +1,61 @@
+.header {
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../asset/img/header_desktop.png);
+  background-repeat: no-repeat;
+}
+
+.header .banner {
+  min-height: 420px;
+}
+
+.header .menu-bg {
+  min-height: 58px;
+  background: #ff0000;
+  position: relative;
+}
+
+.header .menu {
+  top: 0;
+}
+
+.header .menu ul a {
+  display: block;
+}
+
+.header .menu li {
+  color: #fff;
+}
+
+.header .menu li a:hover {
+  font-weight: bolder;
+}
+
+.header .banner-title {
+  max-width: 460px;
+  background: #ff0000;
+  color: #fff;
+}
+
+.header .main-menu {
+  background: #ff0000;
+  overflow: hidden;
+}
+
+.header .main-menu a:hover {
+  background: #ff0000;
+}
+
+.header .hamburger-menu {
+  display: block;
+  float: right;
+}
+
+.header .menu-show {
+  max-height: 165px;
+}
+
+.header .block-md {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */
