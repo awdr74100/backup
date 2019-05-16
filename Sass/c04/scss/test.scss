@@ -1,0 +1,87 @@
+//桌上型電腦
+@mixin pc {
+    @media screen and (max-width:960px) {
+        @content
+    }
+};
+
+
+
+//平板
+@mixin pad {
+    @media screen and (max-width:768px) {
+        @content
+    }
+};
+
+
+
+//手機
+@mixin mobile {
+    @media screen and (max-width:568px) {
+        @content
+    }
+};
+
+
+
+
+
+.header {
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../asset/img/header_desktop.png);
+    background-repeat: no-repeat;
+
+    @include mobile() {
+        background-image: url(../asset/img/header_mobile.png);
+    }
+}
+
+.header {
+    .banner {
+        min-width: 420px;
+    }
+
+    .menu {
+        ul {
+            a {
+                display: block;
+
+                &:hover {
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+
+    .hamburger-menu {
+        display: none;
+
+        @include pad() {
+            display: block;
+            float: right;
+        }
+    }
+}
+
+.content {
+    background: #000;
+
+    @include pc() {
+        float: left;
+        width: 48%;
+    }
+
+    li {
+        color: #000;
+
+        @include pad() {
+            color: #ff0000;
+        }
+
+        @include mobile() {
+            display: none;
+        }
+    }
+}

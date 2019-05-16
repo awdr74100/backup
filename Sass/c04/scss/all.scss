@@ -1,17 +1,22 @@
-$font-m:16px;
-$font-l:24px;
-$base-color:rgba(255, 0, 0, 0.514);
+@import "mixin";
+@import "rwd";
 
-.wrap{
-    max-width: 768px;
-    margin: 0 auto;
-    position: relative;
+
+
+.content h1{
+    @include hide-text();
+}
+
+.content h2{
+    @include color(#ff0000);
 }
 
 .content{
-    position: relative;
-    height: 460px;
-    background-color: $base-color;
-    font-size: $font-m;
+    width: 100%;
+    @include pad(){
+        width: 40%;
+    }
+    @include mobile(){
+        width: 25%;
+    }
 }
-
