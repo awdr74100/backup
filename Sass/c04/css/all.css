@@ -1,0 +1,13 @@
+.wrap {
+  max-width: 768px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content {
+  position: relative;
+  height: 460px;
+  background-color: rgba(255, 0, 0, 0.514);
+  font-size: 16px;
+}
+/*# sourceMappingURL=all.css.map */

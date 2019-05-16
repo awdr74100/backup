@@ -1,0 +1,17 @@
+$font-m:16px;
+$font-l:24px;
+$base-color:rgba(255, 0, 0, 0.514);
+
+.wrap{
+    max-width: 768px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.content{
+    position: relative;
+    height: 460px;
+    background-color: $base-color;
+    font-size: $font-m;
+}
+
