@@ -1,0 +1,117 @@
+@import "reset";
+
+//@mixin
+@mixin vertical-middle($height) {
+    line-height: $height;
+    text-align: center;
+}
+
+
+//variable
+$font-l:24px;
+$font-m:16px;
+$font-s:12px;
+
+//工具選取
+.border-black {
+    border: 1px solid black;
+}
+
+
+
+
+.wrap {
+    max-width: 640px;
+    margin: 50px auto;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+    height: 260px;
+    position: relative;
+
+}
+
+.item {
+    float: left;
+    width: 65%;
+    margin-top: 35px;
+}
+
+.item-list {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.clear-margin-top {
+    margin-top: 0px;
+}
+
+.list-img {
+    width: 96px;
+    height: 96px;
+    float: left;
+
+}
+
+.list-content {
+    float: left;
+    width: 300px;
+    margin-left: 20px;
+
+    h2 {
+        font-size: $font-l;
+    }
+
+    p {
+        padding-top: 10px;
+        font-size: $font-m;
+    }
+}
+
+
+
+
+
+
+.logo {
+    float: right;
+    width: 35%;
+    margin-top: 35px;
+
+}
+
+.logo-img {
+    position: absolute;
+    width: 208px;
+    height: 208px;
+    right: 0px;
+
+}
+
+.logo-list {
+    @include vertical-middle(80px);
+    border: 1px solid black;
+    position: absolute;
+    right: -40px;
+    top: 0px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.footer {
+    height: 100px;
+    position: relative;
+
+}
+
+.f-content-text {
+    @include vertical-middle(100px);
+    font-size: $font-s;
+
+}
