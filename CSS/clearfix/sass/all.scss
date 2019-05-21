@@ -1,0 +1,65 @@
+@import "reset";
+
+@mixin clearfix {
+    &::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin pad {
+    @media screen and(max-width:768px){
+        @content
+    }
+}
+
+.wrap {
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.content {
+    // @include clearfix();
+    position: relative;
+    background-color: black;
+    height: auto;
+    overflow: hidden;
+
+    &1 {
+        float: left;
+        width: 40%;
+        height: 400px;
+        margin: 0 5%;
+        background-color: chocolate;
+        @include pad(){
+            float: none;
+            width: 90%;
+        }
+    }
+
+    &2 {
+        float: left;
+        width: 40%;
+        margin: 0 5%;
+        height: 400px;
+        background-color: cornflowerblue;
+        @include pad(){
+            float: none;
+            width: 90%;
+        }
+    }
+
+    &3 {
+        float: left;
+        width: 40%;
+        margin: 0 5%;
+        height: 400px;
+        background-color: crimson;
+        @include pad(){
+            float: none;
+            width: 90%;
+        }
+    }
+}
