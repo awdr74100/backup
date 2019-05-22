@@ -1,0 +1,52 @@
+@import "reset";
+
+@mixin clearfix {
+    &::after {
+        clear: both;
+        display: block;
+        content: "";
+    }
+}
+
+
+.wrap {
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+    @include clearfix();
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    float: left;
+    background-color: aquamarine;
+}
+
+// @for $i from 1 through 5 {
+//     .box-#{$i}{
+//         background-color: darken(#FFF,$i*10);
+//     }
+// }
+
+@for $i from 1 to 6 {
+    .box-#{$i} {
+        background-color: darken(#FFF, $i*10);
+    }
+}
+
+$thems:(
+    "primary":blue,
+    "danger":red,
+    "happy":orange
+);
+
+// .box-primary{
+//     background-color: map-get($thems , "primary" );
+// }
+
+@each $key,$value in $thems {
+    .box-#{$key}{
+        background-color: $value;
+    }
+}

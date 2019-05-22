@@ -1,0 +1,128 @@
+@import "reset";
+
+.black {
+    background-color: black !important;
+}
+
+$gutter-width:30px;
+$grid-sum:12;
+
+// *{
+//     box-sizing: border-box;
+// }
+
+// gutter可以設置絕對數值
+
+.box {
+    height: 300px;
+    background-color: darkcyan;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.486);
+    margin: 0 auto;
+    max-width: 960px;
+    // padding-left: $gutter-width/2;
+    // padding-right: $gutter-width/2;
+    padding: 0 45px;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    margin-left: -($gutter-width/2);
+    margin-right: -($gutter-width/2);
+    flex-wrap: wrap;
+}
+
+// .col-4 {
+//     position: relative;
+//     max-width: 100%;
+//     flex: 0 0 100%;
+//     padding-left: $gutter-width/2;
+//     padding-right: $gutter-width/2;
+// }
+
+// .col-3 {
+//     position: relative;
+//     max-width: 100%;
+//     flex: 0 0 100%;
+//     padding-left: $gutter-width/2;
+//     padding-right: $gutter-width/2;
+// }
+
+
+
+
+
+// %col {
+//     position: relative;
+//     max-width: 100%;
+//     flex: 0 0 100%;
+//     padding-left: $gutter-width/2;
+//     padding-right: $gutter-width/2;
+// }
+
+// @for $i from 1 to $grid-sum+1 {
+//     .col-#{$i} {
+//         @extend %col;
+//     }
+// }
+
+// @media(min-width:767px) {
+//     @for $i from 1 to $grid-sum+1 {
+//         .col-#{$i} {
+//             max-width: ($i/$grid-sum) * 100%;
+//             flex: 0 0 (100% * ($i/$grid-sum));
+//         }
+//     }
+
+
+// }
+
+
+// .col-4 {
+//     max-width: 33.33333%;
+//     flex: 0 0 33.33333%;
+// }
+
+// .col-3 {
+//     max-width: 25%;
+//     flex: 0 0 25%;
+// }
+
+@for $i from 1 to $grid-sum+1 {
+    .col-#{$i} {
+        position: relative;
+        max-width: ($i/$grid-sum) * 100%;
+        flex: 0 0 (100% * ($i/$grid-sum));
+        padding-left: $gutter-width/2;
+        padding-right: $gutter-width/2;
+    }
+}
+
+
+
+
+
+
+@media(max-width:767px) {
+    @for $i from 1 to $grid-sum+1 {
+        .col-#{$i} {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+    }
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 50px;
+    padding-bottom: 32px;
+}
+
+.a1{
+    justify-content: center;
+    align-items: center;
+}
