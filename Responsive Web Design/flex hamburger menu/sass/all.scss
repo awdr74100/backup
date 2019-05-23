@@ -1,0 +1,92 @@
+@import "reset";
+
+.wrap {
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkcyan;
+}
+
+.logo {
+    display: inline-block;
+    padding: 8px 15px;
+
+    a {
+        width: 30px;
+        height: 30px;
+        display: block;
+        background-image: url(../img/sass-13-1175092.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+
+    }
+}
+
+.showmenu {
+    display: none;;
+    padding: 8px 15px;
+
+    a {
+        width: 30px;
+        height: 30px;
+        display: block;
+        background-image: url(../img/menu.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+
+    }
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-right: 20px;
+
+    a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+@media(max-width:767px){
+    .header{
+        width: 100%;
+        position: fixed;
+        overflow: hidden;
+    }
+    .list{
+        display: block;
+        width: 100%;
+        text-align: center;
+        max-height: 0px;
+        margin: 0px;
+        transition: max-height 0.5s;
+        .item{
+            width: 100%;
+            line-height: 46px;
+            a:hover{
+                color: brown;
+                background-color: cadetblue;
+                transition: all 0.5s;
+            }
+        }
+    }
+    .showmenu{
+        display: inline-block;
+    }
+    .open .list{
+        max-height: 300px;
+    }
+}

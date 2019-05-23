@@ -1,0 +1,165 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+html {
+  line-height: 1;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CSS Reset end */
+.wrap {
+  max-width: 960px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: darkcyan;
+}
+
+.logo {
+  display: inline-block;
+  padding: 8px 15px;
+}
+
+.logo a {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-image: url(../img/sass-13-1175092.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+.showmenu {
+  display: none;
+  padding: 8px 15px;
+}
+
+.showmenu a {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-image: url(../img/menu.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+  margin-right: 20px;
+}
+
+.list a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .header {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+  }
+  .list {
+    display: block;
+    width: 100%;
+    text-align: center;
+    max-height: 0px;
+    margin: 0px;
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+  }
+  .list .item {
+    width: 100%;
+    line-height: 46px;
+  }
+  .list .item a:hover {
+    color: brown;
+    background-color: cadetblue;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .showmenu {
+    display: inline-block;
+  }
+  .open .list {
+    max-height: 300px;
+  }
+}
+/*# sourceMappingURL=all.css.map */
