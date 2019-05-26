@@ -88,19 +88,22 @@
     }
 
     .list {
-        display: block;
+        // display: block;
         width: 100%;
         max-height: 0px;
         transition: max-height 0.5s;
         margin: 0;
+        flex-flow: row wrap;
 
         &__item {
             width: 100%;
             text-align: center;
-            padding: 20px 0px;
+            
 
             a {
+                padding: 20px 0px;
                 &:hover {
+                    background-color: brown;
                     color: darkorange;
                     transition: all 0.5s;
                 }
