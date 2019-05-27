@@ -1,0 +1,50 @@
+.m-banner {
+    position: relative;
+    height: 420px;
+    background-image: url(../img/header_desktop.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.msg {
+    position: relative;
+    top: 123px;
+    margin: 0 auto;
+    max-width: 460px;
+    min-height: 152px;
+    background: rgba(0, 0, 0, 0.35);
+    text-align: center;
+
+    &__title {
+        padding-top: 25px;
+        color: #fff;
+        font-size: 36px;
+    }
+
+    &__content {
+        padding-top: 21px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 23px;
+    }
+}
+
+
+.m-banner {
+    @include iphone() {
+        background-image: url(../img/header_mobile.png);
+    }
+}
+
+.msg {
+    @include iphone() {
+        padding-bottom: 20px;
+    }
+
+    span {
+        @include iphone() {
+            display: block;
+            padding-top: 8px;
+        }
+    }
+}
