@@ -1,0 +1,156 @@
+.p-feature {
+    position: relative;
+    background-color: $bg-color-primary;
+
+    .msg {
+        width: 225px;
+        height: 70px;
+        text-align: center;
+        margin-top: 50px;
+
+        h2 {
+            font-size: $font-m;
+            color: $color-primary;
+            line-height: 32px;
+            font-weight: 500;
+        }
+
+        span {
+            display: block;
+            position: relative;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0%;
+                background-color: #979797;
+                width: 50%;
+                height: 1px;
+            }
+
+            &:before {
+                left: -50%;
+            }
+
+            &:after {
+                right: -50%;
+            }
+        }
+    }
+
+    .img {
+        display: block;
+        width: 200px;
+        height: 200px;
+        background: url(../img/feature_1.png);
+        border-radius: 100px;
+        margin: 31px auto 20px auto;
+    }
+
+
+    .title {
+        font-size: 18px;
+        color: $color-primary;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .content {
+        color: #3D1101;
+        font-weight: 500;
+        line-height: 20px;
+        display: block;
+        font-size: $font-m;
+        text-align: left;
+        max-width: 260px;
+        margin: 11px auto auto auto;
+        padding-bottom: 50px;
+    }
+}
+
+.p-chef {
+    position: relative;
+    background-color: $bg-color-chef;
+
+    .photo {
+        height: 460px;
+        background-image: url(../img/main_chef_brown.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .ex {
+        padding-left: 5px;
+        margin-top: 81px;
+
+        h1 {
+            font-size: $font-m;
+            color: #fff;
+            line-height: 32px;
+        }
+
+        h2 {
+            font-size: $font-s;
+            color: #fff;
+        }
+
+        p {
+            font-size: $font-s;
+            color: #fff;
+            margin-top: 16px;
+            line-height: 22px;
+        }
+    }
+}
+
+.p-evaluation {
+    position: relative;
+    background-color: $bg-color-primary;
+    color: $color-primary;
+
+    .msg {
+        width: 168px;
+        height: 32px;
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: 50px;
+        margin-bottom: 32px;
+    }
+
+    h1 {
+        position: relative;
+        background: url(../img/avatar_1.png);
+        width: 67px;
+        height: 67px;
+        border-radius: 40px;
+    }
+
+    h2 {
+        position: absolute;
+        left: 90px;
+        top: 0px;
+        font-size: 18px;
+        height: 67px;
+        line-height: 67px;
+        font-weight: 500;
+    }
+
+    p {
+        display: block;
+        max-width: 220px;
+        ;
+        margin-left: 80px;
+        font-size: 16px;
+        line-height: 23px;
+        font-weight: 500;
+    }
+
+    h3 {
+        display: block;
+        margin-top: 16px;
+        font-size: 16px;
+        text-align: right;
+        padding-bottom: 50px;
+    }
+}
