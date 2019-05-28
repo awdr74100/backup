@@ -68,6 +68,22 @@ img {
           align-items: flex-end;
 }
 
+.al-ss {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .changeBg1 {
   background: url(../img/feature_2.png) !important;
 }
@@ -304,6 +320,59 @@ img {
   }
 }
 
+.l-footer {
+  position: relative;
+  background-color: #efe9e7;
+  color: #3D1101;
+}
+
+.l-footer h1 {
+  font-size: 24px;
+  margin-top: 50px;
+}
+
+.l-footer p {
+  display: block;
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 50px;
+}
+
+.l-footer .title {
+  font-weight: 900;
+  font-size: 49px;
+  color: #3D1101;
+  letter-spacing: 0px;
+  margin-top: 54px;
+}
+
+.l-footer .google {
+  width: 31px;
+  height: 36px;
+  background: url(../img/google-plus.svg) no-repeat;
+  display: inline-block;
+  margin-top: 22px;
+}
+
+.l-footer .twitter {
+  width: 31px;
+  height: 36px;
+  background: url(../img/twitter.svg) no-repeat;
+  display: inline-block;
+  margin-top: 22px;
+  margin-left: 11px;
+  margin-right: 11px;
+}
+
+.l-footer .fb {
+  width: 31px;
+  height: 36px;
+  background: url(../img/facebook.svg) no-repeat;
+  display: inline-block;
+  margin-top: 22px;
+}
+
 .p-feature {
   position: relative;
   background-color: #efe9e7;
@@ -354,24 +423,6 @@ img {
   margin: 31px auto 20px auto;
 }
 
-.p-feature .img {
-  display: block;
-  width: 200px;
-  height: 200px;
-  background: url(../img/feature_1.png);
-  border-radius: 100px;
-  margin: 31px auto 20px auto;
-}
-
-.p-feature .img {
-  display: block;
-  width: 200px;
-  height: 200px;
-  background: url(../img/feature_1.png);
-  border-radius: 100px;
-  margin: 31px auto 20px auto;
-}
-
 .p-feature .title {
   font-size: 18px;
   color: #3D1101;
@@ -384,7 +435,7 @@ img {
   font-weight: 500;
   line-height: 20px;
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   text-align: left;
   max-width: 260px;
   margin: 11px auto auto auto;
@@ -474,5 +525,109 @@ img {
   font-size: 16px;
   text-align: right;
   padding-bottom: 50px;
+}
+
+.p-map {
+  position: relative;
+  background-color: #f6f4f4;
+  color: #3D1101;
+}
+
+.p-map .msg {
+  margin-top: 50px;
+  width: 216px;
+  height: 64px;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.p-map .map {
+  margin-top: 38px;
+  height: 388px;
+  background: url(../img/Map@2x.png) no-repeat center center;
+  background-size: 462px 388px;
+  margin-bottom: 50px;
+}
+
+.p-map form {
+  margin-top: 38px;
+}
+
+.p-map .lab {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.p-map .input {
+  padding-left: 14px;
+  width: 100%;
+  height: 32px;
+  font-size: 16px;
+  color: #4A4A4A;
+  margin-top: 6px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #ECECEC;
+          box-shadow: inset 0px 1px 0px 0px #ECECEC;
+  border-radius: 3px;
+}
+
+.p-map .select {
+  width: 100px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.p-map .select-mg {
+  margin-right: auto;
+}
+
+.p-map .btn-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-top: 30px;
+  margin-top: 28px;
+}
+
+.p-map .btn-form .btn-cancel {
+  font-size: 14px;
+  width: 70px;
+  height: 32px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 3px;
+  border: none;
+}
+
+.p-map .btn-form .btn-send {
+  font-size: 14px;
+  width: 70px;
+  height: 32px;
+  color: #fff;
+  background: #F56C23;
+  border-radius: 3px;
+  border: none;
+  margin-left: 11px;
 }
 /*# sourceMappingURL=all.css.map */

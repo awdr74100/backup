@@ -154,3 +154,94 @@
         padding-bottom: 50px;
     }
 }
+
+.p-map {
+    position: relative;
+    background-color: $bg-color-minor;
+    color: $color-primary;
+
+    .msg {
+        margin-top: 50px;
+        width: 216px;
+        height: 64px;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .map {
+        margin-top: 38px;
+        height: 388px;
+        background: url(../img/Map@2x.png) no-repeat center center;
+        background-size: 462px 388px;
+        margin-bottom: 50px;
+    }
+
+    form {
+        margin-top: 38px;
+    }
+
+    .lab {
+        display: block;
+        margin-top: 12px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .input {
+        padding-left: 14px;
+        width: 100%;
+        height: 32px;
+        font-size: 16px;
+        color: #4A4A4A;
+        margin-top: 6px;
+        background: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        box-shadow: inset 0px 1px 0px 0px #ECECEC;
+        border-radius: 3px;
+    }
+
+    .select {
+        width: 100px;
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .select-mg {
+        margin-right: auto;
+    }
+
+    .btn-form {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-top: 30px;
+        margin-top: 28px;
+
+        .btn-cancel {
+            font-size: 14px;
+            width: 70px;
+            height: 32px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 3px;
+            border: none;
+        }
+
+        .btn-send {
+            font-size: 14px;
+            width: 70px;
+            height: 32px;
+            color: #fff;
+            background: #F56C23;
+            border-radius: 3px;
+            border: none;
+            margin-left: 11px;
+        }
+    }
+}

@@ -26,7 +26,7 @@
 
 <body>
     <div class="wrap">
-        <!-- 特色 start -->
+        <!-- 餐廳特色 start -->
         <section class="p-feature">
             <div class="container">
                 <div class="row al-center">
@@ -65,7 +65,7 @@
             </div>
 
         </section>
-        <!-- 特色 end -->
+        <!-- 餐廳特色 end -->
         <!-- 主廚介紹 start -->
         <section class="p-chef">
             <div class="container">
@@ -125,6 +125,78 @@
             </div>
         </section>
         <!-- 顧客評價 end -->
+        <!-- 訂單資訊 start -->
+        <section class="p-map">
+            <div class="container">
+                <div class="row al-center">
+                    <div class="msg">
+                        我們的位置不太夠坐<br>要不要先訂位呢？
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="map">
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <form action="#" method="post">
+                            <label for="name" class="lab">姓名</label>
+                            <input type="text" name="name" id="name" class="input" placeholder="六角講師吃尾牙"
+                                onfocus="this.placeholder = '' " onblur="this.placeholder = '六角講師吃尾牙' ">
+                            <label for="phone" class="lab">電話</label>
+                            <input type="tel" name="phone" id="phone" class="input" placeholder="02-1234567"
+                                onfocus="this.placeholder = '' " onblur="this.placeholder = '02-1234567' ">
+                            <label for="email" class="lab">信箱</label>
+                            <input type="email" name="email" id="email" class="input" placeholder="test@gmail.com"
+                                onfocus="this.placeholder = '' " onblur="this.placeholder = 'test@gmail.com' ">
+                            <label for="nubmer" class="lab">人數</label>
+                            <input type="number" name="number" id="number" class="input">
+                            <label for="select" class="lab">是否需要素食</label>
+                            <div class="select">
+                                <label for="select-Yes">是</label>
+                                <input type="radio" name="select" id="select-Yes" checked="true" class="select-mg">
+                                <label for="select-No">否</label>
+                                <input type="radio" name="select" id="select-No">
+                            </div>
+                            <div class="btn-form">
+                                <input type="button" value="取消" id="btn-cancel" class="btn-cancel">
+                                <input type="button" value="送出" id="btn-send" class="btn-send">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 訂單資訊 end -->
+        <!-- 頁腳 start -->
+        <footer class="l-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <h1>關於 六角西餐廳</h1>
+                        <p>Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat augue enim,
+                            pulvinar lobortis nibh lacinia at. </p>
+                    </div>
+                    <div class="col-4">
+                        <h1>聯絡方式</h1>
+                        <p>• 高雄市中正五路到底</br>
+                            • +886 886 886</br>
+                            • service@hexschool.com</p>
+                    </div>
+                    <div class="col-4 al-ss">
+                        <div>
+                            <h1 class="title">六角西餐廳</h1>
+                            <h2 class="google"></h2>
+                            <h2 class="twitter"></h2>
+                            <h2 class="fb"></h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- 頁腳 end -->
     </div>
 
     <script src="js/main.js"></script>

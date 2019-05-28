@@ -1,7 +1,16 @@
 .al-center{
     justify-content: center;
-    align-items: flex-end
+    align-items: flex-end;
 }
+
+.al-ss{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+
 
 .changeBg1{
     background: url(../img/feature_2.png) !important;
