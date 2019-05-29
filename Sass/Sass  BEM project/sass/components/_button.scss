@@ -1,0 +1,47 @@
+.btn {
+    font-size: 14px;
+    width: 70px;
+    height: 32px;
+    border-radius: 3px;
+    border: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.btn-minor {
+    color: #fff;
+    background: #F56C23;
+}
+
+.btn-login {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 40%;
+    background: #F56C23;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.btn-register {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 40%;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+    color: #fff;
+}
+
+.btn-submit {
+    position: absolute;
+    bottom: 15px;
+    right: 17px;
+    width: 125px;
+    height: 32px;
+    background: #F56C23;
+    color: #fff;
+}
