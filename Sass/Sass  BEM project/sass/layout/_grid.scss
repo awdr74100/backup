@@ -33,4 +33,25 @@ $grid-sum:12;
     }
 }
 
+@media(max-width:767px) {
+    // @for $i from 1 to $grid-sum+1 {
+    //     .col-#{$i} {
+    //         max-width: 100%;
+    //         flex: 0 0 100%;
+    //     }
+    // }
+    .container{
+        padding-left: $gutter-width/2;
+        padding-right: $gutter-width/2;
+    }
+}
+@media(max-width:680px){
+    @for $i from 1 to $grid-sum+1 {
+        .col-#{$i} {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+    }
+}
+
 // grid system end

@@ -34,6 +34,9 @@
                 background-color: #979797;
                 width: 50%;
                 height: 1px;
+                @include pad(){
+                    height: 0px;
+                }
             }
 
             &:before {
@@ -76,4 +79,18 @@
 .mt-35{
     margin-top: 35px;
 }
+
+.mt-48{
+    margin-top: 48px;
+}
+
+.ml-0{
+    margin-left: 0px !important;
+}
+
+.mr-0{
+    margin-right: 0px !important;
+}
+
+
 

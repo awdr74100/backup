@@ -6,9 +6,14 @@
 
 .footer {
     margin-top: 50px;
-
+    &--active{
+        @include phone (){
+            margin-top: 0px;
+        }
+    }
     &__title {
         font-size: $font-l;
+        
     }
 
     &__content {
@@ -23,6 +28,7 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-end;
+        padding-bottom: 50px;
 
         &__logo {
             width: 100%;

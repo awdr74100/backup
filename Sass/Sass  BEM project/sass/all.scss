@@ -3,7 +3,9 @@
 
 // helpers
 @import "helpers/variable";
+@import "helpers/mixin";
 @import "helpers/tool";
+
 
 // components
 @import "components/button";
@@ -11,6 +13,11 @@
 @import "components/navbar";
 @import "components/form-login";
 @import "components/form-register";
+@import "components/sidebar";
+@import "components/searchbar";
+@import "components/group-card";
+@import "components/ribbon";
+@import "components/card";
 
 // layout
 @import "layout/grid";
@@ -21,3 +28,4 @@
 @import "pages/home";
 @import "pages/login";
 @import "pages/register";
+@import "pages/cart";

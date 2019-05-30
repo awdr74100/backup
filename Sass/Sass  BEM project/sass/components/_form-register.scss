@@ -11,6 +11,9 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-flow: row wrap;
+    @include phone(){
+        margin: 0px 10px;
+    }
 
     &__title {
         width: 100%;
@@ -29,6 +32,10 @@
         margin-top: 16px;
         padding-left: 15px;
 
+        @include phone() {
+            width: 100%;
+        }
+
         span {
             font-size: 14px;
             line-height: 18px;
@@ -38,6 +45,10 @@
     &__form {
         width: 50%;
         padding-left: 15px;
+
+        @include phone() {
+            width: 100%;
+        }
 
         &__label {
             display: block;
@@ -58,15 +69,18 @@
             border: 1px solid #CCCCCC;
             box-shadow: inset 0px 1px 0px 0px #ECECEC;
             border-radius: 3px;
-            &--password{
+
+            &--password {
                 background-image: url(../img/lock.svg);
             }
-            &--check{
+
+            &--check {
                 margin-top: 15px;
                 background-image: url(../img/lock.svg);
             }
         }
-        .sure{
+
+        .sure {
             display: block;
             font-size: 14px;
             color: #FF5E45;

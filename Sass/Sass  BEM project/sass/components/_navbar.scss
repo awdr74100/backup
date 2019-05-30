@@ -8,14 +8,30 @@
     justify-content: flex-end;
     align-items: center;
     flex-flow: row wrap;
-
+    @include phone(){
+        position: fixed;
+        width: 100%;
+        background-color: black;
+    }
     .list{
         display: flex;
         flex-flow: row wrap;
         width: 30%;
+        @include pad(){
+            width: 40%;
+        }
+        @include phone(){
+            width: 100%;
+            max-height: 0px;
+            overflow: hidden;
+            transition:max-height 0.5s;
+        }
         &__item{
             display: inline-block;
             width: 33.33333%;
+            @include phone(){
+                width: 100%;
+            }
         }
         a{
             color: $color-minor;
@@ -35,7 +51,9 @@
     position: absolute;
     top: 16px;
     left: 40px;
-
+    @include pad(){
+        left:10px;
+    }
     a {
         display: block;
         background: url(../img/logo_w@svg.svg);
@@ -46,7 +64,7 @@
 
 .mobile-icon{
     width: 36px;
-    margin: 16px 40px 16px 0px;
+    margin: 16px 20px 16px 0px;
     display: none;
     &:before,&:after{
         content: "";
@@ -58,5 +76,25 @@
         box-shadow: 0px 10px 0 #fff;
         margin-bottom: 16px;
     }
+    @include phone(){
+        display: inline-block;
+    }
 }
 
+
+// 手機板過場動畫
+.mobile .m-navbar .list{
+    max-height: 300px;
+}
+
+.mobile .mobile-icon{
+    &:before{
+        box-shadow: 0 0 0 #fff;
+        transform: translateY(10px) rotate(45deg);
+        transition: transform 0.3s;
+    }
+    &:after{
+        transform: translateY(-10px) rotate(-45deg);
+        transition: transform 0.3s;
+    }
+}

@@ -5,7 +5,7 @@
 
 .feature {
     margin-top: 31px;
-
+    
     &__img {
         display: block;
         width: 200px;
@@ -41,6 +41,12 @@
         max-width: 260px;
         margin: 11px auto auto auto;
         padding-bottom: 50px;
+        @include phone(){
+            padding-bottom: 0px;
+        }
+        &--active{
+            padding-bottom: 50px;
+        }
     }
 }
 
@@ -60,6 +66,9 @@
     &__content {
         padding-left: 5px;
         margin-top: 81px;
+        @include phone(){
+            margin: 30px 0px;
+        }
 
         h1 {
             font-size: $font-m;
@@ -131,6 +140,12 @@
         font-size: $font-xs;
         text-align: right;
         padding-bottom: 50px;
+        @include phone(){
+            padding-bottom: 0px;
+        }
+        &--active{
+            padding-bottom: 57px;
+        }
     }
 }
 
@@ -143,7 +158,11 @@
 .position {
     margin-top: 38px;
     margin-bottom: 50px;
-
+    &--active{
+        @include phone(){
+            margin-top: 0px;
+        }
+    }
     &__img {
         height: 388px;
         background: url(../img/Map@2x.png) no-repeat center center;

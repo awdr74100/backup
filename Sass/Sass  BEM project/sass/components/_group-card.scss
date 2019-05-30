@@ -1,0 +1,15 @@
+.m-group-card{
+    width: 100%;
+    position: relative;
+}
+
+.group-card{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    @include phone(){
+        justify-content: center;
+    }
+}
+

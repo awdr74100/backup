@@ -1,0 +1,88 @@
+.card {
+    width: 220px;
+    height: 280px;
+    margin-right: 20px;
+    margin-top: 26px;
+    background: #EFE9E7;
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+    text-align: center;
+    font-weight: 500;
+    &--active{
+        margin-right: 0px;
+    }
+    @include pad(){
+        margin-right: 0px;
+    }
+
+    &__img {
+        position: relative;
+        display: block;
+        background-image: url(../img/product_1.png);
+        background-position: center center;
+        width: 100%;
+        height: 120px;
+        &--img2{
+            background-image: url(../img/product_2.png);
+        }
+        &--img3{
+            background-image: url(../img/product_3.png);
+        }
+        &--img4{
+            background-image: url(../img/product_4.png);
+        }
+    }
+
+    &__icon {
+        position: relative;
+        top: -110px;
+        left: 9px;
+        display: block;
+        width: 23px;
+        height: 20px;
+        background-image: url(../img/heart.svg);
+        background-size: 23px 20px;
+        background-position: center center;
+    }
+
+    &__title {
+        margin-top: -9px;
+        font-size: 20px;
+    }
+
+    &__content {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    &__price {
+        display: block;
+        width: 91px;
+        height: 24px;
+        font-size: 20px;
+        font-weight: 700;
+        padding-top: 20px;
+        margin: 8px auto 40px auto;
+        border-top: 1px solid #3D1101;
+
+        i {
+            font-style: italic;
+        }
+    }
+
+    &__btn {
+        width: 90%;
+        height: 28px;
+        border: 2px solid #FF5E45;
+        border-radius: 3px;
+        background-color: #efe9e7;
+        text-align: center;
+        color: #FF5E45;
+        font-size: 16px;
+
+        i {
+            font-size: 12px;
+            font-style: normal;
+        }
+    }
+
+}
