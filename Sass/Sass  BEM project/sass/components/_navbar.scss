@@ -58,11 +58,13 @@
         display: block;
         background-color: #fff;
         height: 4px;
+        transition: all 0.3s;
     }
 
     &:before {
         box-shadow: 0px 10px 0 #fff;
         margin-bottom: 16px;
+        transition: all 0.3s;
     }
 }
 
