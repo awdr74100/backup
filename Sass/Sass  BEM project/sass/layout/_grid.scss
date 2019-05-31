@@ -33,7 +33,7 @@ $grid-sum:12;
     }
 }
 
-@media(max-width:767px) {
+@media(max-width:768px) {
     // @for $i from 1 to $grid-sum+1 {
     //     .col-#{$i} {
     //         max-width: 100%;
@@ -45,7 +45,7 @@ $grid-sum:12;
         padding-right: $gutter-width/2;
     }
 }
-@media(max-width:680px){
+@media(max-width:720px){
     @for $i from 1 to $grid-sum+1 {
         .col-#{$i} {
             max-width: 100%;

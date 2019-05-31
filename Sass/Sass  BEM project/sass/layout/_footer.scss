@@ -6,14 +6,9 @@
 
 .footer {
     margin-top: 50px;
-    &--active{
-        @include phone (){
-            margin-top: 0px;
-        }
-    }
+
     &__title {
         font-size: $font-l;
-        
     }
 
     &__content {
@@ -59,3 +54,16 @@
         }
     }
 }
+
+// pad breakpoint
+@media screen and (max-width:768px) {}
+
+// major breakpoint
+@media screen and (max-width:720px) {
+    .footer--active {
+        margin-top: 0px;
+    }
+}
+
+// phone breakpoint
+@media screen and (max-width:480px) {}

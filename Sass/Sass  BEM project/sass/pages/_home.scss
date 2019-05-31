@@ -40,13 +40,13 @@
         text-align: left;
         max-width: 260px;
         margin: 11px auto auto auto;
-        padding-bottom: 50px;
-        @include phone(){
-            padding-bottom: 0px;
-        }
-        &--active{
-            padding-bottom: 50px;
-        }
+        // padding-bottom: 50px;
+        // @include phone(){
+        //     padding-bottom: 0px;
+        // }
+        // &--active{
+        //     padding-bottom: 50px;
+        // }
     }
 }
 
@@ -66,9 +66,6 @@
     &__content {
         padding-left: 5px;
         margin-top: 81px;
-        @include phone(){
-            margin: 30px 0px;
-        }
 
         h1 {
             font-size: $font-m;
@@ -139,13 +136,6 @@
         margin-top: 16px;
         font-size: $font-xs;
         text-align: right;
-        padding-bottom: 50px;
-        @include phone(){
-            padding-bottom: 0px;
-        }
-        &--active{
-            padding-bottom: 57px;
-        }
     }
 }
 
@@ -157,12 +147,11 @@
 
 .position {
     margin-top: 38px;
-    margin-bottom: 50px;
-    &--active{
-        @include phone(){
-            margin-top: 0px;
-        }
-    }
+    // &--active{
+    //     @include phone(){
+    //         margin-top: 0px;
+    //     }
+    // }
     &__img {
         height: 388px;
         background: url(../img/Map@2x.png) no-repeat center center;
@@ -204,3 +193,17 @@
         margin-top: 28px;
     }
 }
+
+// pad breakpoint
+@media screen and (max-width:768px) {}
+
+// major breakpoint
+@media screen and (max-width:720px) {
+    .chef__content{
+        margin: 30px 0px;
+        padding: 0px 31px;
+    }
+}
+
+// phone breakpoint
+@media screen and (max-width:480px) {}

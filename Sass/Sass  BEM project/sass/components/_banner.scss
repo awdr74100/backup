@@ -4,10 +4,6 @@
     background-image: url(../img/header_desktop.png);
     background-position: center center;
     background-repeat: no-repeat;
-
-    @include phone () {
-        background-image: url(../img/header_mobile.png);
-    }
 }
 
 .bannerMsg {
@@ -18,10 +14,6 @@
     min-height: 152px;
     background: $bg-color-alpha;
     text-align: center;
-
-    @include phone () {
-        padding-bottom: 20px;
-    }
 
     &__title {
         padding-top: 25px;
@@ -35,9 +27,24 @@
         font-size: $font-xs;
         line-height: 23px;
     }
+}
 
-    span {
-        @include phone () {
+// pad breakpoint
+@media screen and (max-width:768px) {}
+
+// major breakpoint
+@media screen and (max-width:720px) {}
+
+// phone breakpoint
+@media screen and (max-width:480px) {
+    .m-banner {
+        background-image: url(../img/header_mobile.png);
+    }
+
+    .bannerMsg {
+        padding-bottom: 20px;
+
+        span {
             display: block;
             padding-top: 8px;
         }
