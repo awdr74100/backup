@@ -1,101 +1,23 @@
-// .ver-end{
-//     align-items: flex-end;
-// }
-.hor-cen {
+.align-center {
     justify-content: center;
-
-}
-
-.section-head {
-    text-align: center;
-    margin-top: 50px;
-
-    h1 {
-        font-size: 24px;
-        line-height: 30px;
-        font-weight: 500;
-    }
-
-    h2 {
-        font-size: $font-m;
-        color: $color-primary;
-        line-height: 32px;
-        font-weight: 500;
-
-        span {
-            display: block;
-            position: relative;
-
-            &:before,
-            &:after {
-                content: '';
-                position: absolute;
-                top: 0%;
-                background-color: #979797;
-                width: 50%;
-                height: 1px;
-                @include pad(){
-                    height: 0px;
-                }
-            }
-
-            &:before {
-                left: -50%;
-            }
-
-            &:after {
-                right: -50%;
-            }
-        }
-    }
-
-    h3 {
-        font-size: 48px;
-        font-weight: 900;
-
-        span {
-            display: block;
-            margin-top: 5px;
-            font-size: 20px;
-            font-weight: 700;
-
-        }
-    }
 }
 
 .ml-11 {
     margin-left: 11px;
 }
 
+.pb-50 {
+    padding-bottom: 50px !important;
+}
+
 .mr-auto {
     margin-right: auto;
 }
 
-.ml-mr-11 {
-    margin-left: 11px;
-    margin-right: 11px;
-}
-
-.mt-35{
+.mt-35 {
     margin-top: 35px;
 }
 
-.mt-48{
+.mt-48 {
     margin-top: 48px;
 }
-
-.ml-0{
-    margin-left: 0px !important;
-}
-
-.mr-0{
-    margin-right: 0px !important;
-}
-
-.mb-50{
-    padding-bottom: 50px !important;
-}
-
-
-
-

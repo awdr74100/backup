@@ -1,16 +1,13 @@
-.m-sidebar{
+.m-sidebar {
     font-weight: 500;
 }
 
 .sidebar {
     height: 698px;
     font-weight: 500;
-    @media screen and (max-width:680px) {
-        height: auto;;
-    }
 
     &__title {
-        font-size: 20px;
+        font-size: $font-m;
     }
 
     &__list {
@@ -27,10 +24,10 @@
         display: block;
         width: 100%;
         height: 35px;
-        font-size: 16px;
+        font-size: $font-xs;
         line-height: 35px;
         text-decoration: none;
-        color: #3D1101;
+        color: $color-primary;
         border-bottom: 1px solid #3D1101;
 
         &:hover {
@@ -39,3 +36,16 @@
         }
     }
 }
+
+// pad breakpoint
+@media screen and (max-width:768px) {}
+
+// major breakpoint
+@media screen and (max-width:720px) {
+    .sidebar {
+        height: auto;
+    }
+}
+
+// phone breakpoint
+@media screen and (max-width:480px) {}

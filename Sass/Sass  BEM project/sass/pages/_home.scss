@@ -5,7 +5,7 @@
 
 .feature {
     margin-top: 31px;
-    
+
     &__img {
         display: block;
         width: 200px;
@@ -40,13 +40,6 @@
         text-align: left;
         max-width: 260px;
         margin: 11px auto auto auto;
-        // padding-bottom: 50px;
-        // @include phone(){
-        //     padding-bottom: 0px;
-        // }
-        // &--active{
-        //     padding-bottom: 50px;
-        // }
     }
 }
 
@@ -147,23 +140,21 @@
 
 .position {
     margin-top: 38px;
-    // &--active{
-    //     @include phone(){
-    //         margin-top: 0px;
-    //     }
-    // }
+
     &__img {
         height: 388px;
         background: url(../img/Map@2x.png) no-repeat center center;
         background-size: 462px 388px;
     }
-    &__data__label{
+
+    &__data__label {
         display: block;
         margin-top: 12px;
         font-weight: 600;
         font-size: $font-xxs;
     }
-    &__data__input{
+
+    &__data__input {
         padding-left: 14px;
         width: 100%;
         height: 32px;
@@ -175,7 +166,8 @@
         box-shadow: inset 0px 1px 0px 0px #ECECEC;
         border-radius: 3px;
     }
-    &__data__select{
+
+    &__data__select {
         width: 100px;
         margin-top: 10px;
         font-weight: 600;
@@ -184,8 +176,9 @@
         justify-content: flex-start;
         align-items: center;
     }
-    &__data__btn{
-        
+
+    &__data__btn {
+
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
@@ -199,7 +192,7 @@
 
 // major breakpoint
 @media screen and (max-width:720px) {
-    .chef__content{
+    .chef__content {
         margin: 30px 0px;
         padding: 0px 31px;
     }

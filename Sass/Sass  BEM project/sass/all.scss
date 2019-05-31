@@ -3,7 +3,6 @@
 
 // helpers
 @import "helpers/variable";
-@import "helpers/mixin";
 @import "helpers/tool";
 
 
@@ -11,6 +10,7 @@
 @import "components/button";
 @import "components/banner";
 @import "components/navbar";
+@import "components/senction-head";
 @import "components/form-login";
 @import "components/form-register";
 @import "components/sidebar";

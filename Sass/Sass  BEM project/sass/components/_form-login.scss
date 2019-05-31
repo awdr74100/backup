@@ -11,7 +11,7 @@
     z-index: 10;
 
     &__title {
-        font-size: 18px;
+        font-size: $font-s;
         font-weight: 900;
         text-align: center;
         padding-top: 12px;
@@ -19,7 +19,7 @@
 
     &__label {
         display: block;
-        font-size: 16px;
+        font-size: $font-xs;
         font-weight: 600;
         margin-top: 15px;
         margin-left: 15px;
@@ -45,10 +45,23 @@
     }
 
     .forget {
-        font-size: 14px;
+        font-size: $font-xxs;
         color: #FF5E45;
         margin-top: 1px;
         margin-left: 15px;
         text-decoration: none;
+
+        &:hover {
+            color: rgb(180, 80, 26);
+        }
     }
 }
+
+// pad breakpoint
+@media screen and (max-width:768px) {}
+
+// major breakpoint
+@media screen and (max-width:720px) {}
+
+// phone breakpoint
+@media screen and (max-width:480px) {}

@@ -39,12 +39,15 @@
             <!-- 橫幅廣告 end -->
             <!-- 導覽列 start -->
             <div class="m-navbar">
-                <div class="desktop-logo"><a href="#"></a></div>
+                <div class="desktop-logo"><a href="index.html"></a></div>
                 <div class="mobile-icon"></div>
                 <ul class="list">
-                    <li class="list__item"><a href="#">特色</a></li>
-                    <li class="list__item"><a href="#">主廚</a></li>
-                    <li class="list__item"><a href="#">地圖</a></li>
+                    <li class="list__item"><a href="login.html"><i class="fas fa-user-cog"></i>
+                            會員專區</a></li>
+                    <li class="list__item"><a href="cart.html"><i class="fas fa-cart-arrow-down"></i>
+                            線上購物</a></li>
+                    <li class="list__item"><a href="#location"><i class="fas fa-location-arrow"></i>
+                            店鋪情報</a></li>
                 </ul>
             </div>
             <!-- 導覽列 end -->
@@ -53,21 +56,22 @@
         <!-- 用戶登入 start -->
         <section class="p-login">
             <div class="container">
-                <div class="row hor-cen">
+                <div class="row m-section-head">
                     <div class="section-head">
                         <h3>六角西餐廳<span>享受美食好味道</span></h3>
                     </div>
                 </div>
-                <div class="row hor-cen">
+                <div class="row align-center">
                     <form action="#" method="post" class="m-form-login mt-35">
                         <div class="login">
                             <h2 class="login__title">LOGIN</h2>
                             <label for="email" class="login__label">Email Address*</label>
                             <input type="email" name="email" id="email" class="login__input">
                             <label for="password" class="login__label">Password*</label>
-                            <input type="password" name="password" id="password" class="login__input login__input--lock">
+                            <input type="password" name="password" id="password"
+                                class="login__input login__input--lock">
                             <a href="#" class="forget">忘記密碼？</a>
-                            <input type="submit" value="註冊" class="btn btn-register">
+                            <input type="submit" value="註冊" class="btn btn-register js-link-register">
                             <input type="submit" value="登入" class="btn btn-login">
                         </div>
 
@@ -75,7 +79,7 @@
                 </div>
             </div>
         </section>
-         <!-- 用戶登入 end -->
+        <!-- 用戶登入 end -->
         <!-- 頁尾 start -->
         <footer class="l-footer">
             <div class="container">

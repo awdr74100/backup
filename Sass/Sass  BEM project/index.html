@@ -39,12 +39,15 @@
             <!-- 橫幅廣告 end -->
             <!-- 導覽列 start -->
             <div class="m-navbar">
-                <div class="desktop-logo"><a href="#"></a></div>
+                <div class="desktop-logo"><a href="index.html"></a></div>
                 <div class="mobile-icon"></div>
                 <ul class="list">
-                    <li class="list__item"><a href="#">特色</a></li>
-                    <li class="list__item"><a href="#">主廚</a></li>
-                    <li class="list__item"><a href="#">地圖</a></li>
+                    <li class="list__item"><a href="login.html"><i class="fas fa-user-cog"></i>
+                            會員專區</a></li>
+                    <li class="list__item"><a href="cart.html"><i class="fas fa-cart-arrow-down"></i>
+                            線上購物</a></li>
+                    <li class="list__item"><a href="#location"><i class="fas fa-location-arrow"></i>
+                            店鋪情報</a></li>
                 </ul>
             </div>
             <!-- 導覽列 end -->
@@ -53,12 +56,12 @@
         <!-- 餐廳特色 start -->
         <section class="p-feature">
             <div class="container">
-                <div class="row hor-cen">
+                <div class="row m-section-head">
                     <div class="section-head">
                         <h2>客人總是在詢問<span>這麼好吃的秘訣是什麼</span></h2>
                     </div>
                 </div>
-                <div class="row mb-50">
+                <div class="row pb-50">
                     <div class="col-4 feature">
                         <h1 class="feature__img"></h1>
                         <h2 class="feature__title">台灣本土蔬菜</h2>
@@ -84,7 +87,7 @@
                     <div class="col-4 feature">
                         <h1 class="feature__img feature__img--img3"></h1>
                         <h2 class="feature__title">退於專業不能退讓</h2>
-                        <p class="feature__content feature__content--active">Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce
+                        <p class="feature__content">Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce
                             lorem leo,
                             vehicula at
                             nibh
@@ -127,12 +130,12 @@
         <!-- 顧客評價 start -->
         <section class="p-evaluation">
             <div class="container">
-                <div class="row hor-cen">
+                <div class="row m-section-head">
                     <div class="section-head">
                         <h1>聽聽別人的感想</h1>
                     </div>
                 </div>
-                <div class="row mb-50">
+                <div class="row pb-50">
                     <div class="col-4 evaluation">
                         <h1 class="evaluation__img"></h1>
                         <h2 class="evaluation__name">高雄一口吃</h2>
@@ -156,19 +159,19 @@
         </section>
         <!-- 顧客評價 end -->
         <!-- 訂單資訊 start -->
-        <section class="p-position">
+        <section class="p-position" id="location">
             <div class="container">
-                <div class="row hor-cen">
+                <div class="row m-section-head">
                     <div class="section-head">
                         <h1>我們的位置不太夠坐<br>要不要先訂位呢？</h1>
                     </div>
                 </div>
-                <div class="row mb-50">
+                <div class="row pb-50">
                     <div class="col-6 position">
                         <div class="position__img">
                         </div>
                     </div>
-                    <div class="col-6 position position--active">
+                    <div class="col-6 position">
                         <form action="#" method="post" class="position__data">
                             <label for="name" class="position__data__label">姓名</label>
                             <input type="text" name="name" id="name" class="position__data__input" placeholder="六角講師吃尾牙"

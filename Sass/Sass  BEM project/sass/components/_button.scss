@@ -4,16 +4,23 @@
     height: 32px;
     border-radius: 3px;
     border: none;
+    cursor: pointer;
 }
 
 .btn-primary {
     color: #fff;
     background: rgba(0, 0, 0, 0.35);
+    &:hover{
+        background:rgba(0, 0, 0, 0.568);
+    }
 }
 
 .btn-minor {
     color: #fff;
     background: #F56C23;
+    &:hover{
+        background: rgb(180, 80, 26);
+    }
 }
 
 .btn-login {
@@ -24,6 +31,9 @@
     background: #F56C23;
     border-radius: 3px;
     color: #fff;
+    &:hover{
+        background: rgb(180, 80, 26);
+    }
 }
 
 .btn-register {
@@ -34,6 +44,9 @@
     background: rgba(0, 0, 0, 0.35);
     border-radius: 3px;
     color: #fff;
+    &:hover{
+        background:rgba(0, 0, 0, 0.568);
+    }
 }
 
 .btn-submit {
@@ -44,4 +57,7 @@
     height: 32px;
     background: #F56C23;
     color: #fff;
+    &:hover{
+        background: rgb(180, 80, 26);
+    }
 }

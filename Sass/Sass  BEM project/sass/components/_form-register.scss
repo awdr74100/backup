@@ -11,14 +11,11 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-flow: row wrap;
-    @include phone(){
-        margin: 0px 10px;
-    }
 
     &__title {
         width: 100%;
         padding: 0px;
-        font-size: 18px;
+        font-size: $font-s;
         padding-top: 11px;
         font-weight: 900;
         text-align: center;
@@ -32,11 +29,9 @@
         margin-top: 16px;
         padding-left: 15px;
 
-        @include phone() {
-            width: 100%;
-        }
-
         span {
+            display: block;
+            margin-top: 7px;
             font-size: 14px;
             line-height: 18px;
         }
@@ -45,10 +40,6 @@
     &__form {
         width: 50%;
         padding-left: 15px;
-
-        @include phone() {
-            width: 100%;
-        }
 
         &__label {
             display: block;
@@ -87,7 +78,32 @@
             margin-top: 1px;
             text-decoration: none;
             margin-bottom: 77px;
+
+            &:hover {
+                color: rgb(180, 80, 26);
+            }
         }
 
     }
 }
+
+// pad breakpoint
+@media screen and (max-width:768px) {}
+
+// major breakpoint
+@media screen and (max-width:720px) {
+    .register {
+        margin: 0 10px;
+
+        &__clause {
+            width: 100%;
+        }
+
+        &__form {
+            width: 100%;
+        }
+    }
+}
+
+// phone breakpoint
+@media screen and (max-width:480px) {}
