@@ -1,0 +1,42 @@
+.ribbon {
+    top: -10px;
+    right: -10px;
+    position: absolute;
+    width: 220px;
+    height: 120px;
+    overflow: hidden;
+
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        border: 5px solid #078f6d;
+    }
+
+    &:before {
+        top: 60px;
+        right: 0px;
+    }
+
+    &:after {
+        top: 0px;
+        right: 60px;
+    }
+
+    &__content {
+        width: 260px;
+        height: 25px;
+        font-weight: 700;
+        padding-top: 5px;
+        font-size: $font-xxs;
+        background-color: #00CC99;
+        text-align: center;
+        color: #fff;
+        transform: rotate(-315deg);
+        position: absolute;
+        top: 15px;
+        left: 65px;
+        z-index: 10;
+    }
+}

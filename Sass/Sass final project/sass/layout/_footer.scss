@@ -1,0 +1,69 @@
+.l-footer {
+    position: relative;
+    background-color: $bg-color-primary;
+    color: $color-primary;
+}
+
+.footer {
+    margin-top: 50px;
+
+    &__title {
+        font-size: $font-l;
+    }
+
+    &__content {
+        display: block;
+        margin-top: 16px;
+        font-size: $font-xs;
+        line-height: 24px;
+        margin-bottom: 50px;
+    }
+
+    &__share {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        padding-bottom: 50px;
+
+        &__logo {
+            width: 100%;
+            text-align: right;
+            font-weight: 900;
+            font-size: 49px;
+            color: #3D1101;
+            letter-spacing: 0px;
+        }
+
+        &__icon {
+            width: 31px;
+            height: 36px;
+            display: inline-block;
+            margin-top: 22px;
+
+            &--google {
+                background: url(../img/google-plus.svg) no-repeat;
+            }
+
+            &--twitter {
+                background: url(../img/twitter.svg) no-repeat;
+            }
+
+            &--fb {
+                background: url(../img/facebook.svg) no-repeat;
+            }
+        }
+    }
+}
+
+// pad breakpoint
+@media screen and (max-width:768px) {}
+
+// major breakpoint
+@media screen and (max-width:720px) {
+    .footer--active {
+        margin-top: 0px;
+    }
+}
+
+// phone breakpoint
+@media screen and (max-width:480px) {}
