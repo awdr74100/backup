@@ -1,4 +1,4 @@
-.m-navbar {
+.c-navbar {
     position: absolute;
     top: 0;
     width: 100%;
@@ -70,7 +70,7 @@
 
 
 // 手機板過場動畫
-.mobile .m-navbar .list {
+.mobile .c-navbar .list {
     max-height: 300px;
 }
 
@@ -99,7 +99,7 @@
 
 // phone breakpoint
 @media screen and (max-width:480px) {
-    .m-navbar {
+    .c-navbar {
         position: fixed;
         width: 100%;
         background-color: black;

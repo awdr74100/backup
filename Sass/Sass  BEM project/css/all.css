@@ -180,7 +180,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   background: #b4501a;
 }
 
-.m-banner {
+.c-banner {
   position: relative;
   height: 420px;
   background-image: url(../img/header_desktop.png);
@@ -212,7 +212,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 }
 
 @media screen and (max-width: 480px) {
-  .m-banner {
+  .c-banner {
     background-image: url(../img/header_mobile.png);
   }
   .bannerMsg {
@@ -224,7 +224,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   }
 }
 
-.m-navbar {
+.c-navbar {
   position: absolute;
   top: 0;
   width: 100%;
@@ -245,7 +245,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
           flex-flow: row wrap;
 }
 
-.m-navbar .list {
+.c-navbar .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,12 +256,12 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   width: 370px;
 }
 
-.m-navbar .list__item {
+.c-navbar .list__item {
   display: inline-block;
   width: 33.33333%;
 }
 
-.m-navbar .list a {
+.c-navbar .list a {
   color: #FFF;
   text-decoration: none;
   display: block;
@@ -269,7 +269,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   text-align: center;
 }
 
-.m-navbar .list a:hover {
+.c-navbar .list a:hover {
   color: coral;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
@@ -311,7 +311,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   transition: all 0.3s;
 }
 
-.mobile .m-navbar .list {
+.mobile .c-navbar .list {
   max-height: 300px;
 }
 
@@ -342,19 +342,19 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 }
 
 @media screen and (max-width: 480px) {
-  .m-navbar {
+  .c-navbar {
     position: fixed;
     width: 100%;
     background-color: black;
   }
-  .m-navbar .list {
+  .c-navbar .list {
     width: 100%;
     max-height: 0px;
     overflow: hidden;
     -webkit-transition: max-height 0.5s;
     transition: max-height 0.5s;
   }
-  .m-navbar .list__item {
+  .c-navbar .list__item {
     width: 100%;
   }
   .mobile-icon {
@@ -362,7 +362,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   }
 }
 
-.m-section-head {
+.c-section-head {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -426,7 +426,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   }
 }
 
-.m-form-login {
+.c-form-login {
   position: relative;
   margin-bottom: 5px;
 }
@@ -503,7 +503,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   padding: 7px 0px;
 }
 
-.m-form-register {
+.c-form-register {
   position: relative;
   margin-bottom: 5px;
 }
@@ -622,7 +622,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   }
 }
 
-.m-sidebar {
+.c-sidebar {
   font-weight: 500;
 }
 
@@ -667,7 +667,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   }
 }
 
-.m-searchbar {
+.c-searchbar {
   font-weight: 500;
   position: relative;
 }
@@ -742,7 +742,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   }
 }
 
-.m-group-card {
+.c-group-card {
   width: 100%;
   position: relative;
 }

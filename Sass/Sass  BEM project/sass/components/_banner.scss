@@ -1,4 +1,4 @@
-.m-banner {
+.c-banner {
     position: relative;
     height: 420px;
     background-image: url(../img/header_desktop.png);
@@ -37,7 +37,7 @@
 
 // phone breakpoint
 @media screen and (max-width:480px) {
-    .m-banner {
+    .c-banner {
         background-image: url(../img/header_mobile.png);
     }
 
