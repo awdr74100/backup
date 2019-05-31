@@ -58,6 +58,18 @@ img {
   height: auto;
 }
 
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  /*Safari/Chrome*/
+  -moz-appearance: none;
+  /*Firefox*/
+  -ms-appearance: none;
+  /*IE*/
+  -o-appearance: none;
+  /*Opera*/
+}
+
 /* CSS Reset end */
 .align-center {
   -webkit-box-pack: center;
@@ -85,16 +97,69 @@ img {
   margin-top: 48px;
 }
 
+.ml-mr-11 {
+  margin-left: 11px;
+  margin-right: 11px;
+}
+
+/*!
+Pure v1.0.0
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
 .btn {
-  font-size: 14px;
-  width: 70px;
-  height: 32px;
-  border-radius: 3px;
-  border: none;
+  /* Structure */
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
   cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Inherit .pure-g styles */
+.btn-group {
+  letter-spacing: -0.31em;
+  /* Webkit: collapse white-space between units */
+  *letter-spacing: normal;
+  /* reset IE < 8 */
+  *word-spacing: -0.43em;
+  /* IE < 8: collapse white-space between units */
+  text-rendering: optimizespeed;
+  /* Webkit: fixes text-rendering: optimizeLegibility */
+}
+
+.opera-only :-o-prefocus,
+.btn-group {
+  word-spacing: -0.43em;
+}
+
+.btn-group .btn {
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
 }
 
 .btn-primary {
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
   color: #fff;
   background: rgba(0, 0, 0, 0.35);
 }
@@ -104,53 +169,14 @@ img {
 }
 
 .btn-minor {
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
   color: #fff;
   background: #F56C23;
 }
 
 .btn-minor:hover {
-  background: #b4501a;
-}
-
-.btn-login {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  width: 40%;
-  background: #F56C23;
-  border-radius: 3px;
-  color: #fff;
-}
-
-.btn-login:hover {
-  background: #b4501a;
-}
-
-.btn-register {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  width: 40%;
-  background: rgba(0, 0, 0, 0.35);
-  border-radius: 3px;
-  color: #fff;
-}
-
-.btn-register:hover {
-  background: rgba(0, 0, 0, 0.568);
-}
-
-.btn-submit {
-  position: absolute;
-  bottom: 15px;
-  right: 17px;
-  width: 125px;
-  height: 32px;
-  background: #F56C23;
-  color: #fff;
-}
-
-.btn-submit:hover {
   background: #b4501a;
 }
 
@@ -461,6 +487,22 @@ img {
   color: #b4501a;
 }
 
+.login__register-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 40%;
+  padding: 7px 0px;
+}
+
+.login__login-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 40%;
+  padding: 7px 0px;
+}
+
 .m-form-register {
   position: relative;
   margin-bottom: 5px;
@@ -545,6 +587,14 @@ img {
 .register__form__input--check {
   margin-top: 15px;
   background-image: url(../img/lock.svg);
+}
+
+.register__form__btn {
+  position: absolute;
+  bottom: 15px;
+  right: 17px;
+  width: 125px;
+  height: 32px;
 }
 
 .register__form .sure {
@@ -1392,6 +1442,10 @@ img {
           align-items: flex-end;
   padding-top: 30px;
   margin-top: 28px;
+}
+
+.position__data__btn input {
+  padding: 9px 28px;
 }
 
 @media screen and (max-width: 720px) {

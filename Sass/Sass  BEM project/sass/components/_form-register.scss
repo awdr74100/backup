@@ -71,6 +71,14 @@
             }
         }
 
+        &__btn {
+            position: absolute;
+            bottom: 15px;
+            right: 17px;
+            width: 125px;
+            height: 32px;
+        }
+
         .sure {
             display: block;
             font-size: 14px;

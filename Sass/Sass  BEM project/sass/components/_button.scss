@@ -1,64 +1,23 @@
-.btn {
-    font-size: 14px;
-    width: 70px;
-    height: 32px;
+.btn-primary {
     border-radius: 3px;
     border: none;
-    cursor: pointer;
-    -webkit-appearance:none;
-}
-
-.btn-primary {
+    font-size: 14px;
     color: #fff;
     background: rgba(0, 0, 0, 0.35);
-    &:hover{
-        background:rgba(0, 0, 0, 0.568);
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.568);
     }
 }
 
 .btn-minor {
-    color: #fff;
-    background: #F56C23;
-    &:hover{
-        background: rgb(180, 80, 26);
-    }
-}
-
-.btn-login {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    width: 40%;
-    background: #F56C23;
     border-radius: 3px;
+    border: none;
+    font-size: 14px;
     color: #fff;
-    &:hover{
-        background: rgb(180, 80, 26);
-    }
-}
-
-.btn-register {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    width: 40%;
-    background: rgba(0, 0, 0, 0.35);
-    border-radius: 3px;
-    color: #fff;
-    &:hover{
-        background:rgba(0, 0, 0, 0.568);
-    }
-}
-
-.btn-submit {
-    position: absolute;
-    bottom: 15px;
-    right: 17px;
-    width: 125px;
-    height: 32px;
     background: #F56C23;
-    color: #fff;
-    &:hover{
+
+    &:hover {
         background: rgb(180, 80, 26);
     }
 }

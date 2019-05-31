@@ -55,6 +55,23 @@
             color: rgb(180, 80, 26);
         }
     }
+
+    &__register-btn {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        width: 40%;
+        padding: 7px 0px;
+    }
+
+    &__login-btn {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        width: 40%;
+        padding: 7px 0px;
+    }
+
 }
 
 // pad breakpoint
