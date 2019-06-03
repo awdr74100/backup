@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2b2b2b"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="#4800c3ff"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="60dp"
+                    android:paddingLeft="18dp"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:text="Auto"
+                    android:textSize="15dp"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:text="200 c.c."
+                    android:textSize="15dp"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="c.c."
+                    android:textColor="#fff"
+                    android:paddingLeft="14dp"
+                    android:paddingTop="20dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="20dp"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#00c3ff"
+                    android:textSize="16dp" />
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="20dp"
+                    android:text="　飲水量"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#00c3ff"
+                    android:textSize="16dp" />
+
+                <ImageView
+
+                    android:id="@+id/imageView"
+                    android:layout_width="107dp"
+                    android:layout_height="102dp"
+
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="15dp"
+
+                    app:srcCompat="@drawable/page4drink" />
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="#48743604"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/view2"
+                    android:text="0"
+                    android:textSize="60dp"
+                    android:paddingLeft="18dp"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:text="Auto"
+                    android:textSize="15dp"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:text="2次"
+                    android:textSize="15dp"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="次"
+                    android:textColor="#fff"
+                    android:paddingLeft="14dp"
+                    android:paddingTop="20dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="藏飯次數"
+                    android:layout_marginRight="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#743604"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="107dp"
+                    android:layout_height="102dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="15dp"
+
+                    app:srcCompat="@drawable/page4cat" />
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="#4856555b"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/view3"
+                    android:textSize="60dp"
+                    android:paddingLeft="18dp"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:text="Auto"
+                    android:textSize="15dp"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:text="120 g"
+                    android:textSize="15dp"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="g"
+                    android:textColor="#fff"
+                    android:paddingLeft="14dp"
+                    android:paddingTop="20dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="進食狀況"
+                    android:layout_marginRight="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#68676d"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="107dp"
+                    android:layout_height="102dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    app:srcCompat="@drawable/page4feed" />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="#4800ff6a"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/view4"
+                    android:textSize="60dp"
+                    android:paddingLeft="18dp"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:text="Auto"
+                    android:textSize="15dp"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:text="100 ppm"
+                    android:textSize="15dp"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="ppm"
+                    android:textColor="#fff"
+                    android:paddingLeft="14dp"
+                    android:paddingTop="20dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="水濁度"
+                    android:layout_marginRight="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#00ff6a"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="107dp"
+                    android:layout_height="102dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    app:srcCompat="@drawable/page4spot" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

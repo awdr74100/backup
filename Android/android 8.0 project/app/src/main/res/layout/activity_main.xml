@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2b2b2b"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="#2b2b2b"
+        android:orientation="horizontal">
+
+
+        <ImageView
+
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="50dp"
+            app:srcCompat="@drawable/page1logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="30dp"
+        android:orientation="vertical">
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#2b2b2b"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            >
+
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="168dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#3d3d3d"
+                android:textAllCaps="false"
+                android:text="Start"
+                android:textColor="#8a8989"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#2b2b2b"
+            android:layout_marginTop="110dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/imageView2"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/page1web" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
