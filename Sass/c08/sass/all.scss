@@ -1,0 +1,33 @@
+@import "reset";
+@import "grid";
+
+
+// 作業共用樣式
+.content {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bg-gray {
+    background-color: #ccc;
+  }
+  .bg-orange {
+    background-color: orange;
+  }
+  .bg-purple {
+    background-color: Plum;
+  }
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color:#ff0000
+  }
+
+  
+  
+
+
+
+
+
