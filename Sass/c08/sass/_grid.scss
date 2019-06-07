@@ -22,11 +22,13 @@ $grid-sum:12;
             padding-right: 0px;
         }
 
-        @for $i from 1 through $grid-sum {
-            .col-#{$i} {
-                @extend %noCol;
-            }
-        }
+        
+    }
+}
+
+@for $i from 1 through $grid-sum {
+    .col-#{$i} {
+        @extend %noCol;
     }
 }
 
