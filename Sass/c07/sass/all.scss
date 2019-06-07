@@ -41,6 +41,10 @@ $thems:(
     "happy":orange
 );
 
+$box-color:(
+    a,a,c,d
+);
+
 // .box-primary{
 //     background-color: map-get($thems , "primary" );
 // }
@@ -48,5 +52,11 @@ $thems:(
 @each $key,$value in $thems {
     .box-#{$key}{
         background-color: $value;
+    }
+}
+
+@each $value in $box-color {
+    .a{
+        font-family: "#{$value}";
     }
 }
