@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2b2b2b"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="#2b2b2b"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="left"
+            android:id="@+id/btn1"
+            android:drawableLeft="@drawable/beforeicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:background="#00000000"
+            android:textSize="18dp"
+            android:textColor="#c0c0c0" />
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:paddingTop="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/page1logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="30dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2b2b2b"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="開發團隊"
+                android:paddingLeft="50dp"
+                android:textSize="22dp"
+                android:textColor="#b4abab"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="第十組"
+                android:paddingLeft="165dp"
+                android:textSize="18dp"
+                android:textColor="#b4abab"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:background="#ffffff"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2b2b2b"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="製作人"
+                android:paddingLeft="50dp"
+                android:textSize="22dp"
+                android:textColor="#b4abab"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Roya"
+                android:paddingLeft="202dp"
+                android:textSize="18dp"
+                android:textColor="#b4abab"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:background="#ffffff"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2b2b2b"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="官方網站"
+                android:paddingLeft="50dp"
+                android:textSize="22dp"
+                android:textColor="#b4abab"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="lanyiru.nctu.me"
+                android:paddingLeft="100dp"
+                android:textSize="18dp"
+                android:textColor="#b4abab"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2b2b2b"
+            android:layout_marginTop="80dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="V 1.0.0"
+                android:textSize="18dp"
+                android:textColor="#b4abab"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
+
+
+

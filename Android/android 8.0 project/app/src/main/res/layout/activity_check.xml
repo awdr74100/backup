@@ -9,10 +9,24 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="280dp"
         android:background="#2b2b2b"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal">
+
+        android:orientation="vertical">
+
+        <Button
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="right"
+            android:id="@+id/btn1"
+            android:drawableRight="@drawable/aftericon"
+            android:drawablePadding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一頁"
+            android:background="#00000000"
+            android:textSize="18dp"
+            android:textColor="#c0c0c0" />
 
 
         <ImageView
@@ -21,33 +35,36 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingTop="50dp"
+            android:paddingTop="20dp"
             app:srcCompat="@drawable/page3menu" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:orientation="vertical">
+
+
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:background="#333333"
+
             android:gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal">
 
 
             <CheckBox
+                android:id="@+id/ck1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:buttonTint="#fff"
                 android:paddingLeft="10dp"
-                android:text="正常菜單"
+                android:text="全濕食貓"
                 android:textColor="#fff"
                 android:textSize="20dp" />
 
@@ -69,12 +86,13 @@
 
 
                 <CheckBox
+                    android:id="@+id/ck2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:buttonTint="#fff"
                     android:paddingLeft="10dp"
-                    android:text="營養菜單"
+                    android:text="活動量較大"
                     android:textColor="#fff"
                     android:textSize="20dp" />
 
@@ -96,12 +114,13 @@
 
 
                     <CheckBox
+                        android:id="@+id/ck3"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
                         android:buttonTint="#fff"
                         android:paddingLeft="10dp"
-                        android:text="豐富菜單"
+                        android:text="較易脫水"
                         android:textColor="#fff"
                         android:textSize="20dp" />
 
@@ -118,12 +137,13 @@
 
 
                     <CheckBox
+                        android:id="@+id/ck4"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
                         android:buttonTint="#fff"
                         android:paddingLeft="10dp"
-                        android:text="特調菜單"
+                        android:text="小嘴零食 ex：燒魚、肉泥"
                         android:textColor="#fff"
                         android:textSize="20dp" />
 
@@ -140,15 +160,7 @@
 
                     android:orientation="horizontal">
 
-                    <Button
-                        android:layout_gravity="top"
-                        android:id="@+id/btn1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="下一步 ＞ ＞"
-                        android:background="#00000000"
-                        android:textSize="18dp"
-                        android:textColor="#8a8989" />
+
 
 
 

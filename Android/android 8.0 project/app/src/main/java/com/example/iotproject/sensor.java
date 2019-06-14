@@ -36,15 +36,23 @@ import android.os.Handler;
 public class sensor extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    private String Drink;
+    private String Eat;
+    private String Name;
+    private String Weight;
+    private String Age;
+
     //    thingspeak 資料欄位 start
     private static final String TAG = "UsingThingspeakAPI";
-    private static final String THINGSPEAK_CHANNEL_ID = "726763";
-    private static final String THINGSPEAK_API_KEY = "E9GPSHJQFHHMM5F2"; //GARBAGE KEY
-    private static final String THINGSPEAK_API_KEY_STRING = "E9GPSHJQFHHMM5F2";
+    private static final String THINGSPEAK_CHANNEL_ID = "800650";
+    private static final String THINGSPEAK_API_KEY = "BYTNIGFTM72HTLCQ"; //GARBAGE KEY
+    private static final String THINGSPEAK_API_KEY_STRING = "BYTNIGFTM72HTLCQ";
     /* Be sure to use the correct fields for your own app*/
     private static final String THINGSPEAK_FIELD1 = "field1";
     private static final String THINGSPEAK_FIELD2 = "field2";
     private static final String THINGSPEAK_FIELD3 = "field3";
+    private static final String THINGSPEAK_FIELD4 = "field4";
     private static final String THINGSPEAK_UPDATE_URL = "https://api.thingspeak.com/update?";
     private static final String THINGSPEAK_CHANNEL_URL = "https://api.thingspeak.com/channels/";
     private static final String THINGSPEAK_FEEDS_LAST = "/feeds/last?";
@@ -63,6 +71,13 @@ public class sensor extends AppCompatActivity
 
         setTitle("Health butler");
 
+        Bundle box1 =this.getIntent().getExtras();
+        Name = box1.getString("Name");
+        Weight = box1.getString("Weight");
+        Age = box1.getString("Age");
+        Drink = box1.getString("Drink");
+        Eat = box1.getString("Eat");
+
 //        初始建構
         drawer = findViewById(R.id.drawer_layout);
 
@@ -70,10 +85,12 @@ public class sensor extends AppCompatActivity
         TextView tt2 = findViewById(R.id.tt2);
         TextView tt3 = findViewById(R.id.tt3);
         TextView tt4 = findViewById(R.id.tt4);
-        tt1.setText(">200 c.c.");
-        tt2.setText("<2次");
-        tt3.setText(">120 g");
-        tt4.setText("<100 ppm");
+
+
+        tt1.setText(">"+Drink+" c.c.");
+        tt3.setText(">"+Eat+" g");
+        tt2.setText("<2次 ");
+        tt4.setText("<450 ppm");
 
         message = "Not executed";
 
@@ -135,12 +152,26 @@ public class sensor extends AppCompatActivity
         });
 
 
-//        btn3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(sensor.this,catvalue.class);
+
+                Bundle bundle = new Bundle();
+                bundle.putString("Name", Name);
+                bundle.putString("Weight", Weight);
+                bundle.putString("Age", Age);
+                bundle.putString("Drink",Drink);
+                bundle.putString("Eat",Eat);
+
+                intent.putExtras(bundle);
+
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.animo_no);
+
+            }
+        });
 
 
 
@@ -148,6 +179,15 @@ public class sensor extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(sensor.this,input.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.animo_no);
+            }
+        });
+
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(sensor.this,about.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.animo_no);
             }
@@ -262,13 +302,65 @@ public class sensor extends AppCompatActivity
                 double v1 = channel.getDouble(THINGSPEAK_FIELD1);
                 double v2 = channel.getDouble(THINGSPEAK_FIELD2);
                 double v3 = channel.getDouble(THINGSPEAK_FIELD3);
-                String value1 =Double.toString(v1);
-                String value2 =Double.toString(v2);
-                String value3 =Double.toString(v3);
-                view1.setText(value1);
-                view2.setText(value2);
-                view3.setText(value3);
-                view4.setText(value3);
+                double v4 = channel.getDouble(THINGSPEAK_FIELD4);
+
+
+                int weight = (int) v1;
+                String weightvalue = String.valueOf(weight);
+                view3.setText(weightvalue);
+
+
+                int water = (int) v2;
+                if (water<360){
+                    view1.setText("50");
+                }else if(water<720){
+                    view1.setText("100");
+                }else if(water<1080){
+                    view1.setText("150");
+                }else if(water<1440){
+                    view1.setText("200");
+                }else if(water<1800){
+                    view1.setText("250");
+                }else if(water<2160){
+                    view1.setText("300");
+                }else if(water<2520){
+                    view1.setText("350");
+                }else if(water<2880){
+                    view1.setText("400");
+                }else if(water<3240){
+                    view1.setText("450");
+                }else if(water<3600){
+                    view1.setText("500");
+                }
+
+//                int pump = (int) v3;
+//                if (pump >1){
+//
+//                }
+
+                if (water <10 && weight<1){
+                    view2.setText("1");
+                }else {
+                    view2.setText("0");
+                }
+
+
+                int tds = (int) v4;
+                if (tds>450){
+                    view4.setTextColor(android.graphics.Color.RED);
+                }
+                String tdsvalue = String.valueOf(tds);
+                view4.setText(tdsvalue);
+
+
+
+//                String value1 =Double.toString(v1);
+//                String value2 =Double.toString(v2);
+//                String value3 =Double.toString(v3);
+//                view1.setText(value1);
+//                view2.setText(value2);
+//                view3.setText(value3);
+//                view4.setText(value3);
 //                if(v1>=90)
 //                    t1.setText("HI ALL  ");
 //                    t3.setText("84");
