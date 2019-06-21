@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#2b2b2b"
+        android:orientation="horizontal">
+
+
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:paddingBottom="8dp"
+            android:text="您目前位於選單..."
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+                <Button
+                    android:gravity="left|center"
+                    android:paddingLeft="25dp"
+                    android:drawableLeft="@drawable/edit"
+                    android:paddingTop="25dp"
+                    android:paddingBottom="25dp"
+                    android:textSize="18dp"
+                    android:text="         寵物資料輸入"
+                    android:textColor="#2b2b2b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button1"
+                    android:background="#fff" />
+
+                <Button
+                    android:gravity="left|center"
+                    android:paddingLeft="25dp"
+                    android:drawableLeft="@drawable/check"
+                    android:paddingTop="25dp"
+                    android:paddingBottom="25dp"
+                    android:textSize="18dp"
+                    android:text="         更改飲食菜單"
+                    android:textColor="#2b2b2b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button2"
+                    android:background="#fff" />
+
+                <Button
+                    android:gravity="left|center"
+                    android:paddingLeft="25dp"
+                    android:drawableLeft="@drawable/search"
+                    android:paddingTop="25dp"
+                    android:paddingBottom="25dp"
+                    android:textSize="18dp"
+                    android:text="         飲食數據偵測"
+                    android:textColor="#2b2b2b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button3"
+                    android:background="#fff" />
+
+                <Button
+                    android:gravity="left|center"
+                    android:paddingLeft="25dp"
+                    android:drawableLeft="@drawable/warning"
+                    android:paddingTop="25dp"
+                    android:paddingBottom="25dp"
+                    android:textSize="18dp"
+                    android:text="         注意事項"
+                    android:textColor="#2b2b2b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button4"
+                    android:background="#fff" />
+
+
+                <ImageView
+                    android:layout_marginTop="80dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#eeeeee"
+                    />
+
+                <Button
+                    android:id="@+id/button5"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:gravity="left|center"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="重設選項"
+                    android:textColor="#2b2b2b"
+                    android:textSize="18dp" />
+
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:gravity="left|center"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="關於"
+                    android:textColor="#2b2b2b"
+                    android:textSize="18dp" />
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
