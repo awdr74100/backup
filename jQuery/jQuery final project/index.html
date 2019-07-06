@@ -7,19 +7,20 @@
     <meta name="copyright" CONTENT="本網頁著作權為Roya所有">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="">
+    <meta name="description" content="六角學院介紹網頁、包含HTML課程、RWD課程、jQuery課程">
 
     <!-- Open Graph Protocol start-->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="">
-    <meta property="og:image" content="">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="六角學院，讓你奠定良好的基礎">
+    <meta property="og:image" content="http://lanyiru.nctu.me/img/logo.png">
+    <meta property="og:description" content="六角學院介紹網頁、包含HTML課程、RWD課程、jQuery課程">
     <meta property="og:url" content="http://lanyiru.nctu.me" />
-    <meta property="og:site_name" content="" />
+    <meta property="og:site_name" content="六角學院" />
     <!-- Open Graph Protocol end-->
 
-    <title>Document</title>
+    <title>六角學院 介紹頁面</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/all.css">
@@ -28,22 +29,31 @@
 <body>
     <div class="wrap">
         <header class="header">
-            <div class="share">
+            <div class="sharebar">
                 <ul class="list">
-                    <li><a href="#" class="color-fb"><i class="fab fa-facebook-square"></i>粉絲團</a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i>追隨我們</a></li>
+                    <li><a href="#"><i class="fab fa-facebook-square"></i>粉絲團</a></li>
+                    <li><a href="#" class="color-twitter"><i class="fab fa-twitter"></i>追隨我們</a></li>
                 </ul>
             </div>
             <div class="navbar">
                 <div class="logo"><a href="#"></a></div>
                 <ul class="list">
-                    <li class="list__item"><a href="#">首頁</a></li>
-                    <li class="list__item"><a href="#">產品介紹</a></li>
-                    <li class="list__item"><a href="#">聯絡我們</a></li>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#" class="dropdownlist jq-dropdownlist">產品介紹</a>
+                        <ul class="dropdownlist__open jq-dropdownlist__open">
+                            <li><a href="#feture">HTML</a></li>
+                            <li><a href="#feture">RWD</a></li>
+                            <li><a href="#feture">jQuery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">聯絡我們</a></li>
                 </ul>
             </div>
         </header>
         <section class="banner">
+            <div class="banner__msg">
+                <p>六角學院<br>讓你奠定良好的前端基礎</p>
+            </div>
             <!-- Slider main container -->
             <div class="swiper-container">
                 <!-- Additional required wrapper -->
@@ -62,24 +72,23 @@
                 <div class="swiper-button-next"></div> -->
 
                 <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
-            </div>
-            <div class="banner__msg">
-                <p>六角學院<br>讓你奠定良好的前端基礎</p>
+                <!-- <div class="swiper-scrollbar"></div> -->
             </div>
         </section>
-        <section class="feture">
+        <section class="feture" id="feture">
             <ul class="list">
-                <li><a href="#"><img src="img/HTML5.jpg" alt=""></a></li>
-                <li><a href="#"><img src="img/RWD.jpg" alt=""></a></li>
-                <li><a href="#"><img src="img/jQ.jpg" alt=""></a></li>
-
+                <li><a href="img/HTML5.jpg" data-lightbox="image-1" data-title="HTML"><img src="img/HTML5.jpg"
+                            alt=""></a></li>
+                <li><a href="img/RWD.jpg" data-lightbox="image-1" data-title="RWD"><img src="img/RWD.jpg" alt=""></a>
+                </li>
+                <li><a href="img/jQ.jpg" data-lightbox="image-1" data-title="jQuery"><img src="img/jQ.jpg" alt=""></a>
+                </li>
             </ul>
         </section>
         <section class="compare">
-            <h2 class="title">線上及實體課程的差異</h2>
-            <table>
-                <tr>
+            <h2 class="title pb30">線上及實體課程的差異</h2>
+            <table class="table">
+                <tr class="table__title">
                     <td>項目</td>
                     <td>Hex School 線上課程</td>
                     <td>一般線上課程</td>
@@ -87,71 +96,75 @@
                 </tr>
                 <tr>
                     <td>費用</td>
-                    <td>較低</td>
-                    <td>較低</td>
+                    <td class="table--active">較低</td>
+                    <td class="table--active">較低</td>
                     <td>較高</td>
                 </tr>
                 <tr>
                     <td>學習效率</td>
                     <td>一般</td>
-                    <td>較低</td>
-                    <td>很好</td>
+                    <td class="table--active">較低</td>
+                    <td class="table--active">很好</td>
                 </tr>
                 <tr>
                     <td>Code review</td>
-                    <td>有</td>
+                    <td class="table--active">有</td>
                     <td>無</td>
                     <td>不一定</td>
                 </tr>
                 <tr>
                     <td>課程更新速度</td>
-                    <td>普通</td>
-                    <td>普通</td>
+                    <td class="table--active">普通</td>
+                    <td class="table--active">普通</td>
                     <td>較慢</td>
                 </tr>
                 <tr>
                     <td>多次複習</td>
-                    <td>可</td>
+                    <td class="table--active">可</td>
                     <td>可</td>
                     <td>不可</td>
                 </tr>
                 <tr>
                     <td>字幕</td>
-                    <td>有</td>
+                    <td class="table--active">有</td>
                     <td>不一定</td>
                     <td>板書</td>
                 </tr>
             </table>
         </section>
-        <section class="record">
-            <h2 class="title">
+        <section class="record pb30">
+            <h2 class="title pb30 pt30">
                 對我們課程有興趣嗎？<br>歡迎留下你的資料
             </h2>
-            <div class="text">
-                <textarea name="" id="" cols="55" rows="15"></textarea>
+            <div class="text pl15 pr15">
+                <textarea name="" id="" cols="60" rows="15"></textarea>
             </div>
-            <div class="form">
+            <div class="form pl15 pr15">
                 <form action="#" method="post">
                     <label for="name">姓名</label>
-                    <input type="text" name="" id="name" class="input">
+                    <input type="text" name="" id="name" class="input" placeholder="六角學院">
                     <label for="tel">電話</label>
-                    <input type="tel" name="" id="tel" class="input">
+                    <input type="tel" name="" id="tel" class="input" placeholder="0912345678">
                     <label for="email">信箱</label>
-                    <input type="email" name="" id="email" class="input">
+                    <input type="email" name="" id="email" class="input" placeholder="hexschool@mail.com">
                     <input type="submit" value="送出" class="submit">
                 </form>
             </div>
         </section>
-        <footer class="footer">
+        <footer class="footer pb30 pt30">
             <div class="logo"><a href="#"></a></div>
             <div class="contact">
                 <p>聯絡我們：<span>hexschool@gmail.com</span></p>
                 <p>電話：<span>0999123456</span></p>
             </div>
         </footer>
+        <div class="top jq-topButton">
+            <a href="#"><i class="fas fa-arrow-up"></i></a>
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="js/all.js"></script>
 </body>
