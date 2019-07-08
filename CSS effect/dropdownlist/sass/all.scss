@@ -1,0 +1,53 @@
+@import "reset";
+
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header{
+    position: fixed;
+    width: 1024px;
+}
+
+.navbar{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__item{
+        display: inline-block;
+        a{
+            color: #fff;
+            display: block;
+            width: 100px;
+            padding: 20px 0px;
+            text-align: center;
+            text-decoration: none;
+            &:hover{
+                color: chocolate;
+            }
+        }
+    }
+    &__drop{
+        display: none;
+        position: absolute;
+        top: 56px;
+        a{
+            background-color: black;
+        }
+    }
+}
+
+.a:hover .list__drop{
+    display: block;
+}
+
