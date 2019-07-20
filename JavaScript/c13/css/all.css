@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+html {
+  line-height: 1;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CSS Reset end */
+.title {
+  max-width: 960px;
+  position: relative;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "微軟正黑體";
+  padding: 20px 0px;
+  font-size: 36px;
+  color: #f7941e;
+  font-weight: 700;
+}
+
+.wrap {
+  max-width: 960px;
+  position: relative;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "微軟正黑體";
+}
+
+.content {
+  width: 700px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.leftLogo {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 60px;
+  position: relative;
+}
+
+.leftLogo a {
+  display: block;
+  background-image: url(../img/boy.svg);
+  width: 200px;
+  height: 200px;
+}
+
+.rightContent {
+  position: relative;
+  width: 60%;
+}
+
+.input {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.textId {
+  margin-top: 50px;
+  width: 220px;
+  height: 50px;
+  font-size: 24px;
+}
+
+.btn {
+  margin-left: 10px;
+  margin-top: 50px;
+  width: 80px;
+  height: 50px;
+  border: none;
+  background-color: #f7941e;
+  color: #fff;
+  font-size: 16px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #a7773d;
+}
+
+.btnClear {
+  margin-left: 10px;
+  margin-top: 50px;
+  width: 80px;
+  height: 50px;
+  border: none;
+  background-color: #f7941e;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.btnClear:hover {
+  background-color: #a7773d;
+}
+
+.output {
+  position: relative;
+  padding-top: 30px;
+}
+
+.list {
+  font-size: 18px;
+  width: 300px;
+}
+
+.list li {
+  border-bottom: 1px solid #5e5e5e;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.list li:hover {
+  border-bottom: 1px solid #f7941e;
+}
+
+.list a {
+  text-decoration: none;
+  line-height: 36px;
+  color: darkorange;
+  margin-right: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.list a:hover {
+  color: #a7773d;
+}
+/*# sourceMappingURL=all.css.map */

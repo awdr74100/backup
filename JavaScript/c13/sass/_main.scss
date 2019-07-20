@@ -1,0 +1,125 @@
+.title{
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-family: "微軟正黑體";
+    padding: 20px 0px;
+    font-size: 36px;
+    color: #f7941e;
+    font-weight: 700;
+    
+}
+
+.wrap {
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-family: "微軟正黑體";
+}
+
+.content {
+    width: 700px;
+    height: auto;;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.leftLogo {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+    position: relative;
+
+    a {
+        display: block;
+        background-image: url(../img/boy.svg);
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.rightContent {
+    position: relative;
+    width: 60%;
+}
+
+.input{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.textId {
+    margin-top: 50px;
+    width: 220px;
+    height: 50px;
+    font-size: 24px;
+
+}
+
+.btn {
+    margin-left: 10px;
+    margin-top: 50px;
+    width: 80px;
+    height: 50px;
+    border: none;
+    background-color: #f7941e;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    &:hover{
+        background-color: #a7773d;
+    }
+}
+
+.btnClear{
+    margin-left: 10px;
+    margin-top: 50px;
+    width: 80px;
+    height: 50px;
+    border: none;
+    background-color: #f7941e;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.5s;
+    &:hover{
+        background-color: #a7773d;
+    }
+}
+
+.output{
+    position: relative;
+    padding-top: 30px;
+}
+
+.list{
+    font-size: 18px;
+    width: 300px;
+    li{
+        border-bottom: 1px solid rgb(94, 94, 94);
+        transition: all 0.5s;
+        &:hover{
+            border-bottom: 1px solid #f7941e;
+        }
+    }
+    a{
+        text-decoration: none;
+        line-height: 36px;
+        color: darkorange;
+        margin-right: 10px;
+        transition: all 0.5s;
+        &:hover{
+            color: #a7773d;
+        }
+        
+    }
+}
