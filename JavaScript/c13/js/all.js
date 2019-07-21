@@ -4,13 +4,14 @@ var list = document.querySelector(".list");
 var btnClear = document.querySelector(".btnClear");
 
 // 創建待存取項目空物件
-var data = [];
+var data = JSON.parse(localStorage.getItem("listData")) || [];
 
 // 增加事件監聽
 btn.addEventListener("click", addList, false);
 list.addEventListener("click", rmList);
 btnClear.addEventListener("click", clear, false);
 
+updateList();
 
 // 增加listitem與上傳
 function addList(e) {

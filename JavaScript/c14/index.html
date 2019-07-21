@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Roya">
+    <meta name="copyright" CONTENT="本網頁著作權為Roya所有">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+
+    <!-- Open Graph Protocol start-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://lanyiru.nctu.me" />
+    <meta property="og:site_name" content="" />
+    <!-- Open Graph Protocol end-->
+
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>第一頁</h1>
+    <h3><a href="b.html">連到第二頁</a></h3>
+    <h3 class="go">下一頁(js版)</h3>
+    <input type="button" value="列印" class="btn">
+    <input type="button" value="瀏覽location資訊" class="btn1">
+    <input type="button" value="移動到google首頁" class="btn2">
+
+    <script>
+    document.querySelector(".go").onclick =  function(){
+        window.history.forward();
+    }
+    document.querySelector(".btn").onclick = function(){
+        window.print();
+    }
+    document.querySelector(".btn1").onclick = function(){
+        console.log(window.location);
+    }
+    document.querySelector(".btn2").onclick = function(){
+        window.open("http://www.google.com.tw");
+    }
+    </script>
+</body>
+
+</html>
