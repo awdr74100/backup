@@ -1,0 +1,306 @@
+// tool
+.mt23 {
+    margin-top: 23px;
+}
+
+.ml53 {
+    margin-left: 53px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.pt48 {
+    padding-top: 48px;
+}
+
+.pb74 {
+    padding-bottom: 74px;
+}
+
+
+.wrap {
+    max-width: 1024px;
+    position: relative;
+    margin: 0 auto;
+    font-family: "微軟正黑體";
+}
+
+.userInfo {
+    position: relative;
+    background-color: #424242;
+    height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 173px;
+    width: 117px;
+    height: 117px;
+    background-image: url(../img/BMICLogo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.user {
+    margin-left: 97px;
+
+    .label {
+        display: block;
+        font-size: 18px;
+        color: #FFD366;
+        padding-bottom: 7px;
+    }
+
+    .input {
+        width: 250px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.18);
+        border: 2px solid #FFD366;
+        border-radius: 10px;
+        font-size: 24px;
+        color: rgba(255, 255, 255, 0.76);
+        padding-left: 16px;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+
+.result {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__btn {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        background-color: #FFD366;
+        border: none;
+        font-weight: 700;
+        border-radius: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        cursor: pointer;
+
+        &__value {
+            display: none;
+            font-size: 32px;
+            color: #86D73F;
+            padding-top: 10px;
+        }
+
+        &__str {
+            font-size: 24px;
+            color: #424242;
+            margin-top: 4px;
+        }
+
+        &__replay {
+            display: none;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            width: 30px;
+            height: 30px;
+            background: #86D73F;
+            border-radius: 15px;
+            background-image: url(../img/icons_loop.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            border: 3px solid #424242;
+            transition: width 0.3s, height 0.3s;
+
+            &:hover {
+                width: 34px;
+                height: 34px;
+            }
+
+        }
+    }
+
+    &__msg {
+        display: none;
+        margin-left: 18px;
+        font-size: 32px;
+        color: #86D73F;
+    }
+}
+
+
+
+.record {
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+.clear {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background-color: #e7e7e7;
+    text-align: center;
+    font-size: 18px;
+    padding: 18px 30px;
+    color: #424242;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 10;
+    transition: padding 0.3s;
+
+    &:hover {
+        padding: 22px 34px;
+    }
+}
+
+.title {
+    position: relative;
+    font-size: 24px;
+    color: #424242;
+    text-align: center;
+    font-weight: 700;
+}
+
+.list {
+    color: #4A4A4A;
+    position: relative;
+
+    &__item {
+        position: relative;
+        margin: 0 auto;
+        width: 624px;
+        height: 62px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #fff;
+        margin-top: 16px;
+
+        &--xs {
+            border-left: 7px solid #86D73F;
+        }
+
+        &--s {
+            border-left: 7px solid #31BAF9;
+        }
+
+        &--m {
+            border-left: 7px solid #ffea2d;
+        }
+
+        &--l {
+            border-left: 7px solid #FF982D;
+        }
+
+        &--xl {
+            border-left: 7px solid #FF6C03;
+        }
+
+        &--2xl {
+            border-left: 7px solid #FF1200;
+        }
+    }
+}
+
+.msg {
+    width: 80px;
+    font-size: 20px;
+    color: #4A4A4A;
+    margin-left: 12px;
+
+    &--Bmi {
+        font-size: 12px;
+        color: #424242;
+        margin-left: 30px;
+
+        &Value {
+            font-size: 20px;
+            color: #4A4A4A;
+            margin-left: 7px;
+        }
+    }
+
+    &--Weight {
+        font-size: 12px;
+        color: #424242;
+        margin-left: 42px;
+
+        &Value {
+            font-size: 20px;
+            color: #4A4A4A;
+            margin-left: 7px;
+        }
+    }
+
+    &--Height {
+        font-size: 12px;
+        color: #424242;
+        margin-left: 42px;
+
+        &Value {
+            font-size: 20px;
+            color: #4A4A4A;
+            margin-left: 7px;
+        }
+    }
+
+    &--Date {
+        margin-left: 52px;
+        font-size: 12px;
+        color: #424242;
+    }
+
+    &--remove {
+        position: absolute;
+        right: -62px;
+        // width: 62px;
+        // height: 62px;
+        background-color: #e7e7e7;
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        align-items: center;
+        cursor: pointer;
+        transition: font-size 0.3s;
+        z-index: 10;
+
+        &:hover {
+            font-size: 48px;
+        }
+
+        i {
+            display: block;
+            padding: 11px 18px;
+        }
+    }
+}
+
+
+
+
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFD366;
+
+    .logo {
+        margin: 18px 0px;
+        background-image: url(../img/BMICLogo-gray.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 55px;
+        height: 55px;
+    }
+}
