@@ -218,6 +218,9 @@ function replayButton() {
         case "2xl":
             btnPrimary = "#FF1200";
     }
+    // 清空按鈕輸入值
+    inputHeight.value = "";
+    inputWeight.value = "";
     // 變更按鈕數值
     btnValue.style.display = "none"
     btnValue.style.color = "#FFD366";
