@@ -197,45 +197,20 @@ function replayButton() {
     var btnValue = document.querySelector(".js-btnValue");
     var btnStr = document.querySelector(".js-btnStr");
     var btnMsg = document.querySelector(".js-btnMsg");
-    var dataLen = data.length;
-    var btnPrimary;
-    switch (data[dataLen - 1].borderStatus) {
-        case "xs":
-            btnPrimary = "#86D73F";
-            break;
-        case "s":
-            btnPrimary = "#31BAF9";
-            break;
-        case "m":
-            btnPrimary = "#ffea2d";
-            break;
-        case "l":
-            btnPrimary = "#FF982D";
-            break;
-        case "xl":
-            btnPrimary = "#FF6C03";
-            break;
-        case "2xl":
-            btnPrimary = "#FF1200";
-    }
     // 清空按鈕輸入值
     inputHeight.value = "";
     inputWeight.value = "";
     // 變更按鈕數值
     btnValue.style.display = "none"
-    btnValue.style.color = "#FFD366";
-    btnValue.textContent = "看結果";
     // 變更文字顏色
     btnStr.style.fontSize = "24px";
     btnStr.style.color = "#424242";
+    btnStr.textContent = "看結果";
     // 變更邊框顏色
     btn.style.backgroundColor = "#FFD366";
     btn.style.border = "none";
-    btnStr.textContent = "看結果";
     // 變更返回按鈕
     btnRetuen.style.display = "none";
-    btnRetuen.style.backgroundColor = btnPrimary;
     // 變更按鈕標題
     btnMsg.style.display = "none";
-    btnMsg.style.color = btnPrimary;
 }
