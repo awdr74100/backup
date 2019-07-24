@@ -6,6 +6,10 @@ var title = document.querySelector(".title");
 var prev = document.querySelector(".prev");
 var next = document.querySelector(".next");
 var toggle = document.querySelector(".toggleList");
+var toggleBar = document.querySelector(".toggleBar");
+
+// 初始化 - 隱藏toggleBar
+toggleBar.style.display = "none";
 
 // 宣告空陣列
 var data = [];
@@ -26,6 +30,7 @@ function checkSelectValue(e) {
     if (selectValue == "parset") {
         return;
     }
+    toggleBar.style.display = "flex";
     addToObject(selectValue);
 }
 
@@ -37,6 +42,7 @@ function checkClickValue(e) {
         return;
     }
     var value = e.target.textContent;
+    toggleBar.style.display = "flex";
     addToObject(value);
 }
 

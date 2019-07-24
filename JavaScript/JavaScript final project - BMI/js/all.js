@@ -57,6 +57,7 @@ function removeItem(e) {
     localStorage.setItem("listData", JSON.stringify(data));
 }
 
+// 移除所有列表項目
 function clear(e) {
     data = [];
     localStorage.removeItem("listData");
@@ -131,7 +132,7 @@ function updateList(e) {
             '<p>kg</p>' +
             '<p class="msg--Height">height</p>' +
             '<span class="msg--HeightValue">' + data[i].height + '</span>' +
-            '<p>cm</p><span class="msg--Date">' + data[i].date + '</span>' + '<div class="msg--remove" data-index="' + i + '"><i class="fas fa-times"></i></div>' +
+            '<p>cm</p><span class="msg--Date">' + data[i].date + '</span>' + '<div class="msg--remove"><i class="fas fa-times" data-index="' + i + '"></i></div>' +
             '</li>';
     }
     list.innerHTML = str;

@@ -436,6 +436,8 @@ img {
 .toggleBar .toggleList li {
   cursor: pointer;
   margin-left: 24px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .toggleBar .toggleList li:hover {

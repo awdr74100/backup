@@ -322,6 +322,7 @@
         li {
             cursor: pointer;
             margin-left: 24px;
+            transition: color 0.3s;
 
             &:hover {
                 color: #000000;
