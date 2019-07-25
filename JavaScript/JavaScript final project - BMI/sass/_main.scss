@@ -65,7 +65,8 @@
         font-size: 24px;
         color: rgba(255, 255, 255, 0.76);
         padding-left: 16px;
-        &:focus{
+
+        &:focus {
             outline: none;
         }
     }
@@ -91,6 +92,19 @@
         align-items: center;
         flex-flow: column wrap;
         cursor: pointer;
+        transition: all 0.3s;
+
+        &--active {
+            transition: all 0.3s;
+
+            &:hover {
+                box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+            }
+
+            &:active {
+                background-color: #DEA821;
+            }
+        }
 
         &__value {
             display: none;
@@ -184,29 +198,60 @@
         align-items: center;
         background-color: #fff;
         margin-top: 16px;
+        cursor: pointer;
 
         &--xs {
+            transition: all 0.3s;
             border-left: 7px solid #86D73F;
+
+            &:hover {
+                border-left: 7px solid rgb(139, 241, 49);
+            }
         }
 
         &--s {
+            transition: all 0.3s;
             border-left: 7px solid #31BAF9;
+
+            &:hover {
+                border-left: 7px solid rgb(133, 216, 255);
+            }
         }
 
         &--m {
+            transition: all 0.3s;
             border-left: 7px solid #ffea2d;
+
+            &:hover {
+                border-left: 7px solid #fdf39a;
+            }
         }
 
         &--l {
+            transition: all 0.3s;
             border-left: 7px solid #FF982D;
+
+            &:hover {
+                border-left: 7px solid rgb(255, 204, 149);
+            }
         }
 
         &--xl {
+            transition: all 0.3s;
             border-left: 7px solid #FF6C03;
+
+            &:hover {
+                border-left: 7px solid rgb(187, 78, 1);
+            }
         }
 
         &--2xl {
+            transition: all 0.3s;
             border-left: 7px solid #FF1200;
+
+            &:hover {
+                border-left: 7px solid rgba(255, 94, 83, 0.699);
+            }
         }
     }
 }
@@ -262,8 +307,6 @@
     &--remove {
         position: absolute;
         right: -62px;
-        // width: 62px;
-        // height: 62px;
         background-color: #e7e7e7;
         display: flex;
         justify-content: center;

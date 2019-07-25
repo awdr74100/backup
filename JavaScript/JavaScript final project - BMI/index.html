@@ -7,18 +7,19 @@
     <meta name="copyright" CONTENT="本網頁著作權為Roya所有">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="">
+    <meta name="description" content="紀錄身體BMI指數，利用身高、體重換算而成">
+    <link rel="shortcut icon" href="img/favicon-20190725061606928.ico" type="image/x-icon">
 
     <!-- Open Graph Protocol start-->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="">
-    <meta property="og:image" content="">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="BMI計算器">
+    <meta property="og:image" content="img/BMICLogo.png">
+    <meta property="og:description" content="紀錄身體BMI指數，利用身高、體重換算而成">
     <meta property="og:url" content="http://lanyiru.nctu.me" />
-    <meta property="og:site_name" content="" />
+    <meta property="og:site_name" content="BMI計算器" />
     <!-- Open Graph Protocol end-->
 
-    <title>Document</title>
+    <title>BMI計算器</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/all.css">
@@ -35,7 +36,7 @@
                 <input type="number" name="weight" id="weightId" class="input js-inputWei" placeholder="請輸入體重">
             </div>
             <div class="result ml53">
-                <div class="result__btn js-btn">
+                <div class="result__btn result__btn--active js-btn">
                     <p class="result__btn__value js-btnValue">20.90</p>
                     <p class="result__btn__str js-btnStr">看結果</p>
                     <div class="result__btn__replay js-btnReturn"></div>
@@ -47,16 +48,6 @@
             <div class="clear js-btnClear">清除全部</div>
             <div class="title pt48 pb20">BMI 紀錄</div>
             <ul class="list js-list pb74">
-                <li class="list__item list__item--s">
-                    <span class="msg">重量過輕</span>
-                    <p class="msg--Bmi">BMI</p><span class="msg--BmiValue">20.90</span>
-                    <p class="msg--Weight">weight</p><span class="msg--WeightValue">70</span>
-                    <p>kg</p>
-                    <p class="msg--Height">height</p>
-                    <span class="msg--HeightValue">180</span>
-                    <p>cm</p><span class="msg--Date">06-19-2017</span>
-                    <div class="msg--remove"><i class="fas fa-times" data-index="0"></i></div>
-                </li>
             </ul>
         </section>
         <footer class="footer">

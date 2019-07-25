@@ -173,6 +173,22 @@ img {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.result__btn--active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.result__btn--active:hover {
+  -webkit-box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+          box-shadow: 0 1px 6px 3px rgba(255, 196, 50, 0.64);
+}
+
+.result__btn--active:active {
+  background-color: #DEA821;
 }
 
 .result__btn__value {
@@ -271,30 +287,67 @@ img {
           align-items: center;
   background-color: #fff;
   margin-top: 16px;
+  cursor: pointer;
 }
 
 .list__item--xs {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   border-left: 7px solid #86D73F;
 }
 
+.list__item--xs:hover {
+  border-left: 7px solid #8bf131;
+}
+
 .list__item--s {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   border-left: 7px solid #31BAF9;
 }
 
+.list__item--s:hover {
+  border-left: 7px solid #85d8ff;
+}
+
 .list__item--m {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   border-left: 7px solid #ffea2d;
 }
 
+.list__item--m:hover {
+  border-left: 7px solid #fdf39a;
+}
+
 .list__item--l {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   border-left: 7px solid #FF982D;
 }
 
+.list__item--l:hover {
+  border-left: 7px solid #ffcc95;
+}
+
 .list__item--xl {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   border-left: 7px solid #FF6C03;
 }
 
+.list__item--xl:hover {
+  border-left: 7px solid #bb4e01;
+}
+
 .list__item--2xl {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   border-left: 7px solid #FF1200;
+}
+
+.list__item--2xl:hover {
+  border-left: 7px solid rgba(255, 94, 83, 0.699);
 }
 
 .msg {

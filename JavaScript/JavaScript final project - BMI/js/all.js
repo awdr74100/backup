@@ -6,7 +6,7 @@ var btnRetuen = document.querySelector(".js-btnReturn");
 var btnClear = document.querySelector(".js-btnClear")
 var list = document.querySelector(".js-list");
 
-// 宣告陣列
+// 宣告陣列存取
 var data = JSON.parse(localStorage.getItem("listData")) || [];
 
 // 載入時自動更新列表
@@ -23,9 +23,15 @@ function addItem(e) {
     var heightValue = inputHeight.value;
     var weightValue = inputWeight.value;
     if (heightValue == "" || weightValue == "") {
-        alert("你還有未填項目");
+        alert("項目不得為空");
+        return;
+    } else if (heightValue <= 0 || weightValue <= 0) {
+        alert("請輸入正確數值");
+        inputHeight.value = "";
+        inputWeight.value = "";
         return;
     }
+    btn.classList.remove("result__btn--active");
     var bmiValue = (parseFloat(weightValue) / ((parseFloat(heightValue) / 100) * (parseFloat(heightValue) / 100))).toFixed(2);
     var intBMI = parseFloat(bmiValue);
     var status = bmiStatus(intBMI);
@@ -188,6 +194,7 @@ function changeButton(e) {
 
 // 返回增加事件監聽
 function replay(e) {
+    btn.classList.add("result__btn--active");
     e.stopPropagation();
     replayButton();
     btn.addEventListener("click", addItem, false);

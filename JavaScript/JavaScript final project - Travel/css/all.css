@@ -444,6 +444,10 @@ img {
   color: #000000;
 }
 
+.toggleBar .toggleList li.active {
+  color: #000000;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,5 +481,22 @@ img {
 .footer .about a {
   text-decoration: none;
   color: #FFD366;
+}
+
+.goTop {
+  position: absolute;
+  bottom: 130px;
+  right: 20px;
+  display: block;
+}
+
+.goTop a {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-image: url(../img/btn_goTop.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=all.css.map */

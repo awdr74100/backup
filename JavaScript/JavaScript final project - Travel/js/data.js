@@ -2610,4 +2610,3 @@ var openData = {
         total: 268
     }
 }
-

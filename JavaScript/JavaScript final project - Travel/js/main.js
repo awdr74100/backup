@@ -7,6 +7,7 @@ var prev = document.querySelector(".prev");
 var next = document.querySelector(".next");
 var toggle = document.querySelector(".toggleList");
 var toggleBar = document.querySelector(".toggleBar");
+var goTop = document.querySelector(".goTop");
 
 // 初始化 - 隱藏toggleBar
 toggleBar.style.display = "none";
@@ -20,9 +21,10 @@ var pageIndex;
 // 宣告監聽事件
 select.addEventListener("change", checkSelectValue, false);
 popularList.addEventListener("click", checkClickValue, false);
-toggle.addEventListener("click", getListValue, false);
+toggle.addEventListener("click", thisPage, false);
 prev.addEventListener("click", prevPage, false);
 next.addEventListener("click", nextPage, false);
+
 // 檢查選擇項目 - select
 function checkSelectValue(e) {
     var selectValue = e.target.value;
@@ -76,73 +78,78 @@ function createToggleList() {
         str += '<li data-index="' + i + '">' + i + '</li>'
     }
     toggle.innerHTML = str;
-    getRange();
+    startPage();
 }
 
-// 判斷列表長度
-function getRange() {
-    var dataLen = data.length;
+// 初始化頁面
+function startPage(e) {
     pageIndex = 1;
-    var endValue;
-    if (dataLen < 9) {
-        endValue = dataLen;
-    } else if (9 <= dataLen < 17) {
-        endValue = 8;
-    }
-    updateList(0, endValue);
+    rmAllStyle();
 }
 
-function getListValue(e) {
-    var dataLen = data.length;
-    if (e.target.nodeName !== "LI") {
-        return;
-    }
-    if (dataLen <= 8) {
-        return;
-    }
-    pageIndex = parseInt(e.target.textContent);
-    if (pageIndex == 1) {
-        updateList(0, 8)
-    } else if (pageIndex == 2) {
-        updateList(8, dataLen);
-    }
-}
-
+// 下一頁
 function nextPage() {
-    var dataLen = data.length;
-    if (pageIndex == 2) {
-        return;
+    if (pageIndex == toggle.childElementCount) {
+        return
     }
-    if (dataLen <= 8) {
-        return;
-    }
-    pageIndex = 2;
-    updateList(8, dataLen);
+    pageIndex++;
+    rmAllStyle();
 }
 
+// 上一頁
 function prevPage() {
     if (pageIndex == 1) {
         return;
     }
-    pageIndex = 1;
-    updateList(0, 8)
+    pageIndex--;
+    rmAllStyle();
 }
 
+// 指定頁面
+function thisPage(e) {
+    if (e.target.nodeName !== "LI") {
+        return;
+    }
+    pageIndex = parseInt(e.target.dataset.index);
+    rmAllStyle();
+}
+
+// 重製索引值效果
+function rmAllStyle(e) {
+    var allIndex = document.querySelectorAll(".toggleList li");
+    var allIndexLen = allIndex.length;
+    for (var i = 0; i < allIndexLen; i++) {
+        allIndex[i].classList.remove("active");
+    }
+    getPageIndex();
+}
+
+// 判斷目前頁數
+function getPageIndex() {
+    var startValue = (pageIndex - 1) * 8;;
+    var endValue = pageIndex * 8;
+    var nowList = data.slice(startValue, endValue);
+    var a = document.querySelectorAll(".toggleList li");
+    var b = a[pageIndex - 1];
+    b.classList = "active";
+    updateList(nowList);
+}
 
 // 更新列表
-function updateList(start, end) {
+function updateList(nowList) {
     var str = "";
-    for (start; start < end; start++) {
+    var nowListLen = nowList.length;
+    for (var i = 0; i < nowListLen; i++) {
         str += '<li class="list__item">' +
-            '<div class="img" style="background-image: url(' + "'" + data[start].img + "'" + ')">' +
-            '<h3 class="name">' + data[start].name + '</h3>' +
-            '<p class="location">' + data[start].location + '</p>' +
+            '<div class="img" style="background-image: url(' + "'" + nowList[i].img + "'" + ')">' +
+            '<h3 class="name">' + nowList[i].name + '</h3>' +
+            '<p class="location">' + nowList[i].location + '</p>' +
             '</div>' +
             '<div class="content">' +
-            '<p class="clock">' + data[start].clock + '</p>' +
-            '<p class="address">' + data[start].address + '</p>' +
-            '<p class="tel">' + data[start].tel + '</p>' +
-            '<p class="price">' + data[start].price + '</p>';
+            '<p class="clock">' + nowList[i].clock + '</p>' +
+            '<p class="address">' + nowList[i].address + '</p>' +
+            '<p class="tel">' + nowList[i].tel + '</p>' +
+            '<p class="price">' + nowList[i].price + '</p>';
     }
     list.innerHTML = str;
 }
