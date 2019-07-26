@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Roya">
+    <meta name="copyright" CONTENT="本網頁著作權為Roya所有">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+
+    <!-- Open Graph Protocol start-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://lanyiru.nctu.me" />
+    <meta property="og:site_name" content="" />
+    <!-- Open Graph Protocol end-->
+
+    <title>Document</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .regBtn,
+        .logBtn {
+            margin-top: 15px;
+            display: block;
+        }
+
+        p {
+            color: red;
+        }
+    </style>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div class="register">
+        <h2>使用者註冊</h2>
+        <label for="regAcc">帳號</label>
+        <input type="text" class="register__acc" id="regAcc">
+        <p class="regMsg"></p>
+        <label for="regPas">密碼</label>
+        <input type="password" id="regPas" class="register__pas">
+
+        <input type="button" value="送出" class="regBtn">
+    </div>
+    <div class="login">
+        <h2>使用者登入</h2>
+        <label for="logAcc">帳號</label>
+        <input type="text" class="login__acc" id="logAcc">
+        <p class="logMsg"></p>
+        <label for="logPas">密碼</label>
+        <input type="password" id="logPas" class="login__pas">
+        <input type="button" value="送出" class="logBtn">
+    </div>
+
+    <script src="js/all.js"></script>
+</body>
+
+</html>
