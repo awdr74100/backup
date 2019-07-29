@@ -131,15 +131,13 @@ function updateList(e) {
     var str = "";
     var dataLen = data.length;
     for (var i = 0; i < dataLen; i++) {
-        str += '<li class="list__item list__item--' + data[i].borderStatus + '">' +
-            '<span class="msg">' + data[i].bmiStatus + '</span>' +
-            '<p class="msg--Bmi">BMI</p><span class="msg--BmiValue">' + data[i].bmi + '</span>' +
-            '<p class="msg--Weight">weight</p><span class="msg--WeightValue">' + data[i].weight + '</span>' +
-            '<p>kg</p>' +
-            '<p class="msg--Height">height</p>' +
-            '<span class="msg--HeightValue">' + data[i].height + '</span>' +
-            '<p>cm</p><span class="msg--Date">' + data[i].date + '</span>' + '<div class="msg--remove"><i class="fas fa-times" data-index="' + i + '"></i></div>' +
-            '</li>';
+        str += `<li class="list__item list__item--${data[i].borderStatus}">
+        <span class="msg">${data[i].bmiStatus}</span>
+        <p class="msg--Bmi">BMI</p><span class="msg--BmiValue">${data[i].bmi}</span>
+        <p class="msg--Weight">weight</p><span class="msg--WeightValue">${data[i].weight}</span>
+        <p>kg</p><p class="msg--Height">height</p>
+        <span class="msg--HeightValue">${data[i].height}</span><p>cm</p><span class="msg--Date">${data[i].date}
+        </span><div class="msg--remove"><i class="fas fa-times" data-index="${i}"></i></div>`
     }
     list.innerHTML = str;
 }
