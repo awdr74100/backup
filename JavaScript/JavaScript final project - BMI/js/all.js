@@ -1,4 +1,5 @@
 // 宣告DOM Element
+var body = document.body;
 var inputHeight = document.querySelector(".js-inputHei");
 var inputWeight = document.querySelector(".js-inputWei");
 var btn = document.querySelector(".js-btn");
@@ -13,10 +14,20 @@ var data = JSON.parse(localStorage.getItem("listData")) || [];
 updateList();
 
 // 監聽物件
+body.addEventListener("keydown",keyEnent,false);
 btn.addEventListener("click", addItem, false);
 btnRetuen.addEventListener("click", replay, false);
 btnClear.addEventListener("click", clear, false);
 list.addEventListener("click", removeItem, false);
+
+// 鍵盤出發事件
+function keyEnent(e){
+    e.stopPropagation();
+    if(e.key !== "Enter"){
+        return;
+    }
+    addItem();
+}
 
 // 增加列表項目
 function addItem(e) {
@@ -187,7 +198,7 @@ function changeButton(e) {
     btnMsg.style.color = btnPrimary;
     btnMsg.textContent = data[dataLen - 1].bmiStatus;
     btn.removeEventListener("click", addItem, false);
-
+    body.removeEventListener("keydown",keyEnent,false);
 }
 
 // 返回增加事件監聽
@@ -196,6 +207,7 @@ function replay(e) {
     e.stopPropagation();
     replayButton();
     btn.addEventListener("click", addItem, false);
+    body.addEventListener("keydown",keyEnent,false);
 }
 
 // 還原按鈕外觀
