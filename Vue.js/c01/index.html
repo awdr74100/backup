@@ -57,7 +57,7 @@
                     <div class="d-flex" v-if="cacheTodo.id !== item.id">
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" :id="item.id" v-model="item.completed">
-                            <label class="form-check-label" :for="item.id">
+                            <label class="form-check-label" :for="item.id" :class="{'completed':item.completed}">
                                 {{item.content}}
                             </label>
                         </div>
