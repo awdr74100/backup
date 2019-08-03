@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Roya">
+    <meta name="copyright" CONTENT="本網頁著作權為Roya所有">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+
+    <!-- Open Graph Protocol start-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://lanyiru.nctu.me" />
+    <meta property="og:site_name" content="" />
+    <!-- Open Graph Protocol end-->
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <div id="app" class="container my-3">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">待辦事項</span>
+            </div>
+            <input type="text" class="form-control" placeholder="準備要做的任務" v-model="newTodoContent"
+                @keyup.enter="addTodo()">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" @click="addTodo()">新增</button>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" :class="{'active':visibility == 'all'}" @click="visibility = 'all' "
+                            href="#">全部</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" :class="{'active':visibility == 'doing'}" @click="visibility = 'doing' "
+                            href="#">進行中</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" :class="{'active':visibility == 'completed'}"
+                            @click="visibility = 'completed' " href="#">已完成</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="list-group list-group-flush text-left">
+                <li class="list-group-item" v-for="(item,index) in filiterTodo" @dblclick="editTodo(item)">
+                    <div class="d-flex" v-if="cacheTodo.id !== item.id">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" :id="item.id" v-model="item.completed">
+                            <label class="form-check-label" :for="item.id">
+                                {{item.content}}
+                            </label>
+                        </div>
+                        <button type="button" class="close ml-auto" aria-label="Close" @click="removeTodo(item)">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <input type="text" class="form-control" v-if="cacheTodo.id == item.id" v-model="cacheContent"
+                        @keyup.enter="saveTodo(item)" @keyup.esc="cancelEdit()">
+                </li>
+            </ul>
+            <div class="card-footer d-flex justify-content-between">
+                <span>還有 {{doingTodoTotal}} 筆任務未完成</span>
+                <a href="#" @click="clearTodo()">清除所有任務</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>
