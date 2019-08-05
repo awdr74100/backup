@@ -120,11 +120,12 @@
   <hr>
   <select name="" id="" class="form-control" v-model="selected2">
     <option disabled value="">請選擇</option>
+    <option :value="item" v-for="item in selectData">{{item}}</option>
   </select>
   <p>小明喜歡的女生是 {{ selected2 }}。</p>
   <hr>
   <h4 class="mt-3">多選</h4>
-  <select name="" id="" class="form-control" v-model="multiSelected">
+  <select name="" id="" class="form-control" v-model="multiSelected" multiple>
     <option value="小美">小美</option>
     <option value="可愛小妞">可愛小妞</option>
     <option value="漂亮阿姨">漂亮阿姨</option>
@@ -133,18 +134,18 @@
   <hr>
   <h4 class="mt-3">複選框</h4>
   <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="sex" v-model="sex">
+    <input type="checkbox" class="form-check-input" id="sex" v-model="sex" true-value="男生" false-value="女生">
     <label class="form-check-label" for="sex">{{ sex }}</label>
   </div>
   <h4 class="mt-3">修飾符</h4>
   {{ lazyMsg }}
-  <input type="text" class="form-control" v-model="lazyMsg">
+  <input type="text" class="form-control" v-model.lazy="lazyMsg">
   <br>
-  <pre>{{ age }}</pre>
-  <input type="number" class="form-control" v-model="age">
+  <pre>{{ typeof(age) }} {{age}}</pre>
+  <input type="number" class="form-control" v-model.number="age">
   <br>
   {{ trimMsg }}緊黏的文字
-  <input type="text" class="form-control" v-model="trimMsg">
+  <input type="text" class="form-control" v-model.trim="trimMsg">
 </div>
 
 <script>
