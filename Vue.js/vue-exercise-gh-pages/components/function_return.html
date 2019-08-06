@@ -128,14 +128,17 @@
 
 <script type="text/x-template" id="counter-component">
 <div>
-  你已經點擊 <button class="btn btn-outline-secondary btn-sm" @click="counter += 1">{{ counter }}</button> 下。
+  你已經點擊 <button class="btn btn-outline-secondary btn-sm" @click="counter += 1">{{ counter + num }}</button> 下。
 </div>
 </script>
 
 <script>
 Vue.component('counter-component', {
-  data: {
-    counter: 0
+  data:function(){
+    return{
+      counter:0,
+      num:10,
+    }
   },
   template: '#counter-component'
 })
