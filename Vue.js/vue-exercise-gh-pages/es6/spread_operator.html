@@ -105,38 +105,46 @@
 
 <script>
 // #1 使用展開語法，合併以下陣列
-let groupA = ['小明', '杰倫', '阿姨'];
-let groupB = ['老媽', '老爸'];
+// let groupA = ['小明', '杰倫', '阿姨'];
+// let groupB = ['老媽', '老爸'];
+// let gropAll = [...groupA,...groupB];
+// console.log(gropAll);
+// console.log(...groupA);
 
 // #2 淺複製觀念說明 (shallow copy)
 // let groupA = ['小明', '杰倫', '阿姨'];
-// let groupB = groupA;
+// let groupB = [...groupA];
 // groupB.push('阿明');
 // console.log(groupA); // 請問此時的 groupA 值為何
 
 
 // #3 類陣列觀念說明
 // let doms = document.querySelectorAll('li');
-// console.log(doms);
+// let newDoms = [...doms]
+// console.log(newDoms);
 
 // #4 類陣列觀念說明
 // var originCash = 1000;
 // function updateEasyCard() {
-//   let arg = arguments
-//   // let sum = arg.reduce(function (accumulator, currentValue) {
-//   //   return accumulator + currentValue;
-//   // }, 0);
-//   // console.log('我有 ' + sum + ' 元');
+//   let arg = [...arguments];
+//   // console.log(arguments);
+//   let sum = arg.reduce(function (accumulator, currentValue) {
+//     return accumulator + currentValue;
+//   }, 0);
+//   console.log('我有 ' + sum + ' 元');
 // }
 // updateEasyCard(0); // 我有 1000 元
 // updateEasyCard(10, 50, 100, 50, 5, 1, 1, 1, 500); // 我有 718 元
 
 
 // #5 其餘參數
-// function moreMoney(...money) {
-//   // console.log(money);
-// }
-// moreMoney(100, 100, 100)
+function moreMoney(ming,...money) {
+  console.log(money);
+  let a = money[0];
+  console.log(a);
+  console.log(ming);
+}
+moreMoney('小名','blue',100, 200, 300)
 </script> 
         </div>
       </div>

@@ -112,12 +112,19 @@
 // let jay = family[1];
 // let auntie = family[2];
 
+// let [ming,jay,,mom,father] = family;
+// console.log(ming,jay,mom,father);
+
 // #2 請交換以下兩個變數
 // let Goku = '悟空';
 // let Ginyu = '基紐';
+// [Goku,Ginyu] = [Ginyu,Goku];
+// console.log(Goku);
 
 // #3 請拆解以下字元到單一變數上
 // let str = '基紐特攻隊';
+// [a,b,c,d,e] = str;
+// console.log(c);
 
 // #4 物件解構
 // 請取出物件內的兩個值到單一變數上
@@ -134,6 +141,8 @@
 //   burter: '巴特',
 //   // ...
 // }
+// let { Ginyu : goku} = GinyuTeam;
+// console.log(goku);
 
 
 // #6 延伸問題
@@ -142,8 +151,9 @@
 
 
 // #7 預設值
-// let [ming = '小明', jay = '杰倫'] = ['阿明'] 
-// 第一個會被賦值，第二個會用預設
+// let [ming = '小明', jay = '杰倫'] = ['阿明'];
+// console.log(ming,jay) 
+// // 第一個會被賦值，第二個會用預設
 // ming: "阿明"
 // jay: "杰倫"
 
