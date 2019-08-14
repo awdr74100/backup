@@ -21,14 +21,25 @@
 
     <title>Document</title>
     <link rel="stylesheet" href="">
+    <style>
+        .cc {
+            border: 1px solid red;
+        }
+    </style>
 </head>
 
 <body>
     <div id="app">
-        <input type="text" name="" id="" v-model="text">
-        <input type="button" value="送出" @click="output(80)">
-        {{outText}}
+        <h2>總數目：{{count}}</h2>
+        <card @calladdcount="addCount"></card>
     </div>
+    <footer></footer>
+    <script type="text/x-template" id="cardData">
+       <div>
+          <input type="button" value="增加" @click="callAdd">
+          <input type="number" v-model="count">
+       </div>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="js/all.js"></script>
 </body>

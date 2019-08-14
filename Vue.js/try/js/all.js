@@ -1,19 +1,27 @@
+Vue.component('card', {
+    template: '#cardData',
+    data() {
+        return {
+            count: '',
+        }
+    },
+    methods: {
+        callAdd() {
+            // this.$emit('calladdcount', Number(this.count));
+            this.$root.addCount(Number(this.count));
+        }
+    },
+
+})
+
 var app = new Vue({
     el: '#app',
     data: {
-        text: "",
-        outText: "",
+        count: 0,
     },
     methods: {
-        output: function (val) {
-            const vm = this;
-            vm.outText = vm.text;
-            console.log(val);
-            console.log(event);
-
+        addCount(num) {
+            this.count += num;
         }
     },
-    computed: {
-
-    },
-})
+})插槽
