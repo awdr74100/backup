@@ -95,14 +95,23 @@
     <li>請嘗試將 Vue Bootstrap 的 Modal 元件載入。</li>
   </ol>
 </div>
+<div>
+    <b-button v-b-modal.modal-1>Launch demo modal</b-button>
+  
+    <b-modal id="modal-1" title="BootstrapVue">
+      <p class="my-4">Hello from modal!</p>
+    </b-modal>
+  </div>
 
 <div id="app">
   
 </div>
 
 
-
+<script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
+<script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
 <script>
+  
 // CLI 版本請加入以下套用 BootstrapVue
 // import BootstrapVue from 'bootstrap-vue'
 // Vue.use(BootstrapVue);

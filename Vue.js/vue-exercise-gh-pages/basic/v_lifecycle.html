@@ -153,9 +153,9 @@
     <span v-else>Show child</span>
   </button>
   <hr>
-  <keep-alive>
+  <!-- <keep-alive> -->
     <app-child v-if="isShowing"></app-child>
-  </keep-alive>
+  <!-- </keep-alive> -->
 </div>
 
 <script type="text/x-template" id="childarea">
@@ -174,31 +174,35 @@ const Child = {
     }
   },
   beforeCreate() {
-    console.log(`beforeCreate! ${this.text}`);
+    console.log(`beforeCreate! ${this.text}`); //Vue.js 開始運行，但data資料還沒有掛載上去
   }, 
   created() {
-    alert(`created! ${this.text}`);
+    alert(`created! ${this.text}`); //執行AJAX獲取JSON到DATA，至少要等到這一個步驟 (已經可以讀取到data內容，但el屬性還不存在)
   }, 
   beforeMount() {
-    alert(`beforeMount! ${this.text}`);
+    alert(`beforeMount! ${this.text}`); //掛載開始之前被調用
   }, 
   mounted() {
-    alert(`mounted! ${this.text}`);
+    // alert(`mounted! ${this.text}`);
+    console.log("掛載完成") //已經掛載上去，但還沒開始渲染
+  },
+  beforeUpdate() {
+    alert("re");
   },
   updated () {
-    console.log(`updated! ${this.text}`);
+    console.log(`updated! ${this.text}`);  //資料更新觸發
   },
   activated () {
-    alert(`activated! ${this.text}`);
+    alert(`activated! ${this.text}`); //使用keep alive觸發
   },
   deactivated () {
-    alert(`deactivated! ${this.text}`);
+    alert(`deactivated! ${this.text}`); //保存keep alive內容 (下一次觸發從actived開始，不會從頭開始\)
   },
   beforeDestroy() {
-    console.log(`beforeDestroy! ${this.text}`);
+    console.log(`beforeDestroy! ${this.text}`); //銷毀之前被調用、但該instance還是完全可以使用
   }, 
   destroyed() {
-    console.log(`destroyed! ${this.text}`);
+    console.log(`destroyed! ${this.text}`); // instance銷毀之後被調用，所有東西解除綁定
   }
 };
 
