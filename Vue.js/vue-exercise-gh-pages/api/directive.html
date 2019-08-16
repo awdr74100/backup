@@ -112,34 +112,34 @@
         <script>
           // 官方文件 https://cn.vuejs.org/v2/guide/custom-directive.html
           Vue.directive('focus', {
-            inserted: function (el) {
+            inserted: function (el,binding,vnode) {
               el.focus()
             }
           });
 
           Vue.directive('validation', {
-            update: function (el, binding, vnode) {
-              let value = el.value;
-              let re =
-                /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-              console.log(value,re.test(value));
-              if(!re.test(value)){
-                el.className = 'form-control is-invalid'
-              }else{
-                el.className = 'form-control is-valid'
-              }
-            },
+            // update: function (el, binding, vnode) {
+            //   let value = el.value;
+            //   let re =
+            //     /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            //   console.log(value,re.test(value));
+            //   if(!re.test(value)){
+            //     el.className = 'form-control is-invalid'
+            //   }else{
+            //     el.className = 'form-control is-valid'
+            //   }
+            // },
             bind: function (el, binding, vnode) {
               console.log(el, binding, vnode)
               el.className = binding.value.className;
 
-              // v-model
+              // // v-model
               var vModel = vnode.data.directives.find(function(item){
                 return item.name == "model";
               }).expression
               
-              let value = vnode.context[vModel];
-              console.log(vModel,value);
+              // let value = vnode.context[vModel];
+              // console.log(vModel,value);
             }
           })
 
