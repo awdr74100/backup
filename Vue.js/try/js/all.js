@@ -24,4 +24,4 @@ var app = new Vue({
             this.count += num;
         }
     },
-})插槽
+})
