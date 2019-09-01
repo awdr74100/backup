@@ -1,0 +1,73 @@
+// grid system start
+
+$gutter-width:15px;
+$grid-sum:12;
+
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  position: relative;
+  font-family: "微軟正黑體";
+}
+
+.container {
+  position: relative;
+  padding-left: ($gutter-width*2);
+  padding-right: ($gutter-width*2);
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -($gutter-width/2);
+  margin-right: -($gutter-width/2);
+
+  &__noGutter {
+    margin-left: 0px;
+    margin-right: 0px;
+
+    %noCol {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    @for $i from 1 through $grid-sum {
+      .col-#{$i} {
+        @extend %noCol;
+      }
+    }
+  }
+}
+
+@for $i from 1 through $grid-sum {
+  .col-#{$i} {
+    position: relative;
+    max-width: ($i/$grid-sum)*100%;
+    flex: 0 0 (($i/$grid-sum)*100%);
+    padding-left: $gutter-width/2;
+    padding-right: $gutter-width/2;
+  }
+}
+
+// @media(max-width:768px) {
+//     // @for $i from 1 to $grid-sum+1 {
+//     //     .col-#{$i} {
+//     //         max-width: 100%;
+//     //         flex: 0 0 100%;
+//     //     }
+//     // }
+//     .container{
+//         padding-left: $gutter-width/2;
+//         padding-right: $gutter-width/2;
+//     }
+// }
+// @media(max-width:720px){
+//     @for $i from 1 to $grid-sum+1 {
+//         .col-#{$i} {
+//             max-width: 100%;
+//             flex: 0 0 100%;
+//         }
+//     }
+// }
+
+// grid system end

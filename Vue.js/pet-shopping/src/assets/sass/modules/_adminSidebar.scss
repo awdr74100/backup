@@ -1,0 +1,65 @@
+.adminSidebar {
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  box-shadow: 1px 1px 5px rgb(165, 165, 165);
+
+  .logo {
+    h2 {
+      font-size: $font-l;
+      color: $color-primary;
+      font-weight: bold;
+      text-align: center;
+      line-height: 70px;
+
+      span {
+        color: $color-minor;
+      }
+    }
+  }
+
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__item {
+      margin-top: 30px;
+
+      .active {
+        color: rgb(76, 167, 76);
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-decoration: none;
+        color: $color-primary;
+        transition: all 0.3s;
+
+
+
+        i {
+          font-size: $font-l;
+        }
+
+        p {
+          font-size: $font-xs;
+          text-decoration: none;
+          margin-top: 10px;
+        }
+
+        &:hover {
+          color: rgb(76, 167, 76);
+        }
+      }
+    }
+  }
+}

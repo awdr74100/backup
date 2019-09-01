@@ -1,0 +1,96 @@
+.login {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+
+    a {
+      display: block;
+      width: 460px;
+      height: 140px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('~@/assets/img/logo.png')
+    }
+  }
+
+  .login-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column wrap;
+
+    h3 {
+      width: 100%;
+      text-align: center;
+      font-size: $font-l;
+      color: $color-primary;
+    }
+
+    label {
+      padding-top: 20px;
+      color: #4d3e28;
+    }
+
+
+    .input {
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 18px 18px;
+      padding-left: 30px;
+      border: none;
+      border-bottom: 1px solid #4d3e28;
+      margin-top: 10px;
+      font-size: $font-s;
+      width: 400px;
+      height: 36px;
+      color: #4d3e28;
+      transition: border-bottom 0.3s;
+
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid $color-minor;
+      }
+
+      &--mail {
+        background-image: url("~@/assets/img/mail.svg");
+      }
+
+      &--key {
+        background-image: url("~@/assets/img/key.svg");
+      }
+    }
+
+    button {
+      margin-top: 20px;
+      width: 400px;
+      border: none;
+      height: 44px;
+      border-radius: 5px;
+      font-size: $font-s;
+      color: #302f2e;
+      background-color: $color-minor;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: darken($color-minor, $amount: 10);
+        color: #fff;
+      }
+    }
+    span{
+      display: block;
+      margin-top: 30px;
+      width: 100%;
+      color: #4d3e28;
+      text-align: center;
+      font-size: $font-xl;
+    }
+  }
+
+
+}

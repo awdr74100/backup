@@ -1,0 +1,25 @@
+.swiper-container {
+  width: 1024px;
+  height: 486px;
+
+  .banner {
+    width: 1024px;
+    height: 486px;
+    display: block;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &--Img1 {
+      background-image: url(~@/assets/img/banner1.jpg);
+    }
+
+    &--Img2 {
+      background-image: url(~@/assets/img/banner2.jpg);
+    }
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #9dd269 !important;
+}

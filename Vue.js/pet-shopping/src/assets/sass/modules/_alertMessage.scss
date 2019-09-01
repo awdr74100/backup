@@ -1,0 +1,61 @@
+.message-alert {
+  position: fixed;
+  z-index: 100;
+  top: 35px;
+  right: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .alert {
+    margin-top: 15px;
+    // padding: 15px 25px;
+    padding: 15px 10px 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 5px black;
+
+    i {
+      font-size: 26px;
+      margin-right: 15px;
+    }
+
+    &--success {
+      background-color: #fff;
+      border-left: 5px solid rgb(76, 167, 76);
+      color: rgb(76, 167, 76);
+
+    }
+
+    &--warning{
+      background-color: #fff;
+      border-left: 5px solid rgb(226, 197, 29);
+      color: rgb(226, 197, 29);
+    }
+
+    &--danger {
+      background-color: #fff;
+      border-left: 5px solid #dc3545;
+      color: #dc3545;
+    }
+
+    p {
+      font-size: $font-s;
+    }
+
+    button {
+      margin-left: 12px;
+      font-size: 24px;
+      color: rgb(194, 194, 194);
+      border: none;
+      background-color: rgba(255, 255, 255, 0);
+      transition: all 0.3s;
+
+      &:hover {
+        color: rgb(70, 70, 70);
+      }
+    }
+  }
+}
