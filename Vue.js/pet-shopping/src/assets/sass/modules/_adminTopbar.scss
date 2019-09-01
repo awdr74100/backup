@@ -1,0 +1,44 @@
+.adminTopbar {
+  position: relative;
+  background-color: #fff;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 5px rgb(165, 165, 165);
+
+  h3 {
+    margin-left: 30px;
+    font-size: $font-m;
+    color: $color-primary;
+    font-weight: bold;
+    text-align: center;
+    line-height: 70px;
+  }
+
+  .list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__item {
+
+      a {
+        padding: 24.5px 30px;
+        text-decoration: none;
+        font-size: $font-xs;
+        color: $color-primary;
+        transition: all 0.3s;
+
+        i {
+          margin-left: 8px;
+        }
+
+        &:hover {
+          background-color: rgb(76, 167, 76);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
