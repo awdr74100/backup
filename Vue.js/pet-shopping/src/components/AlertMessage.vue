@@ -29,12 +29,17 @@
         //   message: '訊息內容',
         //   status: 'danger',
         //   timestamp: '123',
-        // }
+        // },
         ],
       };
     },
     methods: {
       updateMessage(message, status) {
+        if(this.messages = []){
+
+        }else if(this.messages[1].message == '請先登入'){
+          this.messages.splice(1,1);
+        }
         const timestamp = Math.floor(new Date() / 1000);
         this.messages.push({
           message,
@@ -65,7 +70,6 @@
       vm.$bus.$on('message:push', (message, status = 'danger') => {
         vm.updateMessage(message, status);
       });
-      // vm.$bus.$emit('message:push');
     },
   };
 
