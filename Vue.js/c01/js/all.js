@@ -1,3 +1,7 @@
+Vue.filter('dollar', (num = 0) => {
+    return `NT$${num}`;
+})
+
 var app = new Vue({
     el: "#app",
     data: {
