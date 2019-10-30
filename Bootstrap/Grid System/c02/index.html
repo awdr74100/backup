@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Roya">
+    <meta name="copyright" CONTENT="本網頁著作權為Roya所有">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+
+    <!-- Open Graph Protocol start-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://lanyiru.nctu.me" />
+    <meta property="og:site_name" content="" />
+    <!-- Open Graph Protocol end-->
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+        .box {
+            height: 100px;
+            background-color: aqua;
+            border: 1px solid whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 利用 flex 的中斷點 -->
+    <!-- <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+            <div class="col">
+                <div class="box"></div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- flexbox 練習 -->
+    <div class="container">
+        <!-- <div class="row justify-content-between">
+            <div class="col-3">
+                <div class="box">1</div>
+            </div>
+            <div class="col-3">
+                <div class="box">2</div>
+            </div>
+        </div> -->
+        <div class="row flex-column align-items-center">
+            <div class="col-6 align-self-start">
+                <div class="box"></div>
+            </div>
+            <div class="col-6">
+                <div class="box"></div>
+            </div>
+            <div class="col-6 align-self-end">
+                <div class="box"></div>
+            </div>
+            <div class="col-6">
+                <div class="box"></div>
+            </div>
+            <div class="col-6 align-self-start">
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src=""></script>
+</body>
+
+</html>

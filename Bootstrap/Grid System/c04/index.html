@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Roya">
+    <meta name="copyright" CONTENT="本網頁著作權為Roya所有">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+
+    <!-- Open Graph Protocol start-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://lanyiru.nctu.me" />
+    <meta property="og:site_name" content="" />
+    <!-- Open Graph Protocol end-->
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+        .box {
+            height: 100px;
+            background-color: aqua;
+        }
+
+        .bg-cover {
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .timeline-section {
+            position: relative;
+        }
+
+        .timeline-section::after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            background-color: brown;
+        }
+
+        .timeline-pointer {
+            position: relative;
+        }
+
+        .timeline-pointer::after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            z-index: 10;
+            border: 3px solid rgb(107, 214, 93);
+            background-color: rgb(107, 214, 93);
+        }
+
+        @media (max-width: 576px) {
+            .timeline-pointer::after,
+            .timeline-section::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="timeline-section">
+            <div class="row timeline-pointer my-3">
+                <div class="col-sm-6">
+                    <h3>這是一段標題</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate reiciendis aut doloribus,
+                        dolore
+                        tenetur nobis dolorum vero neque enim asperiores?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum debitis iure autem incidunt
+                        porro
+                        tempore illum deserunt assumenda libero repudiandae!</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="box">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row timeline-pointer my-3 flex-sm-row-reverse">
+                <div class="col-sm-6">
+                    <h3>這是一段標題</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate reiciendis aut doloribus,
+                        dolore
+                        tenetur nobis dolorum vero neque enim asperiores?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum debitis iure autem incidunt
+                        porro
+                        tempore illum deserunt assumenda libero repudiandae!</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="box">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row timeline-pointer my-3">
+                <div class="col-sm-6">
+                    <h3>這是一段標題</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate reiciendis aut doloribus,
+                        dolore
+                        tenetur nobis dolorum vero neque enim asperiores?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum debitis iure autem incidunt
+                        porro
+                        tempore illum deserunt assumenda libero repudiandae!</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="box">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row timeline-pointer my-3 flex-sm-row-reverse">
+                <div class="col-sm-6">
+                    <h3>這是一段標題</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate reiciendis aut doloribus,
+                        dolore
+                        tenetur nobis dolorum vero neque enim asperiores?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum debitis iure autem incidunt
+                        porro
+                        tempore illum deserunt assumenda libero repudiandae!</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="box">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row timeline-pointer my-3">
+                <div class="col-sm-6">
+                    <h3>這是一段標題</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate reiciendis aut doloribus,
+                        dolore
+                        tenetur nobis dolorum vero neque enim asperiores?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum debitis iure autem incidunt
+                        porro
+                        tempore illum deserunt assumenda libero repudiandae!</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="box">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src=""></script>
+</body>
+
+</html>
