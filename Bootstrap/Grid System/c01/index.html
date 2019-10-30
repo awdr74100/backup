@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Roya">
+    <meta name="copyright" CONTENT="本網頁著作權為Roya所有">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+
+    <!-- Open Graph Protocol start-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://lanyiru.nctu.me" />
+    <meta property="og:site_name" content="" />
+    <!-- Open Graph Protocol end-->
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+        .box {
+            height: 100px;
+            background-color: aqua;
+            border: 1px solid whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <!-- 錯誤的 -->
+        <div class="row">
+            <div class="col-6 box"></div>
+            <div class="col-6 box"></div>
+        </div>
+        <!-- 錯誤的 -->
+        <div class="row">
+            <div class="col-4 box"></div>
+            <div class="col-4 box"></div>
+            <div class="col-4 box"></div>
+        </div>
+        <hr>
+        <!-- 正確的 -->
+        <div class="row">
+            <div class="col-6">
+                <div class="box"></div>
+            </div>
+            <div class="col-6">
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 實際應用 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                .Menu
+            </div>
+            <div class="col-8">
+                <h2>這是標題</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, molestiae!</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- 加上斷點 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="box"></div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="box"></div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-2">
+                <div class="box"></div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="box"></div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="box"></div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+    <script src=""></script>
+</body>
+
+</html>
