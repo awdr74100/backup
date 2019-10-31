@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/all.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </head>
+  <% var menus = {
+    layout: [
+      {
+        name: 'Media object',
+        url: 'media-object'
+      },
+      {
+        name: '網格',
+        url: 'grid'
+      },
+    ],
+    components: [
+      {
+        name: 'Alerts',
+        url: 'alerts'
+      },
+      {
+        name: 'Badge',
+        url: 'badge'
+      },
+      {
+        name: 'Breadcrumb',
+        url: 'breadcrumb'
+      },
+      {
+        name: 'Buttons',
+        url: 'buttons'
+      },
+      {
+        name: 'Button Group',
+        url: 'button-group'
+      },
+      {
+        name: 'Card',
+        url: 'card'
+      },
+      {
+        name: 'Carousel',
+        url: 'carousel'
+      },
+      {
+        name: 'Collapse',
+        url: 'collapse'
+      },
+      {
+        name: 'Dropdowns',
+        url: 'dropdowns'
+      },
+      {
+        name: 'Forms',
+        url: 'forms'
+      },
+      {
+        name: 'Input Group',
+        url: 'input-group'
+      },
+      {
+        name: 'Jumbotron',
+        url: 'jumbotron'
+      },
+      {
+        name: 'List Group',
+        url: 'list-group'
+      },
+      {
+        name: 'Modal',
+        url: 'modal'
+      },
+      {
+        name: 'Nav',
+        url: 'nav'
+      },
+      {
+        name: 'Navbar',
+        url: 'navbar'
+      },
+      {
+        name: 'Pagination',
+        url: 'pagination'
+      },
+      {
+        name: 'Popovers',
+        url: 'popovers'
+      },
+      {
+        name: 'Progress',
+        url: 'progress'
+      },
+      {
+        name: 'Scrollspy',
+        url: 'scrollspy'
+      },
+      {
+        name: 'Tooltip',
+        url: 'tooltips'
+      }
+    ],
+    utilities: [
+      {
+        name: 'Borders',
+        url: 'borders'
+      },
+      {
+        name: 'Clearfix',
+        url: 'clearfix'
+      },
+      {
+        name: 'Close Icon',
+        url: 'close-icon'
+      },
+      {
+        name: 'Colors',
+        url: 'colors'
+      },
+      {
+        name: 'Display',
+        url: 'display'
+      },
+      {
+        name: 'Embed',
+        url: 'embed'
+      },
+      {
+        name: 'Flex',
+        url: 'flex'
+      },
+      {
+        name: 'Float',
+        url: 'float'
+      },
+      {
+        name: 'Image Replacement',
+        url: 'image-replacement'
+      },
+      {
+        name: 'Position',
+        url: 'position'
+      },
+      {
+        name: 'Screenreaders',
+        url: 'screenreaders'
+      },
+      {
+        name: 'Sizing',
+        url: 'sizing'
+      },
+      {
+        name: 'Spacing',
+        url: 'spacing'
+      },
+      {
+        name: 'Text',
+        url: 'text'
+      },
+      {
+        name: 'Vertical Align',
+        url: 'vertical-align'
+      },
+      {
+        name: 'Visibility',
+        url: 'visibility'
+      }
+    ]
+  } %>
+  <body class="over-flow-x">
+    <%- include partials/navbar %>
+    <div class="container my-5">
+      <div class="row">
+        <% if (menu) { %>
+          <div class="col-md-3">
+            <%- include('sidebar/menu', {current: current, menus: menus[menu], path: menu}) %>
+          </div>
+        <% } %>
+        <div class="col-md-9 post">      
+          <!-- 練習開始 -->
+          <h1 class="mt-0"><%- title %></h1>
+          <%- contents %> 
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
