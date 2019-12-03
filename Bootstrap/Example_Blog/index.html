@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Roya" />
+    <meta name="copyright" content="本網頁著作權為Roya所有" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+
+    <!-- Open Graph Protocol start-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://awdr74100.github.io/" />
+    <meta property="og:site_name" content="" />
+    <!-- Open Graph Protocol end-->
+
+    <title>Blog</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!--Fontawesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+      integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00cc99;">
+      <a class="navbar-brand" href="#">
+        <i class="far fa-gem"></i>
+        六角部落格
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- container -->
+    <div class="container">
+      <!-- breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb pl-0">
+          <li class="breadcrumb-item"><a href="#" class="text-hexschool">Home</a></li>
+          <li class="breadcrumb-item"><a href="#" class="text-hexschool">部落格</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Bootstrap</li>
+        </ol>
+      </nav>
+      <!-- title -->
+      <h1 class="text-hexschool">Bootstrap 4 繁體中文手冊</h1>
+      <!-- grid system -->
+      <div class="row">
+        <div class="col-md-8">
+          <div class="my-2 text-secondary">
+            <small>
+              <span class="mr-3"><i class="far fa-user"></i> 卡斯柏</span>
+              <span class="mr-3">2017/08/13</span>
+              <span class="mr-3"><i class="fas fa-tag"></i> event</span>
+            </small>
+          </div>
+          <article>
+            <p>
+              Bootstrap 是目前最主流的 CSS
+              框架，由於他包含了大量的元件以及具有良好的架構，在實際運用及擴增也都是非常容易，也越來越多開發者協同一起開發
+              (Github 上有超過 10 萬個 Star)。如今第四版 Beta (Bootstrap 4 Beta) 也在 2017/8/10
+              釋出，我們先來看看他有什麼樣的改變吧！
+            </p>
+            <h2 class="text-secondary">Bootstrap 4 的特色</h2>
+            <p>
+              Bootstrap 4 Beta 經過了 Alpha 六個版本的歷練，重新翻修了大量元件以及加入許多新的元素，如果你沒有用過 Alpha
+              的任何版本，提供了以下摘要讓您快速了解第四版有什麼新新聞：
+            </p>
+            <ul>
+              <li>
+                從 Less 到 Sass: 自從 Sass 不在只能使用 Ruby 編譯後，Libsass 有更快的編譯效率，加上 Sass
+                本身具有龐大的開發社群，所以 Bootstrap 從 Less 改用 Sass 囉！
+              </li>
+              <li>
+                Flexbox 以及強化的網格系統: 網格系統不在使用 <code>float</code>，進而改用
+                flexbox，讓行動裝置及桌面裝置有更彈性的排版方法。
+              </li>
+              <li>
+                卡片元件: 許多元件本質相似度較高，如 wells、thumbnails、panels
+                等等，這些元件被捨棄掉，取而代之的則是卡片元件，不僅可以完成上述元件的功能，且運作的更為美好。
+              </li>
+              <li>
+                彈性更高的變數: 以往的樣式都是固定的名稱、色彩，透過 Sass $map
+                變數可以更有彈性的調整、新增、減少不同的品牌色彩、陰影等視覺效果。
+              </li>
+              <li>
+                IE8、IE9 掰掰: 放棄舊有的瀏覽器支持，讓元件的使用及開發上更為容易，如果還是考慮支援 IE8/IE9、 Safari
+                8-、 iOS 8- 可以繼續使用 Bootstrap 3。
+              </li>
+              <li>
+                重新設計說明文件: 新的文件重新設計了，並且加入一些插件讓搜尋上更為容易！
+              </li>
+              <li>
+                更多的改變: 重新設計更多更多的樣式，像是自由套色的導覽列、HTML5 的驗證樣式、嶄新的輪播以及許多的元件
+              </li>
+            </ul>
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/hexschool-api.appspot.com/o/blog%2F2017%2F08%2Fbootstrap4.png?alt=media&token=0b014ac6-b99b-46e7-8336-3fbfda1da3c2"
+              alt=""
+              class="img-fluid"
+            />
+          </article>
+          <div class="card">
+            <div class="card-header">
+              留言回復
+            </div>
+            <div class="card-body">
+              <div class="media mb-4">
+                <img
+                  src="https://randomuser.me/api/portraits/men/73.jpg"
+                  width="64px"
+                  height="64px"
+                  class="mr-3"
+                  alt="..."
+                />
+                <div class="media-body">
+                  <h5 class="mt-0">Media heading</h5>
+                  <div class="form-group">
+                    <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
+                    <textarea class="form-control" rows="3"></textarea>
+                    <button class="btn btn-light btn-block mt-2">Submit</button>
+                  </div>
+                </div>
+              </div>
+              <div class="media">
+                <img
+                  src="https://randomuser.me/api/portraits/men/73.jpg"
+                  width="64px"
+                  height="64px"
+                  class="mr-3"
+                  alt="..."
+                />
+                <div class="media-body">
+                  <h5 class="mt-0">Media heading</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus
+                  odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+                  fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h2 class="text-secondary">Tags</h2>
+          <a href="#" class="badge badge-info"><i class="fas fa-tag"></i> Info</a>
+          <a href="#" class="badge badge-info"><i class="fas fa-tag"></i> Bootstrap</a>
+          <a href="#" class="badge badge-info"><i class="fas fa-tag"></i> css</a>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

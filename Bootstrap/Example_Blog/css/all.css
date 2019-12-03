@@ -1,0 +1,12 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Microsoft JhengHei, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.breadcrumb{
+    background-color: transparent;
+}
+
+.text-hexschool{
+    color: #00cc99 !important;
+}
