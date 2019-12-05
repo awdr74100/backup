@@ -1,0 +1,61 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class control : MonoBehaviour {
+
+    public GameObject mainCamera;
+    float angle = 0;
+    float speedUp = 0;
+    int flag = 1;
+
+	
+	// Update is called once per frame
+	void Update () {
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            speedUp += 0.01f;
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            speedUp -= 0.01f;
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            angle -= 2;
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            angle += 2;
+        }
+        if(flag == 1)
+        {
+            mainCamera.transform.position = transform.position + new Vector3(0, 13, -25);
+            mainCamera.transform.eulerAngles = new Vector3(10,0,0);
+        }
+        if(flag == -1)
+        {
+            mainCamera.transform.position = transform.position + new Vector3(0, 10, 20);
+            mainCamera.transform.eulerAngles = new Vector3(10, 180, 0);
+        }
+        if (Input.GetKey(KeyCode.Z))
+        {
+            flag = 1;
+            mainCamera.transform.parent = null;
+        }
+        if (Input.GetKey(KeyCode.X))
+        {
+            flag = -1;
+            mainCamera.transform.parent = null;
+        }
+        if (Input.GetKey(KeyCode.C))
+        {
+            flag = 0;
+            mainCamera.transform.position = transform.position + transform.forward * 2;
+            mainCamera.transform.rotation = transform.rotation;
+            mainCamera.transform.parent = transform;
+        }
+        transform.position += transform.forward * (0.1f + speedUp);
+        transform.eulerAngles = new Vector3(0, angle, 0);
+    }
+}
