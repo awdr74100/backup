@@ -1,0 +1,23 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Microsoft JhengHei', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btn {
+  border-width: 2px;
+}
+
+.bg-cover {
+  background-position: center center;
+  background-size: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 768px) {
+  .text-md-dark {
+    color: #333;
+  }
+}
