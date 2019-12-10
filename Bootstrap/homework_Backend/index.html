@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Roya" />
+    <meta name="copyright" content="本網頁著作權為Roya所有" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+
+    <!-- Open Graph Protocol start-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://awdr74100.github.io/" />
+    <meta property="og:site_name" content="" />
+    <!-- Open Graph Protocol end-->
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+      integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">商務控制後台</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">列表</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- content -->
+    <div class="container-fluid mt-4">
+      <!-- row 1 -->
+      <div class="row mb-4">
+        <div class="col-lg-3 col-6">
+          <div class="card rounded-0 h-100">
+            <div class="card-body d-flex align-items-center">
+              <div class="d-none d-sm-block"><i class="far fa-money-bill-alt mr-2 fa-3x text-secondary"></i></div>
+              <div class="w-100 text-center">
+                <div class="h5">今日營收</div>
+                <div class="h3">192,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="card rounded-0">
+            <div class="card-body d-flex align-items-center">
+              <div class="d-none d-sm-block"><i class="fas fa-users fa-3x mr-2 text-secondary"></i></div>
+              <div class="w-100 text-center">
+                <div class="h5">會員增加</div>
+                <div class="display-4">172</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="card rounded-0">
+            <div class="card-body d-flex align-items-center">
+              <div class="d-none d-sm-block"><i class="far fa-address-card fa-3x mr-2 text-secondary"></i></div>
+              <div class="w-100 text-center">
+                <div class="h5">訂單數</div>
+                <div class="display-4">320</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="card rounded-0">
+            <div class="card-body d-flex align-items-center">
+              <div class="d-none d-sm-block"><i class="fas fa-archive fa-3x mr-2 text-secondary"></i></div>
+              <div class="w-100 text-center">
+                <div class="h5">待出貨數</div>
+                <div class="display-4">120</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- row 2 -->
+      <div class="row mb-4">
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column text-center justify-content-center">
+              <p>目前線上人數</p>
+              <p class="display-2">99</p>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 35%"
+                  aria-valuenow="35"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  桌機
+                </div>
+                <div
+                  class="progress-bar bg-info"
+                  role="progressbar"
+                  style="width: 65%"
+                  aria-valuenow="65"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  行動裝置
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-header">新進訂單</div>
+            <div class="card-body">
+              <div class="text-right mb-3">
+                <button class="btn btn-outline-secondary btn-sm">訂單管理</button>
+              </div>
+              <table class="table mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">來源</th>
+                    <th scope="col">姓名</th>
+                    <th scope="col">貨品</th>
+                    <th scope="col">價格</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">Youtube</td>
+                    <td>喜多郎</td>
+                    <td>六角和牛排</td>
+                    <td class="text-right">3000</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Youtube</td>
+                    <td>喜多郎</td>
+                    <td>六角喜餅</td>
+                    <td class="text-right">2000</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Youtube</td>
+                    <td>喜多郎</td>
+                    <td>六角雞胸</td>
+                    <td class="text-right">1500</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Youtube</td>
+                    <td>喜多郎</td>
+                    <td>六角可愛 T Shirt</td>
+                    <td class="text-right">2000</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="3" class="text-right">總營收</td>
+                    <td class="text-right">10,500</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- chart -->
+      <div class="row mb-4">
+        <section class="col-lg-8">
+          <div class="card">
+            <div class="card-header">用戶來源</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-8">
+                  <canvas id="barCanvas"></canvas>
+                </div>
+                <div class="col-lg-4">
+                  <h4>Detail</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit expedita aut facilis amet,
+                    iste illo. Sed aspernatur earum voluptate!
+                  </p>
+                  <h6>Google 來源</h6>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 20%"
+                      aria-valuenow="20"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <h6 class="mt-3">Facebook 來源</h6>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 40%"
+                      aria-valuenow="40"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <h6 class="mt-3">無法追蹤</h6>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-info"
+                      role="progressbar"
+                      style="width: 40%"
+                      aria-valuenow="40"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-header">瀏覽器</div>
+            <div class="card-body d-flex align-items-center">
+              <canvas class="chart-item"></canvas>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- status -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/all.js"></script>
+  </body>
+</html>
