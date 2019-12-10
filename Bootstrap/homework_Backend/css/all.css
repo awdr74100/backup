@@ -6,3 +6,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Microsoft JhengHei', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+.main {
+  min-height: calc(100vh - (49px + 49px + 42px + 14px));
+}

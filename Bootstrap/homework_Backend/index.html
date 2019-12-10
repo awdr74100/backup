@@ -56,7 +56,7 @@
       </div>
     </nav>
     <!-- content -->
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-4 main">
       <!-- row 1 -->
       <div class="row mb-4">
         <div class="col-lg-3 col-6">
@@ -253,6 +253,403 @@
         </section>
       </div>
       <!-- status -->
+      <div class="card mb-4">
+        <div class="card-header">月營運狀態</div>
+        <div class="card-body">
+          <div class="d-flex">
+            <div class="form-group">
+              <label for="month" class="sr-only">月份</label>
+              <select class="form-control form-control-sm" id="month">
+                <option>9月</option>
+                <option>10月</option>
+                <option>11月</option>
+                <option>12月</option>
+              </select>
+            </div>
+            <div class="ml-auto">
+              <a href="#" class="btn btn-outline-secondary btn-sm">下載報表</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">訂單管理</a>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th width="50">日期</th>
+                  <th>訂單數</th>
+                  <th>退費數</th>
+                  <th>出貨數</th>
+                  <th width="15%">有問題貨品</th>
+                  <th width="150">營業額</th>
+                  <th width="150">淨利潤</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">9/1</td>
+                  <td>300</td>
+                  <td>1</td>
+                  <td>250</td>
+                  <td>3</td>
+                  <td class="text-right">250,000</td>
+                  <td class="text-right">168,000</td>
+                </tr>
+                <tr>
+                  <td scope="row">9/2</td>
+                  <td>300</td>
+                  <td>1</td>
+                  <td>250</td>
+                  <td>3</td>
+                  <td class="text-right">250,000</td>
+                  <td class="text-right">168,000</td>
+                </tr>
+                <tr>
+                  <td scope="row">9/3</td>
+                  <td>300</td>
+                  <td>1</td>
+                  <td>250</td>
+                  <td>3</td>
+                  <td class="text-right">250,000</td>
+                  <td class="text-right">168,000</td>
+                </tr>
+                <tr>
+                  <td scope="row">9/4</td>
+                  <td>300</td>
+                  <td>1</td>
+                  <td>250</td>
+                  <td>3</td>
+                  <td class="text-right">250,000</td>
+                  <td class="text-right">168,000</td>
+                </tr>
+                <tr>
+                  <td scope="row">9/5</td>
+                  <td>300</td>
+                  <td>1</td>
+                  <td>250</td>
+                  <td>3</td>
+                  <td class="text-right">250,000</td>
+                  <td class="text-right">168,000</td>
+                </tr>
+                <tr>
+                  <td scope="row">9/6</td>
+                  <td>300</td>
+                  <td>1</td>
+                  <td>250</td>
+                  <td>3</td>
+                  <td class="text-right">250,000</td>
+                  <td class="text-right">168,000</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="6" class="text-right">月總營收</td>
+                  <td class="text-right">3,750,500</td>
+                </tr>
+                <tr>
+                  <td colspan="6" class="text-right">月總淨利潤</td>
+                  <td class="text-right">2,140,500</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!-- search -->
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search for"
+              aria-label="Search for"
+              aria-describedby="button-addon2"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="<em>按下 Enter 快入搜尋</em>"
+              data-html="true"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="button" id="button-addon2">Go!</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="d-flex justify-content-end">
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#editModal" data-title="快速下單"
+              >快速下單</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- order -->
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th width="10">#</th>
+              <th>品項</th>
+              <th width="120">Name</th>
+              <th width="200">Email</th>
+              <th width="120">狀態</th>
+              <th width="120" class="text-right">金額</th>
+              <th width="150" class="text-center">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td class="text-primary">超纖細肥皂 1盒</td>
+              <td>Mark<span class="badge badge-pill badge-danger ml-2">奧客</span></td>
+              <td>Mark@mail.com</td>
+              <td>已出貨</td>
+              <td class="text-right">NT$ 899</td>
+              <td class="text-center">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-toggle="modal"
+                    data-target="#editModal"
+                    data-title="超纖細肥皂 1盒"
+                  >
+                    編輯
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary">查看</button>
+                  <div class="btn-group btn-group-sm" role="group">
+                    <button
+                      id="btnGroupDrop1"
+                      type="button"
+                      class="btn btn-outline-secondary dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      ...
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <a class="dropdown-item" href="#">操作紀錄</a>
+                      <a class="dropdown-item" href="#">資料匯出</a>
+                      <div class="dropdown-divider"></div>
+                      <a
+                        class="dropdown-item text-danger"
+                        href="#"
+                        data-toggle="modal"
+                        data-title="超纖細肥皂 1盒"
+                        data-target="#removeModal"
+                        >刪除訂單</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="table-danger">
+              <th>2</th>
+              <td class="text-primary">(保證)無泡泡沐浴乳 5罐</td>
+              <td>Jacob<span class="badge badge-pill badge-success ml-2">常客</span></td>
+              <td>Jacob@mail.com</td>
+              <td>缺貨</td>
+              <td class="text-right">NT$ 3,600</td>
+              <td class="text-center">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-toggle="modal"
+                    data-target="#editModal"
+                    data-title="(保證)無泡泡沐浴乳 5罐"
+                  >
+                    編輯
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary">查看</button>
+                  <div class="btn-group btn-group-sm" role="group">
+                    <button
+                      id="btnGroupDrop1"
+                      type="button"
+                      class="btn btn-outline-secondary dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      ...
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <a class="dropdown-item" href="#">操作紀錄</a>
+                      <a class="dropdown-item" href="#">資料匯出</a>
+                      <div class="dropdown-divider"></div>
+                      <a
+                        class="dropdown-item text-danger"
+                        href="#"
+                        data-title="(保證)無泡泡沐浴乳 5罐"
+                        data-toggle="modal"
+                        data-target="#removeModal"
+                        >刪除訂單</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td class="text-primary">防滑燈罩 100個</td>
+              <td>Larry</td>
+              <td>Larry@mail.com</td>
+              <td>已出貨</td>
+              <td class="text-right">NT$ 14,060</td>
+              <td class="text-center">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    data-toggle="modal"
+                    data-target="#editModal"
+                    data-title="防滑燈罩 100個"
+                  >
+                    編輯
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary">查看</button>
+                  <div class="btn-group btn-group-sm" role="group">
+                    <button
+                      id="btnGroupDrop1"
+                      type="button"
+                      class="btn btn-outline-secondary dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      ...
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <a class="dropdown-item" href="#">操作紀錄</a>
+                      <a class="dropdown-item" href="#">資料匯出</a>
+                      <div class="dropdown-divider"></div>
+                      <a
+                        class="dropdown-item text-danger"
+                        href="#"
+                        data-toggle="modal"
+                        data-title="防滑燈罩 100個"
+                        data-target="#removeModal"
+                        >刪除訂單</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="7">
+                <div class="progress">
+                  <div
+                    class="progress-bar progress-bar-striped"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="7">...</td>
+            </tr>
+            <tr>
+              <td colspan="7">...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- pagination -->
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <footer class="mt-5 py-3 bg-light text-secondary text-center">
+      六角學院後台管理系統
+    </footer>
+    <!-- editModal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="editLabel">快速下單</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="inputName">用戶名稱</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Mark" />
+              </div>
+              <div class="form-group">
+                <label for="inputEmail">email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Mark@email.com" />
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="product">品項</label>
+                  <input type="text" class="form-control" id="product" readonly />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="count">數量</label>
+                  <input type="number" class="form-control" id="count" value="1" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary">確定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- removeModal -->
+    <div
+      class="modal fade"
+      id="removeModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="removeLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="removeLabel">確定刪除</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            確定刪除商品
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-danger">確定</button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
