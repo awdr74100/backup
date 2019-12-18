@@ -1,0 +1,1 @@
+let bang = 'hello world';
