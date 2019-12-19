@@ -1,7 +1,9 @@
 @import 'reset';
 
+$color-primary:gray;
+
 body {
-  color: red;
+  color: $color-primary;
 }
 
 h2 {
@@ -9,4 +11,5 @@ h2 {
   justify-content: center;
   align-items: center;
   transition: all 0.3s;
+  color: black;
 }

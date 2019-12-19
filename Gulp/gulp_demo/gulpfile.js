@@ -4,8 +4,17 @@ const gulp = require('gulp');
 // const babel = require('gulp-babel');
 // const postcss = require('gulp-postcss');
 // const plumber = require('gulp-plumber');
+// let cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('autoprefixer');
+const browserSync = require('browser-sync').create();
 const $ = require('gulp-load-plugins')();
+const minimist = require('minimist');
+// const envOptions = {
+//   string: 'env',
+//   default: { env: 'develop' },
+// };
+const options = minimist(process.argv.slice(2));
+console.log(options);
 
 // pug
 gulp.task('pug', function buildHTML() {
@@ -17,7 +26,8 @@ gulp.task('pug', function buildHTML() {
         pretty: true,
       })
     )
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./public'))
+    .pipe(browserSync.stream());
 });
 
 // sass
@@ -29,8 +39,10 @@ gulp.task('sass', function() {
     .pipe($.sourcemaps.init())
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.postcss([autoprefixer]))
+    .pipe($.if(options.env === 'production', $.cleanCss()))
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./public/css'))
+    .pipe(browserSync.stream());
 });
 
 // babel
@@ -44,16 +56,48 @@ gulp.task('babel', () =>
         presets: ['@babel/env'],
       })
     )
-    .pipe($.sourcemaps.write())
     .pipe($.concat('all.js'))
+    .pipe(
+      $.if(
+        options.env === 'production',
+        $.uglify({
+          compress: {
+            drop_console: true,
+          },
+        })
+      )
+    )
+    .pipe($.sourcemaps.write())
     .pipe(gulp.dest('./public/js'))
+    .pipe(browserSync.stream())
 );
+
+// Static server
+// gulp.task('browser-sync', function() {
+//   browserSync.init({
+//     server: {
+//       baseDir: './public',
+//     },
+//   });
+// });
+
+gulp.task('clean', function() {
+  return gulp.src('public', { read: false }).pipe($.clean());
+});
 
 // watch
 gulp.task('watch', function() {
+  browserSync.init({
+    server: {
+      baseDir: './public',
+    },
+  });
   gulp.watch('source/**/*.pug', gulp.series('pug'));
   gulp.watch('source/scss/**/*.scss', gulp.series('sass'));
   gulp.watch('source/js/**/*.js', gulp.series('babel'));
+  // gulp.watch("./public/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default',gulp.series('pug','sass','babel','watch'))
+gulp.task('build', gulp.series('clean', 'pug', 'sass', 'babel'));
+
+gulp.task('default', gulp.series('pug', 'sass', 'babel', 'watch'));
