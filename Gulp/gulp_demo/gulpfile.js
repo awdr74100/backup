@@ -72,6 +72,15 @@ gulp.task('babel', () =>
     .pipe(browserSync.stream())
 );
 
+// imagemin
+gulp.task('imagemin', function(done) {
+  gulp
+    .src('source/img/**/*')
+    .pipe($.imagemin())
+    .pipe(gulp.dest('public/img/'));
+  done();
+});
+
 // Static server
 // gulp.task('browser-sync', function() {
 //   browserSync.init({
