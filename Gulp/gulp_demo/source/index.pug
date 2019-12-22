@@ -1,17 +1,27 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
-        link(rel="stylesheet", href="css/all.css")
-    body
-            .conatiner
-                .col-4
-                    label(for="inputName") dasd
-                    input(type="text", name="inputName" id="inputName")
-                    hr
-                    h2 asdasdasdas
-                .col-4
-                .col-4
+extend layout.pug
+
+
+block navbar
+    - let path = 'index.html'
+    - const aa = 10
+    include ./partials/navbar.pug
+
+block content
+    //- h1 #{.test.people.name}
+        span 先生
+        | 是帥哥
+    ul.list
+        a(href="#") link
+    ul.list
+        a(href="#") link
+    ul.list
+        a(href="#") link
+    h2: a(href="#"): span 連結
+
+    h2
+        a(href="#")
+            span 連結
+    .container
+        form(action="#")
+            label(for="email") 請輸入 Email：
+            input#email.form-control.input-sm(type="email")

@@ -1,0 +1,24 @@
+mixin link(item,index)
+    //- #{path}
+    li.nav-item.active
+        a.nav-link(href=index)
+            |#{item}.#{index*aa}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand(href='#') Navbar
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav
+            each item,index in list.test
+                +link(item.name,index)
+                //- li.nav-item.active
+                //-     a.nav-link(href=item.name)
+                //-         |#{item.name}.#{index}
+            //-         span.sr-only (current)
+            //- li.nav-item
+            //-     a.nav-link(href='#') Features
+            //- li.nav-item
+            //-     a.nav-link(href='#') Pricing
+            //- li.nav-item
+            //-     a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled

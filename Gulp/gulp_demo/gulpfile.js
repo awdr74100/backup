@@ -22,6 +22,16 @@ gulp.task('pug', function buildHTML() {
     .src('./source/**/*.pug')
     .pipe($.plumber())
     .pipe(
+      $.data(() => {
+        let list = require('./source/data/list.json');
+        let source = {
+          'list':list
+        };
+        console.log(source);
+        return source;
+      })
+    )
+    .pipe(
       $.pug({
         pretty: true,
       })
