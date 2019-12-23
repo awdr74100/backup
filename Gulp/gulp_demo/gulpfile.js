@@ -25,9 +25,9 @@ gulp.task('pug', function buildHTML() {
       $.data(() => {
         let list = require('./source/data/list.json');
         let source = {
-          'list':list
+          list: list,
         };
-        console.log(source);
+        // console.log(source);
         return source;
       })
     )
@@ -47,7 +47,11 @@ gulp.task('sass', function() {
     .src('./source/scss/**/*.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
-    .pipe($.sass().on('error', $.sass.logError))
+    .pipe(
+      $.sass({
+        includePaths: ['./node_modules/bootstrap/scss'],
+      }).on('error', $.sass.logError)
+    )
     .pipe($.postcss([autoprefixer]))
     .pipe($.if(options.env === 'production', $.cleanCss()))
     .pipe($.sourcemaps.write())
@@ -100,8 +104,21 @@ gulp.task('imagemin', function(done) {
 //   });
 // });
 
+gulp.task('vendorsJs', (done) => {
+  gulp
+    .src([
+      './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+      './node_modules/jquery/dist/jquery.min.js',
+      './source/js/*.js',
+    ])
+    .pipe($.order(['jquery.min.js', 'bootstrap.bundle.min.js', 'all2.js', 'all.js']))
+    .pipe($.concat('vendors.js'))
+    .pipe(gulp.dest('./public/js'));
+  done();
+});
+
 gulp.task('clean', function() {
-  return gulp.src('public', { read: false }).pipe($.clean());
+  return gulp.src('public', { read: false, allowEmpty: true }).pipe($.clean());
 });
 
 // watch
@@ -110,6 +127,7 @@ gulp.task('watch', function() {
     server: {
       baseDir: './public',
     },
+    reloadDebounce: 2000,
   });
   gulp.watch('source/**/*.pug', gulp.series('pug'));
   gulp.watch('source/scss/**/*.scss', gulp.series('sass'));
@@ -119,4 +137,4 @@ gulp.task('watch', function() {
 
 gulp.task('build', gulp.series('clean', 'pug', 'sass', 'babel'));
 
-gulp.task('default', gulp.series('pug', 'sass', 'babel', 'watch'));
+gulp.task('default', gulp.series('pug', 'sass', 'vendorsJs', 'babel', 'watch'));

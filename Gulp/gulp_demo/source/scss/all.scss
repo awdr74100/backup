@@ -1,15 +1,7 @@
-@import 'reset';
+// Required
+@import "functions";
+@import "./helpers/variables";
+@import "mixins";
 
-$color-primary:gray;
+@import 'bootstrap';
 
-body {
-  color: $color-primary;
-}
-
-h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s;
-  color: black;
-}
