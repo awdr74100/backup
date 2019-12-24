@@ -36,6 +36,13 @@ gulp.task('pug', function buildHTML() {
         pretty: true,
       })
     )
+    .pipe(
+      $.htmlmin({
+        collapseWhitespace: true,
+        minifyCSS: true,
+        minifyJS: true,
+      })
+    )
     .pipe(gulp.dest('./public'))
     .pipe(browserSync.stream());
 });

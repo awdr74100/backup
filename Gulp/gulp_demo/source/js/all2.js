@@ -1,2 +1,2 @@
 let bang = 'hello world';
-const a = 'd'
+const d = 'd'
