@@ -1,0 +1,25 @@
+# 記得使用 conda 的 Terminal
+
+# 安裝另外一個環境
+conda create --name myenv -c conda-forge python=3.7 pyside2=5.12.4
+
+# 切換到指定環境
+
+conda activate myenv
+
+# 執行 python
+
+python pyside.py
+
+# 安裝 BeautfulSoup4
+
+pip install beautifulsoup4
+
+# 安裝 requests
+
+pip install requests
+
+
+
+
+
