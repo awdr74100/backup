@@ -49,26 +49,42 @@
         <div class="dropdown-menu dropdown-menu-right" style="min-width: 300px;">
           <div class="px-4 py-3">
             <h6>以選擇商品</h6>
-            <table class="table table-sm">
-              <tbody>
-                <tr>
-                  <td class="align-middle">
-                    <a href="#" class="text-muted"><i class="far fa-trash-alt"></i></a>
-                  </td>
-                  <td class="align-middle">金牌西裝</td>
-                  <td class="align-middle">1 件</td>
-                  <td class="align-middle">$ 528</td>
-                </tr>
-                <tr>
-                  <td class="align-middle">
-                    <a href="#" class="text-muted"><i class="far fa-trash-alt"></i></a>
-                  </td>
-                  <td class="align-middle">金牌女裝</td>
-                  <td class="align-middle">2 件</td>
-                  <td class="align-middle">$ 998</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-responsive-sm">
+              <table class="table table-sm">
+                <tbody>
+                  <tr>
+                    <td class="align-middle">
+                      <a
+                        href="#"
+                        class="text-muted"
+                        data-toggle="modal"
+                        data-title="金牌西裝 1 件 "
+                        data-target="#deleteModal"
+                        ><i class="far fa-trash-alt"></i
+                      ></a>
+                    </td>
+                    <td class="align-middle">金牌西裝</td>
+                    <td class="align-middle">1 件</td>
+                    <td class="align-middle">$ 528</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <a
+                        href="#"
+                        class="text-muted"
+                        data-toggle="modal"
+                        data-title="金牌女裝 1 件"
+                        data-target="#deleteModal"
+                        ><i class="far fa-trash-alt"></i
+                      ></a>
+                    </td>
+                    <td class="align-middle">金牌女裝</td>
+                    <td class="align-middle">2 件</td>
+                    <td class="align-middle">$ 998</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <button class="btn btn-primary btn-block">結帳去</button>
           </div>
         </div>
@@ -88,7 +104,7 @@
       <div class="row">
         <!-- left content -->
         <div class="col-md-3">
-          <div class="list-group sticky-top" style="top: 10px;">
+          <div class="list-group sticky-top mb-3" style="top: 10px;">
             <a href="#all" class="list-group-item list-group-item-action active" data-toggle="list">
               金牌專賣店
             </a>
@@ -358,28 +374,27 @@
         </div>
       </div>
     </section>
-    <!-- pay -->
+    <!-- checkout -->
     <hr />
     <section class="container py-5">
       <h1 class="text-muted text-center">六角血拼 結帳</h1>
       <div class="form-row text-center">
-        <div class="col">
+        <div class="col-md-4">
           <div class="alert alert-success alert-rounded" role="alert">
             1.輸入訂單資料
           </div>
         </div>
-        <div class="col">
+        <div class="col-md-4">
           <div class="alert alert-light alert-rounded" role="alert">
             2.金流付款
           </div>
         </div>
-        <div class="col">
+        <div class="col-md-4">
           <div class="alert alert-light alert-rounded" role="alert">
             3.完成
           </div>
         </div>
       </div>
-      <!-- accordion -->
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="card">
@@ -400,68 +415,76 @@
             </div>
           </div>
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
-            <table class="table table-sm">
-              <thead>
-                <tr>
-                  <th wdith="30"></th>
-                  <th width="100"></th>
-                  <th>商品名稱</th>
-                  <th width="100">數量</th>
-                  <th width="80">小計</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="align-middle">
-                    <a href="#" class="text-muted"><i class="far fa-trash-alt"></i></a>
-                  </td>
-                  <td class="align-middle">
-                    <img
-                      class="img-fluid img-thumbnail"
-                      src="https://images.unsplash.com/photo-1494281258937-45f28753affd?w=1350"
-                      alt=""
-                    />
-                  </td>
-                  <td class="align-middle">金牌西裝</td>
-                  <td class="align-middle">1 件</td>
-                  <td class="align-middle">$ 520</td>
-                </tr>
-                <tr>
-                  <td class="align-middle">
-                    <a href="#" class="text-muted"><i class="far fa-trash-alt"></i></a>
-                  </td>
-                  <td class="align-middle">
-                    <img
-                      class="img-fluid img-thumbnail"
-                      src="https://images.unsplash.com/photo-1481399124169-87493351c8a1?w=1349"
-                      alt=""
-                    />
-                  </td>
-                  <td class="align-middle">金牌女裝</td>
-                  <td class="align-middle">1 件</td>
-                  <td class="align-middle">$ 530</td>
-                </tr>
-                <tr>
-                  <td colspan="4" class="text-right">運費</td>
-                  <td class="text-right"><strong>$60</strong></td>
-                </tr>
-                <tr>
-                  <td colspan="4" class="text-right">合計</td>
-                  <td class="text-right"><strong>$1110</strong></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-responsive-sm">
+              <table class="table table-sm ">
+                <thead>
+                  <tr>
+                    <th wdith="30"></th>
+                    <th width="100"></th>
+                    <th>商品名稱</th>
+                    <th width="100">數量</th>
+                    <th width="80">小計</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="align-middle">
+                      <a href="#" class="text-muted"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                    <td class="align-middle">
+                      <img
+                        class="img-fluid img-thumbnail"
+                        src="https://images.unsplash.com/photo-1494281258937-45f28753affd?w=1350"
+                        alt=""
+                      />
+                    </td>
+                    <td class="align-middle">金牌西裝</td>
+                    <td class="align-middle">1 件</td>
+                    <td class="align-middle text-right">$520</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <a href="#" class="text-muted"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                    <td class="align-middle">
+                      <img
+                        class="img-fluid img-thumbnail"
+                        src="https://images.unsplash.com/photo-1481399124169-87493351c8a1?w=1349"
+                        alt=""
+                      />
+                    </td>
+                    <td class="align-middle">金牌女裝</td>
+                    <td class="align-middle">1 件</td>
+                    <td class="align-middle text-right">$530</td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" class="text-right">運費</td>
+                    <td class="text-right"><strong>$60</strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" class="text-right">合計</td>
+                    <td class="text-right"><strong>$1110</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <h5 class="bg-light p-3 text-center">訂購人資訊</h5>
-          <form>
+          <form action="#" class="needs-validation" novalidate>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="userName">姓名</label>
-                <input type="text" class="form-control" id="userName" placeholder="姓名" />
+                <input type="text" class="form-control" id="userName" placeholder="姓名" required />
+                <div class="invalid-feedback">
+                  請輸入姓名
+                </div>
               </div>
               <div class="form-group col-md-6">
                 <label for="userEmail">Email</label>
-                <input type="email" class="form-control" id="userEmail" placeholder="Email" />
+                <input type="email" class="form-control" id="userEmail" placeholder="Email" required />
+                <div class="invalid-feedback">
+                  請輸入正確的 Email
+                </div>
               </div>
             </div>
             <div class="form-row">
@@ -475,9 +498,9 @@
               <div class="form-group col-md">
                 <label for="userCity">城市</label>
                 <select id="userCity" class="form-control">
-                  <option selected>台北</option>
-                  <option>台中</option>
-                  <option>高雄</option>
+                  <option selected>台北市</option>
+                  <option>台中市</option>
+                  <option>高雄市</option>
                 </select>
               </div>
               <div class="form-group col-md">
@@ -487,10 +510,14 @@
             </div>
             <div class="form-group">
               <label for="userAddress">地址</label>
-              <input type="text" class="form-control" id="userAddress" placeholder="重慶北路一段122號" />
+              <input type="text" class="form-control" id="userAddress" placeholder="重慶北路一段122號" required />
+              <div class="invalid-feedback">
+                請輸入地址
+              </div>
             </div>
             <div class="text-right">
-              <button class="btn btn-secondary">繼續付款</button><button class="btn btn-primary ml-2">確認付款</button>
+              <button class="btn btn-secondary" type="button">繼續選購</button>
+              <button class="btn btn-primary ml-2" type="submit">確認付款</button>
             </div>
           </form>
         </div>
@@ -506,71 +533,75 @@
             完成
           </div>
           <h4 class="text-center mb-3">購買資訊</h4>
-          <table class="table table-sm">
-            <thead>
-              <tr>
-                <th width="100"></th>
-                <th>商品名稱</th>
-                <th width="100">數量</th>
-                <th width="80">小計</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="align-middle">
-                  <img
-                    class="img-fluid img-thumbnail"
-                    src="https://images.unsplash.com/photo-1494281258937-45f28753affd?w=1350"
-                    alt=""
-                  />
-                </td>
-                <td class="align-middle">金牌西裝</td>
-                <td class="align-middle">1 件</td>
-                <td class="align-middle">$ 520</td>
-              </tr>
-              <tr>
-                <td class="align-middle">
-                  <img
-                    class="img-fluid img-thumbnail"
-                    src="https://images.unsplash.com/photo-1481399124169-87493351c8a1?w=1349"
-                    alt=""
-                  />
-                </td>
-                <td class="align-middle">金牌女裝</td>
-                <td class="align-middle">1 件</td>
-                <td class="align-middle">$ 530</td>
-              </tr>
-              <tr>
-                <td colspan="3" class="text-right">運費</td>
-                <td class="text-right"><strong>$60</strong></td>
-              </tr>
-              <tr>
-                <td colspan="3" class="text-right">合計</td>
-                <td class="text-right"><strong>$1110</strong></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-responsive-sm">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th width="100"></th>
+                  <th>商品名稱</th>
+                  <th width="100">數量</th>
+                  <th width="80">小計</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="align-middle">
+                    <img
+                      class="img-fluid img-thumbnail"
+                      src="https://images.unsplash.com/photo-1494281258937-45f28753affd?w=1350"
+                      alt=""
+                    />
+                  </td>
+                  <td class="align-middle">金牌西裝</td>
+                  <td class="align-middle">1 件</td>
+                  <td class="align-middle text-right">$520</td>
+                </tr>
+                <tr>
+                  <td class="align-middle">
+                    <img
+                      class="img-fluid img-thumbnail"
+                      src="https://images.unsplash.com/photo-1481399124169-87493351c8a1?w=1349"
+                      alt=""
+                    />
+                  </td>
+                  <td class="align-middle">金牌女裝</td>
+                  <td class="align-middle">1 件</td>
+                  <td class="align-middle text-right">$530</td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="text-right">運費</td>
+                  <td class="text-right"><strong>$60</strong></td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="text-right">合計</td>
+                  <td class="text-right"><strong>$1110</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <h4 class="text-center">個人資料</h4>
-          <table class="table">
-            <tbody>
-              <tr>
-                <th width="200">Email</th>
-                <td>ag3456***@gmail.com</td>
-              </tr>
-              <tr>
-                <th width="200">姓名</th>
-                <td>咬 * 手手</td>
-              </tr>
-              <tr>
-                <th width="200">電話</th>
-                <td>987654***</td>
-              </tr>
-              <tr>
-                <th width="200">地址</th>
-                <td>重慶南路一段122號</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-responsive-sm">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th width="200">Email</th>
+                  <td>ag3456***@gmail.com</td>
+                </tr>
+                <tr>
+                  <th width="200">姓名</th>
+                  <td>咬 * 手手</td>
+                </tr>
+                <tr>
+                  <th width="200">電話</th>
+                  <td>987654***</td>
+                </tr>
+                <tr>
+                  <th width="200">地址</th>
+                  <td>重慶南路一段122號</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
@@ -592,6 +623,33 @@
         <p class="text-center">Made with Bootstrap4</p>
       </div>
     </footer>
+    <!-- delete Model -->
+    <div
+      class="modal fade"
+      id="deleteModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="deleteModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="deleteModalLabel">確認刪除</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            是否確認刪除商品
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-outline-danger">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- bootstrap js -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -608,6 +666,34 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <!-- bootstrap validation -->
+    <script>
+      (function() {
+        'use strict';
+        window.addEventListener(
+          'load',
+          function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener(
+                'submit',
+                function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                },
+                false
+              );
+            });
+          },
+          false
+        );
+      })();
+    </script>
     <!-- self js -->
     <script src="js/main.js"></script>
   </body>
