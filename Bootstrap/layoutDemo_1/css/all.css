@@ -1,0 +1,10 @@
+.bg-cover {
+  background-image: url("https://vancouver.ca/images/cov/feature/corp-plan-downtown-landing-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.mt-gutter-s {
+  margin-top: 10px;
+}
