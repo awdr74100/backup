@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.mt-5 {
+  margin-top: 50px;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+}
+
+.table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.table th,
+.table td {
+  padding: 20px 0px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+}
+/*# sourceMappingURL=all.css.map */
