@@ -1,9 +1,19 @@
 const express = require("express");
 const engine = require("ejs-locals");
+const bosyParser = require("body-parser");
 
 const app = express();
 
+// 配置靜態檔案根目錄
 app.use(express.static("./public"));
+
+// 配置 body.parser
+app.use(bosyParser.json());
+app.use(
+  bosyParser.urlencoded({
+    extended: false
+  })
+);
 
 // 註冊 ejs
 app.set("view engine", "ejs");
@@ -33,6 +43,17 @@ app.get("/login", (req, res) => {
 app.get("/signin", (req, res) => {
   res.send("你是誰！");
   console.log("有人造訪囉");
+});
+
+app.get("/search", (req, res) => {
+  res.render("search");
+});
+
+app.post("/searchList", (req, res) => {
+  console.log(req.body);
+  console.log(req.body.title);
+  console.log(req.body.content);
+  res.redirect("search");
 });
 
 // 設置 port
