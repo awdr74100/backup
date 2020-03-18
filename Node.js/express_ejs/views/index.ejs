@@ -1,0 +1,23 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body> -->
+<% layout('./layout') %>
+<h1>這是 <%- title %></h1>
+<p>提示訊息：<%- msg %></p>
+<ul>
+  <% products.forEach(item => { %>
+  <li><%= item %></li>
+  <% }) %>
+</ul>
+<% if (vip) { %>
+<p>你是 VIP ！！！</p>
+<% } else { %>
+<P>你不是 VIP，趕緊儲值吧！</P>
+<% } %>
+<!-- </body>
+</html> -->
