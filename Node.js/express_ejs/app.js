@@ -1,6 +1,7 @@
 const express = require("express");
 const engine = require("ejs-locals");
 const bosyParser = require("body-parser");
+const user = require("./routes/user");
 
 const app = express();
 
@@ -57,14 +58,16 @@ app.post("/searchList", (req, res) => {
 });
 
 app.post("/searchAjax", (req, res) => {
-  console.log(req.body.content)
-  console.log(req.body.list[0])
+  console.log(req.body.content);
+  console.log(req.body.list[0]);
   console.log("有人造訪囉");
   let a = req.body.content;
   res.send({
-    res:req.body.list[0]
+    res: req.body.list[0]
   });
 });
+
+app.use("/user",user);
 
 // 設置 port
 const port = process.env.PORT || 3000;
