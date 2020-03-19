@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+  <body>
+    <h1>代辦事項列表</h1>
+    <input type="text" name="content" id="content" />
+    <input type="submit" value="儲存" id="sendBtn" />
+    <ul id="list">
+      <% for (const [key,value] of Object.entries(todos)) { %>
+      <li>
+        <%= value.content %><button
+          id="deleteBtn"
+          class="ml-3"
+          data-key="<%= key %>"
+        >
+          刪除
+        </button>
+      </li>
+      <% } %>
+    </ul>
+    <script src="js/all.js"></script>
+  </body>
+</html>
