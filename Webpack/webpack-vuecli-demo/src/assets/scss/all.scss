@@ -1,0 +1,24 @@
+#app {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav {
+  margin-top: 30px;
+  text-align: center;
+  &__link {
+    text-decoration: none;
+    color: dodgerblue;
+    font-size: 20px;
+    margin: 0px 20px;
+    transition: all 0.3s;
+    &:hover {
+      color: lightskyblue;
+    }
+  }
+}
+
+h1 {
+  text-align: center;
+}
