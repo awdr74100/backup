@@ -10,43 +10,36 @@ $spacers: (
 $object: "m", "p";
 $direction: "", "x", "y", "t", "b", "l", "r";
 
-@each $obj in $object {
+@each $name in $object {
   @each $var in $direction {
     @each $key, $value in $spacers {
-      .#{$obj}#{$var}-#{$key} {
-        @if $var == "" {
-          padding: $value;
+      .#{$name}#{$var}-#{$key} {
+        @if $name == "m" {
+          @if $var == "" {
+            margin: $value;
+          }
+          @if $var == "x" {
+            margin-left: $value;
+            margin-right: $value;
+          }
+          @if $var == "y" {
+            margin-top: $value;
+            margin-bottom: $value;
+          }
+          @if $var == "t" {
+            margin-top: $value;
+          }
+          @if $var == "b" {
+            margin-bottom: $value;
+          }
+          @if $var == "l" {
+            margin-left: $value;
+          }
+          @if $var == "r" {
+            margin-right: $value;
+          }
         }
-        @if $var == "x" {
-          padding-left: $value;
-          padding-right: $value;
-        }
-        @if $var == "y" {
-          padding-top: $value;
-          padding-bottom: $value;
-        }
-        @if $var == "t" {
-          padding-top: $value;
-        }
-        @if $var == "b" {
-          padding-bottom: $value;
-        }
-        @if $var == "l" {
-          padding-left: $value;
-        }
-        @if $var == "r" {
-          padding-right: $value;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 567px) {
-  @each $obj in $object {
-    @each $var in $direction {
-      @each $key, $value in $spacers {
-        .#{$obj}#{$var}-sm-#{$key} {
+        @if $name == "p" {
           @if $var == "" {
             padding: $value;
           }
@@ -69,6 +62,67 @@ $direction: "", "x", "y", "t", "b", "l", "r";
           }
           @if $var == "r" {
             padding-right: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 567px) {
+  @each $name in $object {
+    @each $var in $direction {
+      @each $key, $value in $spacers {
+        .#{$name}#{$var}-sm-#{$key} {
+          @if $name == "m" {
+            @if $var == "" {
+              margin: $value;
+            }
+            @if $var == "x" {
+              margin-left: $value;
+              margin-right: $value;
+            }
+            @if $var == "y" {
+              margin-top: $value;
+              margin-bottom: $value;
+            }
+            @if $var == "t" {
+              margin-top: $value;
+            }
+            @if $var == "b" {
+              margin-bottom: $value;
+            }
+            @if $var == "l" {
+              margin-left: $value;
+            }
+            @if $var == "r" {
+              margin-right: $value;
+            }
+          }
+          @if $name == "p" {
+            @if $var == "" {
+              padding: $value;
+            }
+            @if $var == "x" {
+              padding-left: $value;
+              padding-right: $value;
+            }
+            @if $var == "y" {
+              padding-top: $value;
+              padding-bottom: $value;
+            }
+            @if $var == "t" {
+              padding-top: $value;
+            }
+            @if $var == "b" {
+              padding-bottom: $value;
+            }
+            @if $var == "l" {
+              padding-left: $value;
+            }
+            @if $var == "r" {
+              padding-right: $value;
+            }
           }
         }
       }
@@ -77,32 +131,59 @@ $direction: "", "x", "y", "t", "b", "l", "r";
 }
 
 @media screen and (min-width: 768px) {
-  @each $obj in $object {
+  @each $name in $object {
     @each $var in $direction {
       @each $key, $value in $spacers {
-        .#{$obj}#{$var}-md-#{$key} {
-          @if $var == "" {
-            padding: $value;
+        .#{$name}#{$var}-md-#{$key} {
+          @if $name == "m" {
+            @if $var == "" {
+              margin: $value;
+            }
+            @if $var == "x" {
+              margin-left: $value;
+              margin-right: $value;
+            }
+            @if $var == "y" {
+              margin-top: $value;
+              margin-bottom: $value;
+            }
+            @if $var == "t" {
+              margin-top: $value;
+            }
+            @if $var == "b" {
+              margin-bottom: $value;
+            }
+            @if $var == "l" {
+              margin-left: $value;
+            }
+            @if $var == "r" {
+              margin-right: $value;
+            }
           }
-          @if $var == "x" {
-            padding-left: $value;
-            padding-right: $value;
-          }
-          @if $var == "y" {
-            padding-top: $value;
-            padding-bottom: $value;
-          }
-          @if $var == "t" {
-            padding-top: $value;
-          }
-          @if $var == "b" {
-            padding-bottom: $value;
-          }
-          @if $var == "l" {
-            padding-left: $value;
-          }
-          @if $var == "r" {
-            padding-right: $value;
+          @if $name == "p" {
+            @if $var == "" {
+              padding: $value;
+            }
+            @if $var == "x" {
+              padding-left: $value;
+              padding-right: $value;
+            }
+            @if $var == "y" {
+              padding-top: $value;
+              padding-bottom: $value;
+            }
+            @if $var == "t" {
+              padding-top: $value;
+            }
+            @if $var == "b" {
+              padding-bottom: $value;
+            }
+            @if $var == "l" {
+              padding-left: $value;
+            }
+            @if $var == "r" {
+              padding-right: $value;
+            }
           }
         }
       }
