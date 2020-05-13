@@ -1,0 +1,111 @@
+$spacers: (
+  0: 0,
+  1: 5px,
+  2: 10px,
+  3: 15px,
+  4: 30px,
+  5: 60px,
+  auto: auto,
+);
+$object: "m", "p";
+$direction: "", "x", "y", "t", "b", "l", "r";
+
+@each $obj in $object {
+  @each $var in $direction {
+    @each $key, $value in $spacers {
+      .#{$obj}#{$var}-#{$key} {
+        @if $var == "" {
+          padding: $value;
+        }
+        @if $var == "x" {
+          padding-left: $value;
+          padding-right: $value;
+        }
+        @if $var == "y" {
+          padding-top: $value;
+          padding-bottom: $value;
+        }
+        @if $var == "t" {
+          padding-top: $value;
+        }
+        @if $var == "b" {
+          padding-bottom: $value;
+        }
+        @if $var == "l" {
+          padding-left: $value;
+        }
+        @if $var == "r" {
+          padding-right: $value;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 567px) {
+  @each $obj in $object {
+    @each $var in $direction {
+      @each $key, $value in $spacers {
+        .#{$obj}#{$var}-sm-#{$key} {
+          @if $var == "" {
+            padding: $value;
+          }
+          @if $var == "x" {
+            padding-left: $value;
+            padding-right: $value;
+          }
+          @if $var == "y" {
+            padding-top: $value;
+            padding-bottom: $value;
+          }
+          @if $var == "t" {
+            padding-top: $value;
+          }
+          @if $var == "b" {
+            padding-bottom: $value;
+          }
+          @if $var == "l" {
+            padding-left: $value;
+          }
+          @if $var == "r" {
+            padding-right: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @each $obj in $object {
+    @each $var in $direction {
+      @each $key, $value in $spacers {
+        .#{$obj}#{$var}-md-#{$key} {
+          @if $var == "" {
+            padding: $value;
+          }
+          @if $var == "x" {
+            padding-left: $value;
+            padding-right: $value;
+          }
+          @if $var == "y" {
+            padding-top: $value;
+            padding-bottom: $value;
+          }
+          @if $var == "t" {
+            padding-top: $value;
+          }
+          @if $var == "b" {
+            padding-bottom: $value;
+          }
+          @if $var == "l" {
+            padding-left: $value;
+          }
+          @if $var == "r" {
+            padding-right: $value;
+          }
+        }
+      }
+    }
+  }
+}

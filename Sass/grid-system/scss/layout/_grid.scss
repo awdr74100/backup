@@ -1,0 +1,106 @@
+$gutter-width: 30px;
+$grid-num: 12;
+
+.container {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: $gutter-width/2;
+  padding-right: $gutter-width/2;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -($gutter-width / 2);
+  margin-right: -($gutter-width / 2);
+}
+
+.no-gutters {
+  margin-left: 0px;
+  margin-right: 0px;
+
+  & > [class*="col-"] {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+%col {
+  position: relative;
+  width: 100%;
+  // max-width: 100%;
+  // flex: 0 0 100%;
+  padding-left: $gutter-width / 2;
+  padding-right: $gutter-width / 2;
+}
+
+@for $var from 1 through $grid-num {
+  .col-#{$var},
+  .col-sm-#{$var},
+  .col-md-#{$var},
+  .col-lg-#{$var} {
+    @extend %col;
+  }
+}
+
+@mixin breakpoint($var) {
+  max-width: 100% * ($var / $grid-num);
+  flex: 0 0 (100% * ($var / $grid-num));
+}
+
+@for $var from 1 through $grid-num {
+  .col-#{$var} {
+    @include breakpoint($var);
+  }
+}
+@media screen and (min-width: 576px) {
+  @for $var from 1 through $grid-num {
+    .col-sm-#{$var} {
+      @include breakpoint($var);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @for $var from 1 through $grid-num {
+    .col-md-#{$var} {
+      @include breakpoint($var);
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  @for $var from 1 through $grid-num {
+    .col-lg-#{$var} {
+      @include breakpoint($var);
+    }
+  }
+}
+
+// @media screen and (min-width: 576px) {
+//   @for $var from 1 through $grid-num {
+//     .col-sm-#{$var} {
+//       max-width: 100% * ($var / $grid-num);
+//       flex: 0 0 (100% * ($var / $grid-num));
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 768px) {
+//   @for $var from 1 through $grid-num {
+//     .col-md-#{$var} {
+//       max-width: 100% * ($var / $grid-num);
+//       flex: 0 0 (100% * ($var / $grid-num));
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 992px) {
+//   @for $var from 1 through $grid-num {
+//     .col-lg-#{$var} {
+//       max-width: 100% * ($var / $grid-num);
+//       flex: 0 0 (100% * ($var / $grid-num));
+//     }
+//   }
+// }
