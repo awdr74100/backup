@@ -1,0 +1,30 @@
+GET http://localhost:3000/user
+
+###
+
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "name":"Green",
+    "msg":"Green Color"
+}
+
+###
+
+GET http://localhost:3000/user/5ef63368e874ea37ac83b88d
+
+###
+
+DELETE http://localhost:3000/user/5ef63426031a2a1588b230c4
+
+
+###
+
+PATCH http://localhost:3000/user/5ef6335de874ea37ac83b88c
+Content-Type: application/json
+
+{
+    "name":"Red",
+    "msg":"Red Color"
+}
