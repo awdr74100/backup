@@ -1,0 +1,23 @@
+POST http://localhost:3000/user/
+Content-Type: application/json
+
+{
+    "userId":"4A6G0065",
+    "userName":"陳雅軒"
+}
+
+###
+
+GET http://localhost:3000/user/
+
+###
+
+GET http://localhost:3000/user/5ef8b0729ccf170dc4b17a0d
+
+###
+
+DELETE http://localhost:3000/user/5ef8b07d9ccf170dc4b17a0e
+
+###
+
+PATCH http://localhost:3000/user/5ef8aa462f9991011c5f10f3
