@@ -1,188 +1,103 @@
-$spacers: (
-  0: 0,
-  1: 5px,
-  2: 10px,
-  3: 15px,
-  4: 30px,
-  5: 60px,
-  auto: auto,
+$spacies: (
+  "0": 0px,
+  "1": 5px,
+  "2": 10px,
+  "3": 20px,
+  "4": 30px,
+  "5": 60px,
+  "auto": auto,
 );
-$object: "m", "p";
-$direction: "", "x", "y", "t", "b", "l", "r";
+$grid-breakpoints: (
+  "": false,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+$property: "m", "p";
+$sides: "", "t", "b", "l", "r", "x", "y";
 
-@each $name in $object {
-  @each $var in $direction {
-    @each $key, $value in $spacers {
-      .#{$name}#{$var}-#{$key} {
-        @if $name == "m" {
-          @if $var == "" {
-            margin: $value;
-          }
-          @if $var == "x" {
-            margin-left: $value;
-            margin-right: $value;
-          }
-          @if $var == "y" {
-            margin-top: $value;
-            margin-bottom: $value;
-          }
-          @if $var == "t" {
-            margin-top: $value;
-          }
-          @if $var == "b" {
-            margin-bottom: $value;
-          }
-          @if $var == "l" {
-            margin-left: $value;
-          }
-          @if $var == "r" {
-            margin-right: $value;
-          }
-        }
-        @if $name == "p" {
-          @if $var == "" {
-            padding: $value;
-          }
-          @if $var == "x" {
-            padding-left: $value;
-            padding-right: $value;
-          }
-          @if $var == "y" {
-            padding-top: $value;
-            padding-bottom: $value;
-          }
-          @if $var == "t" {
-            padding-top: $value;
-          }
-          @if $var == "b" {
-            padding-bottom: $value;
-          }
-          @if $var == "l" {
-            padding-left: $value;
-          }
-          @if $var == "r" {
-            padding-right: $value;
-          }
-        }
-      }
+@mixin generate($pro, $side, $spacValue) {
+  @if $side == "" {
+    @if $pro == "m" {
+      margin: $spacValue !important;
+    }
+    @if $pro == "p" {
+      padding: $spacValue !important;
+    }
+  }
+  @if $side == "t" {
+    @if $pro == "m" {
+      margin-top: $spacValue !important;
+    }
+    @if $pro == "p" {
+      padding-top: $spacValue !important;
+    }
+  }
+  @if $side == "b" {
+    @if $pro == "m" {
+      margin-bottom: $spacValue !important;
+    }
+    @if $pro == "p" {
+      padding-bottom: $spacValue !important;
+    }
+  }
+  @if $side == "l" {
+    @if $pro == "m" {
+      margin-left: $spacValue !important;
+    }
+    @if $pro == "p" {
+      padding-left: $spacValue !important;
+    }
+  }
+  @if $side == "r" {
+    @if $pro == "m" {
+      margin-right: $spacValue !important;
+    }
+    @if $pro == "p" {
+      padding-right: $spacValue !important;
+    }
+  }
+  @if $side == "x" {
+    @if $pro == "m" {
+      margin-left: $spacValue !important;
+      margin-right: $spacValue !important;
+    }
+    @if $pro == "p" {
+      padding-left: $spacValue !important;
+      padding-right: $spacValue !important;
+    }
+  }
+  @if $side == "y" {
+    @if $pro == "m" {
+      margin-top: $spacValue !important;
+      margin-bottom: $spacValue !important;
+    }
+    @if $pro == "p" {
+      padding-top: $spacValue !important;
+      padding-bottom: $spacValue !important;
     }
   }
 }
 
-@media screen and (min-width: 567px) {
-  @each $name in $object {
-    @each $var in $direction {
-      @each $key, $value in $spacers {
-        .#{$name}#{$var}-sm-#{$key} {
-          @if $name == "m" {
-            @if $var == "" {
-              margin: $value;
-            }
-            @if $var == "x" {
-              margin-left: $value;
-              margin-right: $value;
-            }
-            @if $var == "y" {
-              margin-top: $value;
-              margin-bottom: $value;
-            }
-            @if $var == "t" {
-              margin-top: $value;
-            }
-            @if $var == "b" {
-              margin-bottom: $value;
-            }
-            @if $var == "l" {
-              margin-left: $value;
-            }
-            @if $var == "r" {
-              margin-right: $value;
-            }
-          }
-          @if $name == "p" {
-            @if $var == "" {
-              padding: $value;
-            }
-            @if $var == "x" {
-              padding-left: $value;
-              padding-right: $value;
-            }
-            @if $var == "y" {
-              padding-top: $value;
-              padding-bottom: $value;
-            }
-            @if $var == "t" {
-              padding-top: $value;
-            }
-            @if $var == "b" {
-              padding-bottom: $value;
-            }
-            @if $var == "l" {
-              padding-left: $value;
-            }
-            @if $var == "r" {
-              padding-right: $value;
-            }
+@each $key, $value in $grid-breakpoints {
+  @if not $value {
+    @each $pro in $property {
+      @each $side in $sides {
+        @each $spacKey, $spacValue in $spacies {
+          .#{$pro}#{$side}-#{$spacKey} {
+            @include generate($pro, $side, $spacValue);
           }
         }
       }
     }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  @each $name in $object {
-    @each $var in $direction {
-      @each $key, $value in $spacers {
-        .#{$name}#{$var}-md-#{$key} {
-          @if $name == "m" {
-            @if $var == "" {
-              margin: $value;
-            }
-            @if $var == "x" {
-              margin-left: $value;
-              margin-right: $value;
-            }
-            @if $var == "y" {
-              margin-top: $value;
-              margin-bottom: $value;
-            }
-            @if $var == "t" {
-              margin-top: $value;
-            }
-            @if $var == "b" {
-              margin-bottom: $value;
-            }
-            @if $var == "l" {
-              margin-left: $value;
-            }
-            @if $var == "r" {
-              margin-right: $value;
-            }
-          }
-          @if $name == "p" {
-            @if $var == "" {
-              padding: $value;
-            }
-            @if $var == "x" {
-              padding-left: $value;
-              padding-right: $value;
-            }
-            @if $var == "y" {
-              padding-top: $value;
-              padding-bottom: $value;
-            }
-            @if $var == "t" {
-              padding-top: $value;
-            }
-            @if $var == "b" {
-              padding-bottom: $value;
-            }
-            @if $var == "l" {
-              padding-left: $value;
-            }
-            @if $var == "r" {
-              padding-right: $value;
+  } @else {
+    @media screen and (min-width: $value) {
+      @each $pro in $property {
+        @each $side in $sides {
+          @each $spacKey, $spacValue in $spacies {
+            .#{$pro}#{$side}-#{$key}-#{$spacKey} {
+              @include generate($pro, $side, $spacValue);
             }
           }
         }
