@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" name="file-data" id="" />
+    <button class="btn">上傳</button>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+    <script>
+      var firebaseConfig = {
+        // key
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      // Get a reference to the storage service, which is used to create references in your storage bucket
+      const storageRef = firebase.storage().ref("images/logo.png");
+
+      const btn = document.querySelector(".btn");
+      btn.addEventListener("click", async () => {
+        const file = document.querySelector('input[type="file"]').files[0];
+        try {
+          await storageRef.put(file);
+          const url = await storageRef.getDownloadURL();
+          console.log(url);
+        } catch (error) {
+          console.log(error);
+        }
+      });
+    </script>
+  </body>
+</html>
