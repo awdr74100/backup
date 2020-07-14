@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="login">login</button>
+    <button class="check">check</button>
+    <button class="logout">logout</button>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+      const login = document.querySelector(".login");
+      const check = document.querySelector(".check");
+      const logout = document.querySelector(".logout");
+      login.addEventListener("click", () => {
+        axios({
+          method: "post",
+          url: "https://jmaker-ac-api.vercel.app/admin/login",
+          data: {
+            email: "root@gmail.com",
+            password: "jmaker00643",
+            nickname: "藍奕濡",
+          },
+        }).then((res) => {
+          console.log(res);
+        });
+      });
+      check.addEventListener("click", () => {
+        axios({
+          method: "post",
+          url: "https://jmaker-ac-api.vercel.app/user/register",
+          data: {
+            uid:'e11fege6'
+            // auth: true,
+            // userId: "4A6G0067",
+            // userName: "弘毅全",
+            // userId:'4A6G0068',
+            // userName:"藍奕濡",
+            // auth: true,
+          },
+        }).then((res) => {
+          console.log(res);
+        });
+      });
+      logout.addEventListener("click", () => {
+        axios({
+          method: "post",
+          url: "https://jmaker-ac-api.vercel.app/admin/logout",
+          //   data: {
+          //     email: "root",
+          //     password: "jmaker00643",
+          //   },
+        }).then((res) => {
+          console.log(res);
+        });
+      });
+
+      axios.interceptors.request.use((config) => {
+        config.withCredentials = true;
+        return config;
+      });
+      // (1)
+      //   axios.interceptors.request.use((request) => {
+      //     const jwt_token = window.localStorage.getItem("jwt_token");
+      //     if (jwt_token) {
+      //       request.headers["Authorization"] = `Bearer ${jwt_token}`;
+      //     }
+      //     return request;
+      //   });
+      // (2)
+      //   axios.interceptors.response.use(
+      //     (response) => {
+      //       if (response.data.token) {
+      //         console.log("token:", response.data.token);
+      //         window.localStorage.setItem("jwt_token", response.data.token);
+      //       }
+      //       return response;
+      //     },
+      //     (error) => {
+      //       const errRes = error.response;
+      //       if (errRes.status === 401) {
+      //         window.localStorage.removeItem("jwt_token");
+      //         swal(
+      //           "Auth Error!",
+      //           `${errRes.data.error.message}, please login!`,
+      //           "error"
+      //         ).then(() => {
+      //           history.push("/login");
+      //         });
+      //       }
+      //       return Promise.reject(error.message); // 返回接口返回的错误信息
+      //     }
+      //   );
+    </script>
+  </body>
+</html>
