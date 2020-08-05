@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Roya" />
+    <meta name="copyright" content="本網頁著作權為Roya所有" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+
+    <!-- Open Graph Protocol start-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://awdr74100.github.io/" />
+    <meta property="og:site_name" content="" />
+    <!-- Open Graph Protocol end-->
+
+    <title>Document</title>
+    <link rel="stylesheet" href="" />
+  </head>
+
+  <body>
+    <input type="file" />
+    <button class="btn">按鈕</button>
+    <button class="login">登入</button>
+
+    <script>
+      const file = document.querySelector("input[type='file']");
+      file.addEventListener("change", async (e) => {
+        const formData = new FormData();
+        formData.append("image", e.target.files[0]);
+        // formData.append('album', 't6YPG6o');
+        // console.log(e.target.files[0]);
+        // const accessToken = "";
+        // const url = "https://api.imgur.com/3/image";
+        // try {
+        //   const res = await fetch("https://api.imgur.com/3/image", {
+        //     method: "POST",
+        //     headers: {
+        //       authorization: `Bearer ${accessToken}`,
+        //     },
+        //     body: {
+
+        //     },
+        //   }).then(res=>res.json())
+        //   console.log(res);
+        // } catch (error) {
+        //   console.log(error);
+        // }
+        fetch("http://localhost:3000/api/v2/upload", {
+          method: "POST",
+          credentials: "include",
+          body: formData,
+        })
+          .then((res) => {
+            return res.json();
+          })
+          .then((res) => {
+            console.log(res);
+            file.value = "";
+          });
+      });
+      const login = document.querySelector(".login");
+      login.addEventListener("click", () => {
+        fetch("http://localhost:3000/api/v2/admin/login", {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: "",
+            password: "",
+          }),
+        })
+          .then((res) => {
+            return res.json();
+          })
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      });
+    </script>
+  </body>
+</html>
