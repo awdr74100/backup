@@ -1,0 +1,28 @@
+POST  http://localhost:3000/users/
+Content-Type: application/json
+
+{
+    "uid":"8489L"
+}
+
+### 
+
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/8489L
+
+###
+
+POST http://localhost:3000/users/55WEF
+Content-Type: application/json
+
+{
+    "userName": "張家齊",
+    "userNumber": "4A6G0032"
+}
+
+###
+
+DELETE  http://localhost:3000/users/8er8g
