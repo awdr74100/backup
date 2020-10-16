@@ -7,11 +7,14 @@ module.exports = {
   },
   purge: {
     // enabled: true,
-    content: ['./src/**/*.html'],
+    content: ["./src/**/*.html"],
   },
   theme: {
-    extend: {}
+    extend: {},
+    screens: {
+      lg: "1144px",
+    },
   },
   variants: {},
-  plugins: []
-}
+  plugins: [],
+};

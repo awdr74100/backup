@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.a {
-  color: red;
-}
-
-.c {
-  flex: 0 0 50%;
+.card-border{
+  @apply border-solid border-8 border-green-300;
 }
