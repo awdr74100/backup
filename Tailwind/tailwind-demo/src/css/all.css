@@ -8,6 +8,21 @@
   }
 }
 
-.card-border {
-  @apply border-solid border-8 border-green-300;
+/* @layer utilities {
+  .btn {
+    @apply text-lg text-green-500 font-bold;
+  }
+} */
+
+@layer utilities {
+  @responsive {
+    @variants hover, focus {
+      .btn-lg {
+        @apply text-6xl;
+      }
+      .btn-sm {
+        @apply text-3xl;
+      }
+    }
+  }
 }

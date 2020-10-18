@@ -21,7 +21,9 @@ module.exports = {
     //   lg: "1144px",
     // },
   },
-  variants: {},
+  variants: {
+    backgroundColor: ["responsive", "hover", "focus", "active"],
+  },
   plugins: [
     plugin(function ({ addBase, config }) {
       addBase({
