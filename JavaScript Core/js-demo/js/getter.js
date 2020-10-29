@@ -21,8 +21,8 @@ const wallet = {
 //     enumerable: false,
 //   },
 // });
-Object.freeze()
-Object.defineProperty(wallet, 'save', {
+Object.freeze();
+Object.defineProperty(wallet, "save", {
   enumerable: false,
 });
 

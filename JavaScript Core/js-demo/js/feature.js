@@ -21,15 +21,15 @@ Array.prototype.getLastValue = function () {
   return this[this.keys.length - 1];
 };
 
-Array.prototype.a = 'dw';
-Object.prototype.b = 'qwd';
-Object.defineProperty(Object.prototype, 'b', {
+Array.prototype.a = "dw";
+Object.prototype.b = "qwd";
+Object.defineProperty(Object.prototype, "b", {
   enumerable: false,
 });
 console.dir(Array);
 
 const obj = {
-  name: 'Roya',
+  name: "Roya",
   age: 21,
 };
 

@@ -91,7 +91,7 @@ Family.prototype.getRank = function () {
 };
 
 function Person(name, age, weight, height) {
-  Family.call(this, '2');
+  Family.call(this, "2");
   this.name = name;
   this.age = age;
   this.weight = weight;
@@ -104,8 +104,8 @@ Person.prototype.getBmi = function () {
   return Math.round((this.weight / Math.pow(this.height / 100, 2)) * 10) / 10;
 };
 
-const YiRu = new Person('YiRu', '21', '64', '170');
-const Owen = new Person('Owen', '21', '96', '172');
+const YiRu = new Person("YiRu", "21", "64", "170");
+const Owen = new Person("Owen", "21", "96", "172");
 console.log(YiRu);
 console.log(Owen);
 console.log(YiRu.getBmi());
