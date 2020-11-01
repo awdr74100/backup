@@ -1,6 +1,6 @@
 const obj = [
   {
-    name: "YiRy",
+    name: "YiRa",
     age: 20,
   },
   {
@@ -8,7 +8,7 @@ const obj = [
     age: 21,
   },
   {
-    name: "Rebecca",
+    name: "LiRu",
     age: 18,
   },
 ];
