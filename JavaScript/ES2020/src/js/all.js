@@ -16,4 +16,22 @@ ex:
   console.log(person?.first?.second); // call property
   console.log(person?.['first']?.['second']); // call property
   console.log(person?.first?.func?.()); // call function
+
+*/
+
+/* Promise.allSettled
+
+1. 回傳 Promise 各決議狀態，只包含 fulfilled、rejected 兩種狀態
+ex:
+  const promise = (bool) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => (bool ? resolve({ bool }) : reject({ bool })), 1000);
+    });
+  };
+
+  (async () => {
+    const res = await Promise.allSettled([promise(true), promise(false)]);
+    console.log(res);
+  })();
+
 */
