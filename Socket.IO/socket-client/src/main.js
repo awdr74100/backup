@@ -14,7 +14,7 @@ socket.on('disconnect', () => {
 
 // 監聽自定義事件
 socket.on('callYourId', (message) => {
-  console.log(message, 17);
+  console.log(message);
 });
 
 socket.on('responseName', (message) => {
