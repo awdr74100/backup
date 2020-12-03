@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn" class="btn btn-primary">送出</button>
+    <script src="node_modules/socket.io-client/dist/socket.io.min.js"></script>
+    <script>
+      const socket = io('http://localhost:3000');
+
+      socket.on('connect', () => {
+        console.log('connected to the server');
+      });
+
+      // 監聽是否斷開連接
+      socket.on('disconnect', () => {
+        console.log('disconnect to the server');
+      });
+
+      // 監聽自定義事件
+      socket.on('callYourId', (message) => {
+        console.log(message);
+      });
+
+      socket.on('responseName', (message) => {
+        console.log(message, 28);
+      });
+
+      document.querySelector('#btn').addEventListener('click', function (e) {
+        e.preventDefault();
+        socket.emit('push_data', { message: `I'm ${socket.id}` });
+      });
+    </script>
+  </body>
+</html>
