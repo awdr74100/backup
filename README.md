@@ -1,1 +1,24 @@
-## 學習中
+## Includes
+ - Vue.js
+ - Nuxt.js
+ - Express.js
+ - Node.js
+ - MongoDB
+ - Firebase
+ - Webpack
+ - Gulp
+ - Face-api.js
+ - Socket.IO
+ - RESTful API
+ - TailwindCSS
+ - Bootstrap
+ - Highcharts
+ - JWT
+ - EJS
+ - RWD
+ - PWA
+ - SCSS
+ - jQuery
+ - AJAX / Fetch / Axios
+ - SMACSS / OOCSS / BEM
+ - HTML5 / CSS3
