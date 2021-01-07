@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// $theme-colors: (
+//   'primary': 'blue',
+//   'danger': 'red',
+//   'secondary': 'gray',
+// );
+
+// @layer base {
+//   h1 {
+//     @apply text-2xl;
+//   }
+
+//   h2 {
+//     @apply text-3xl;
+
+//     color: theme('colors.pink.600');
+//   }
+// }
+
+// @layer components {
+//   .btn {
+//     @apply px-2 py-1 rounded-lg focus:outline-none transition;
+//   }
+
+//   @each $key, $value in $theme-colors {
+//     .btn-#{$key} {
+//       @apply border border-#{$value}-500 bg-#{$value}-500 text-white hover:bg-#{$value}-700;
+//     }
+//   }
+
+//   // .btn {
+//   //   @apply px-2 py-1 rounded-lg focus:outline-none transition;
+
+//   //   &-primary {
+//   //     @apply border border-solid border-blue-500 bg-blue-500 text-white hover:bg-blue-700;
+//   //   }
+//   // }
+// }
+
+// @layer utilities {
+//   @variants responsive, hover {
+//     .col-4 {
+//       @apply pl-4 pr-4;
+
+//       flex: 0 0 (100% / 3);
+//       max-width: (100% / 3);
+//     }
+
+//     .col-6 {
+//       @apply pl-4 pr-4;
+
+//       flex: 0 0 (100% / 2);
+//       max-width: (100% / 2);
+//     }
+//   }
+// }
