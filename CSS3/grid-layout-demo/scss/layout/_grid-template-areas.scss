@@ -1,0 +1,52 @@
+.container {
+  max-width: 1140px;
+  margin: 30px auto;
+  background-color: rgb(182, 180, 180);
+
+  & > * {
+    background-color: rgb(46, 46, 46);
+    color: rgb(216, 216, 216);
+    padding: 30px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px repeat(3, minmax(100px, 1fr));
+  grid-template-rows: auto;
+  grid-template-areas:
+    "h h h h"
+    "sb m m m"
+    "sb s1 s2 s3"
+    "f f f f";
+  column-gap: 15px;
+  row-gap: 15px;
+}
+
+.header {
+  grid-area: h;
+}
+
+.sidebar {
+  grid-area: sb;
+}
+
+.main {
+  grid-area: m;
+}
+
+.section-1 {
+  grid-area: s1;
+}
+
+.section-2 {
+  grid-area: s2;
+}
+
+.section-3 {
+  grid-area: s3;
+}
+
+.footer {
+  grid-area: f;
+}

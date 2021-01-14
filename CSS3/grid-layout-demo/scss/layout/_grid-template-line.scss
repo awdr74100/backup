@@ -1,0 +1,52 @@
+.container {
+  max-width: 1140px;
+  margin: 30px auto;
+  background-color: rgb(182, 180, 180);
+
+  & > * {
+    background-color: rgb(46, 46, 46);
+    color: rgb(216, 216, 216);
+    padding: 30px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template: auto / 200px repeat(3, minmax(100px, 1fr));
+  gap: 15px;
+}
+
+.header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
+.main {
+  grid-column: 2 / -1;
+  grid-row: 2 / 3;
+}
+
+.section-1 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.section-2 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.section-3 {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+}

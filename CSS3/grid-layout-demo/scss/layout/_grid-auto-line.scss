@@ -1,0 +1,46 @@
+.container {
+  max-width: 1140px;
+  margin: 30px auto;
+  background-color: rgb(182, 180, 180);
+
+  & > * {
+    background-color: rgb(46, 46, 46);
+    color: rgb(216, 216, 216);
+    padding: 30px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 15px;
+}
+
+.header {
+  grid-area: 1 / 1 / span 1 / span 4;
+}
+
+.sidebar {
+  grid-area: 2 / 1 / span 2 / span 1;
+}
+
+.main {
+  grid-area: 2 / 2 / span 1 / span 3;
+}
+
+.section-1 {
+  grid-area: 3 / 2 / span 1 / span 1;
+}
+
+.section-2 {
+  grid-area: 3 / 3 / span 1 / span 1;
+}
+
+.section-3 {
+  grid-area: 3 / 4 / span 1 / span 1;
+}
+
+.footer {
+  grid-area: 4 / 1 / span 1 / span 4;
+}
