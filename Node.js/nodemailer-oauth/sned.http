@@ -1,0 +1,4 @@
+@BASE_URL = http://localhost:3000
+
+###
+POST {{BASE_URL}}/reset_password HTTP/1.1
