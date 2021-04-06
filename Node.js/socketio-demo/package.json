@@ -1,0 +1,21 @@
+{
+  "name": "socketio-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "lite-server --baseDir=example"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.0.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "nodemon": "^2.0.7"
+  }
+}
