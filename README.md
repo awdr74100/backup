@@ -1,24 +1,26 @@
 ## Includes
- - Vue.js
- - Nuxt.js
- - Express.js
- - Node.js
- - MongoDB
- - Firebase
- - Webpack
- - Gulp
- - Face-api.js
- - Socket.IO
- - RESTful API
- - TailwindCSS
- - Bootstrap
- - Highcharts
- - JWT
- - EJS
- - RWD
- - PWA
- - SCSS
- - jQuery
- - AJAX / Fetch / Axios
- - SMACSS / OOCSS / BEM
- - HTML5 / CSS3
+
+- Vue.js
+- Nuxt.js
+- Express.js
+- Node.js
+- MongoDB
+- Firebase
+- Webpack
+- Gulp
+- face-api.js
+- Socket.IO
+- WebSocket
+- RESTful API
+- TailwindCSS
+- Bootstrap
+- Highcharts
+- JWT
+- EJS
+- RWD
+- PWA
+- SCSS
+- jQuery
+- AJAX / Fetch / Axios
+- SMACSS / OOCSS / BEM
+- HTML5 / CSS3
