@@ -4,6 +4,7 @@ const swaggerUI = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
 const morgan = require('morgan');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 const routes = require('./routes/index');
 
 const app = express();
@@ -26,6 +27,20 @@ const swaggerSpec = swaggerJsDoc({
     servers: [
       { url: `http://localhost:${port}`, description: 'Development server' },
     ],
+    // components: {
+    //   securitySchemes: {
+    //     bearerAuth: {
+    //       type: 'http',
+    //       scheme: 'bearer',
+    //       bearerFormat: 'JWT',
+    //     },
+    //   },
+    // },
+    // security: [
+    //   {
+    //     bearerAuth: [],
+    //   },
+    // ],
   },
   apis: ['./controllers/*.js'],
 });
@@ -44,6 +59,9 @@ app.use(morgan('dev'));
 app.use(cors({ origin: true }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cookieParser());
+
+console.log(swaggerSpec);
 
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 app.use('/api', routes);

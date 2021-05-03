@@ -10,6 +10,16 @@ const Product = require('../models/Product');
 /**
  * @swagger
  * components:
+ *   securitySchemes:
+ *     bearerAuth:
+ *       type: http
+ *       scheme: bearer
+ *       bearerFormat: JWT
+ */
+
+/**
+ * @swagger
+ * components:
  *   schemas:
  *     Product:
  *       type: object
@@ -49,6 +59,8 @@ const Product = require('../models/Product');
  * /api/products:
  *   get:
  *     summary: Get the product list
+ *     security:
+ *       - bearerAuth: []
  *     tags: [products]
  *     responses:
  *       '200':
@@ -65,6 +77,9 @@ const Product = require('../models/Product');
  */
 exports.find = async (req, res) => {
   try {
+    console.log(req.headers);
+    const token = req.headers.authorization.split(' ')[1];
+    console.log(token);
     const products = await Product.find();
     return res.send({ products });
   } catch (error) {
