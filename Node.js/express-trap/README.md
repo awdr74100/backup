@@ -585,3 +585,66 @@ router.use((err, req, res, next) => {
    App Middleware Active 4
 */
 ```
+
+```js
+const m1 = (req, res, next) => {
+  console.log("App Middleware Active 1");
+  next();
+};
+
+const m2 = async (req, res, next) => {
+  console.log("App Middleware Active 2");
+  next();
+};
+
+const m3 = (req, res, next) => {
+  console.log("App Middleware Active 3");
+  next();
+};
+
+app.use(m1, m2);
+
+app.use("/api", m1, m2, routes, e2, m3);
+
+app.use((req, res, next) => {
+  console.log("App Middleware Active 4");
+  res.send({ title: "App Middleware Active 4" });
+});
+
+// routes/index.js
+
+router.use((req, res, next) => {
+  console.log("Inner Middleware Active 1");
+  next();
+});
+
+router.post(
+  "/check",
+  (req, res, next) => {
+    console.log("Inner Middleware Active 2");
+    next();
+  },
+  (req, res, next) => {
+    console.log("Inner Router Middleware Active 1");
+    next();
+  }
+);
+
+router.use((req, res, next) => {
+  console.log("inner Middleware Active 3");
+  next();
+});
+
+/** 
+ * App Middleware Active 1
+   App Middleware Active 2
+   App Middleware Active 1
+   App Middleware Active 2
+   Inner Middleware Active 1
+   Inner Middleware Active 2
+   Inner Router Middleware Active 1
+   inner Middleware Active 3
+   App Middleware Active 3
+   App Middleware Active 4
+*/
+```
