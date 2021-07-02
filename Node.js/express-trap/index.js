@@ -14,10 +14,19 @@ const m1 = (req, res, next) => {
   next();
 };
 
-const m2 = (req, res, next) => {
+const m2 = async (req, res, next) => {
   console.log("App Middleware Active 2");
   //   next();
-  throw new Error("Go");
+  // try {
+  // throw new Error("Go");
+  // } catch (error) {
+  //   console.log('EV',error.message);
+  // throw new Error("Bang")
+  //   // next(new Error("dw"))
+  // }
+  // next(new Error("Go"))
+  // return Promise.resolve(123)
+  next();
 };
 
 const m3 = (req, res, next) => {
@@ -27,12 +36,12 @@ const m3 = (req, res, next) => {
 
 const e2 = (err, req, res, next) => {
   console.log("App Error Middleware Active 2");
-  return next(err);
+  return next();
 };
 
 app.use(m1, m2);
 
-app.use("/api", m1, m2, routes, m3, e2);
+app.use("/api", m1, m2, routes, e2, m3);
 
 app.use((req, res, next) => {
   console.log("App Middleware Active 4");
