@@ -33,7 +33,7 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.5.0",
     "minimist": "^1.2.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   },
   "browserslist": [
     "last 2 version",
