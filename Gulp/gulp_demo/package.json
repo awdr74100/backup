@@ -32,7 +32,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.5.0",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.6",
     "node-sass": "^4.13.1"
   },
   "browserslist": [
